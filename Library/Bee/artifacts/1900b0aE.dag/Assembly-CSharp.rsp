@@ -361,7 +361,7 @@
 "Assets/packages/QuickOutline/Scripts/Outline.cs"
 "Assets/scripts/menu.cs"
 "Assets/scripts/onHover.cs"
-"Assets/UI/setActive.cs"
+"Assets/scripts/setActive.cs"
 -langversion:9.0
 
 /deterministic
