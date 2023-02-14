@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CardDisplay : MonoBehaviour
 {
+    //Данный скрипт нужен для отображение полей карты,
+    //что хранятся scriptable objects на нужные элементы UI в юнити
     public Card card;
 
     public Text name;
@@ -33,7 +35,7 @@ public class CardDisplay : MonoBehaviour
         name.text = card.name;
         /*race.text = card.race;*/
         /*Class.text = card.Class;*/
-        if (card.rarity == "Обычная")
+        if (card.rarity.ToString() == "Обычная")
         {
             rarity.color = new Color(125, 125, 125);
         }

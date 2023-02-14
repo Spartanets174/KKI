@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class setActive : MonoBehaviour
 {
+    //¬ключение нужного ui интерфейса при клике на 3d объект, использу€ raycast
     [SerializeField] private GameObject canvasInterface;
     [SerializeField] private GameObject blur;
     [SerializeField] private GameObject settingsObj;

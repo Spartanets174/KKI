@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//scriptable object для карт со всеми параметрами карты
 [CreateAssetMenu(fileName = "New Card",menuName = "Card")]
 public class Card: ScriptableObject
 {
     public new string name;
-    public string race;
-    public string Class;
-    public string rarity;
+    public enums.Races race;
+    public enums.Classes Class;
+    public enums.Rarity rarity;
     public string description;
     public double health;
     public int speed;

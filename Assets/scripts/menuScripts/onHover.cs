@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class onHover : MonoBehaviour
 {
+    //Скрипт для появление внешней линии на 3d объекте и
+    //чтобы нужный ui элемент следовал за мышкой при,
+    //пока мышь находится в зоне этого 3d объекта
+    //Применятеся в главном меню при наведении на гору денег и чернильницу
     [SerializeField] private GameObject caption;
     [SerializeField] private Camera cam;
     private Outline outline;

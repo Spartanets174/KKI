@@ -58,25 +58,33 @@
   <ItemGroup>
     <Compile Include="Assets\packages\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\scripts\card scripts\CardDisplay.cs" />
+    <Compile Include="Assets\scripts\card scripts\cardSupport.cs" />
     <Compile Include="Assets\scripts\menuScripts\setActive.cs" />
     <Compile Include="Assets\scripts\menuScripts\onHover.cs" />
+    <Compile Include="Assets\scripts\Player manager.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSpawner.cs" />
+    <Compile Include="Assets\scripts\card scripts\turnOnCards.cs" />
+    <Compile Include="Assets\scripts\card scripts\alWindowOpen.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\PlayerTurn.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\StateMachine.cs" />
     <Compile Include="Assets\scripts\menuScripts\menu.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\EnemyTurn.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\Won.cs" />
+    <Compile Include="Assets\scripts\card scripts\filter scripts\setCardClass.cs" />
+    <Compile Include="Assets\scripts\card scripts\filter scripts\cardFilter.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\BattleSystem.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\Begin.cs" />
     <Compile Include="Assets\scripts\card scripts\Card.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\State.cs" />
     <Compile Include="Assets\scripts\gameScripts\battle field\Cell.cs" />
+    <Compile Include="Assets\scripts\card scripts\setCoordTo0.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\Lost.cs" />
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
-    <Compile Include="Assets\scripts\card scripts\alWindowOpen.cs" />
-    <Compile Include="Assets\scripts\card scripts\setCoordTo0.cs" />
-    <Compile Include="Assets\scripts\card scripts\card Manager.cs" />
-    <Compile Include="Assets\scripts\card scripts\turnOnCards.cs" />
+    <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
+    <Compile Include="Assets\scripts\enums.cs" />
+    <Compile Include="Assets\scripts\card scripts\cardSupportDisplay.cs" />
+    <Compile Include="Assets\scripts\card scripts\filter scripts\setSupportType.cs" />
+    <Compile Include="Assets\scripts\card scripts\disableCharCards.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\packages\Room\Settings\Note.txt" />

@@ -880,7 +880,6 @@ GameObject:
   - component: {fileID: 5430371857472153679}
   - component: {fileID: 23009406360498845}
   - component: {fileID: -3397660595810802727}
-  - component: {fileID: 4062190594970828238}
   m_Layer: 5
   m_Name: cardOfCharacter
   m_TagString: Untagged
@@ -1030,7 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c53479bd6a87d4884f7d8b4efeddeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: d5212e957263f9147a641d89f0fcf4db, type: 2}
+  card: {fileID: 11400000, guid: 8ddad6f2dd7fae749ab585f3bc109f72, type: 2}
   name: {fileID: 5043645709484370059}
   race: {fileID: 0}
   Class: {fileID: 0}
@@ -1077,24 +1076,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 181.65504, y: 219.56726, z: 4.03}
   m_Center: {x: 1.8672256, y: 1.0234947, z: -2.015}
---- !u!114 &4062190594970828238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4355251719833999351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &4603184963223692134
 GameObject:
   m_ObjectHideFlags: 0
