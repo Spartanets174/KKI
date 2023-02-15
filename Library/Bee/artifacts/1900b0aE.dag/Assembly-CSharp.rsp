@@ -360,6 +360,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/packages/QuickOutline/Scripts/Outline.cs"
 "Assets/scripts/card scripts/alWindowOpen.cs"
+"Assets/scripts/card scripts/buyCard.cs"
 "Assets/scripts/card scripts/Card.cs"
 "Assets/scripts/card scripts/CardDisplay.cs"
 "Assets/scripts/card scripts/cardSpawner.cs"
@@ -370,6 +371,7 @@
 "Assets/scripts/card scripts/filter scripts/setCardClass.cs"
 "Assets/scripts/card scripts/filter scripts/setRace.cs"
 "Assets/scripts/card scripts/filter scripts/setSupportType.cs"
+"Assets/scripts/card scripts/PlayerManager1.cs"
 "Assets/scripts/card scripts/setCoordTo0.cs"
 "Assets/scripts/card scripts/turnOnCards.cs"
 "Assets/scripts/enums.cs"
@@ -386,7 +388,6 @@
 "Assets/scripts/menuScripts/menu.cs"
 "Assets/scripts/menuScripts/onHover.cs"
 "Assets/scripts/menuScripts/setActive.cs"
-"Assets/scripts/Player manager.cs"
 -langversion:9.0
 
 /deterministic

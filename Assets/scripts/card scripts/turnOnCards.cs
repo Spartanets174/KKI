@@ -9,10 +9,12 @@ public class turnOnCards : MonoBehaviour
     {
         for (int i = 0; i < GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardObjects.Count; i++)
         {
+            GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardObjects[i].GetComponent<alWindowOpen>().isOpen = false;
             GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardObjects[i].gameObject.SetActive(true);
         }
         for (int i = 0; i < GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardSupportObjects.Count; i++)
         {
+            GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardSupportObjects[i].GetComponent<alWindowOpen>().isOpen = false;
             GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardSupportObjects[i].gameObject.SetActive(true);
         }
     }

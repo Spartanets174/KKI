@@ -7,11 +7,12 @@ public class alWindowOpen : MonoBehaviour
 {
     /*Скрипт нужен для того, чтобы записать нужные данные в
      * модальное окно для карточки, на которую ты кликнул*/
-    
+    public bool isOpen = false;
     public CardDisplay cardDisplay;
     public cardSupportDisplay CardSupportDisplay;
     void OnMouseUp()
     {
+        isOpen = true;
         if (this.GetComponent<CardDisplay>()!=null)
         {
             GameObject.Find("blur modal").GetComponent<setCoordTo0>().setCoord0();

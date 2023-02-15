@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Класс для создания нужных карточек на сцене
 public class cardSpawner : MonoBehaviour
@@ -14,15 +15,28 @@ public class cardSpawner : MonoBehaviour
     //Родитель куда спавнить
     [SerializeField] private Transform parentToSpawn;
     [SerializeField] private Transform parentSupportToSpawn;
-
+    
     public cardFilter cardFilter;
     //list для перезаписи текущего списка заспавненных карт
     public List<GameObject> listOfCardObjects;
     public List<GameObject> listOfCardSupportObjects;
 
+    //игрок
+    public Text Money;
+    public PlayerManager1 playerManager1;
+
     //Просто начальный спавн всех карт на сцене
     private void Start()
     {
+        for (int i = 0; i < playerManager1.allCharCards.Count; i++)
+        {
+            cardObjects.Add(playerManager1.allCharCards[i]);
+        }
+        for (int i = 0; i < playerManager1.allSupportCards.Count; i++)
+        {
+            cardSupportObjects.Add(playerManager1.allSupportCards[i]);
+        }
+        Money.text =  $"У вас денег: {playerManager1.money}";
         cardFilter.cards.Clear();
         for (int i = 0; i < cardObjects.Count; i++)
         {
