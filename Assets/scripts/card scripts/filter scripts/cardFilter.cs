@@ -15,6 +15,7 @@ public class cardFilter : MonoBehaviour
     public List<GameObject> classButtons;
     public List<GameObject> supportButtons;
     public cardSpawner cardSpawner;
+    public PlayerManager1 playerManager1;
 
     /*Запись в list "cards" всех scriptable objects для применения при фильтрации */
     private void Start()
@@ -34,14 +35,26 @@ public class cardFilter : MonoBehaviour
     public void cardFiltration()
     {
         //Если ничего не выбрано
-        if (cardRace==""&&cardClass=="")
+        if (cardRace == "" && cardClass == "")
         {
-            cards.Clear();
-            for (int i = 0; i < cardSpawner.cardObjects.Count; i++)
+            if (cardSpawner.isShop)
             {
-                cards.Add(cardSpawner.cardObjects[i]);
+                cards.Clear();
+                for (int i = 0; i < playerManager1.allCharCards.Count; i++)
+                {
+                    cards.Add(playerManager1.allCharCards[i]);
+                }
+                cardSpawner.cardSpawn(cards);
             }
-            cardSpawner.cardSpawn(cards);
+            else
+            {
+                cards.Clear();
+                for (int i = 0; i < playerManager1.allUserCharCards.Count; i++)
+                {
+                    cards.Add(playerManager1.allUserCharCards[i]);
+                }
+                cardSpawner.cardSpawn(cards);
+            }
         }
         //Если выбран только класс
         if (cardRace == "" && cardClass != "")
@@ -62,16 +75,31 @@ public class cardFilter : MonoBehaviour
             cardSpawner.cardSpawn(raceAndClass);
         }
     }
+    //Та же самая функция, что и выше, но для карт помощи (свои нюансы есть)
     public void cardSupportFiltration()
     {
         if (cardSupportType == "")
         {
-            supportCards.Clear();
-            for (int i = 0; i < cardSpawner.cardSupportObjects.Count; i++)
+            if (cardSpawner.isShop)
             {
-                supportCards.Add(cardSpawner.cardSupportObjects[i]);
+                supportCards.Clear();
+                for (int i = 0; i < playerManager1.allSupportCards.Count; i++)
+                {
+                    supportCards.Add(playerManager1.allSupportCards[i]);
+                }
+                cardSpawner.cardSupportSpawn(supportCards);
             }
-            cardSpawner.cardSupportSpawn(supportCards);
+            else
+            {
+                supportCards.Clear();
+                for (int i = 0; i < playerManager1.allUserSupportCards.Count; i++)
+                {
+                    supportCards.Add(playerManager1.allUserSupportCards[i]);
+                }
+                cardSpawner.cardSupportSpawn(supportCards);
+
+            }
+            
         }
         if (cardSupportType != "")
         {

@@ -188,7 +188,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3310927341985305896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cf5a8e9af509c42b90dcd540387e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  card: {fileID: 11400000, guid: 01051d735d44b6d4d882ae4ff2cd2912, type: 2}
   name: {fileID: 6100805102827885464}
   race: {fileID: 0}
   type: {fileID: 0}
@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a8024cae48ff54996eff443e49e04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpen: 0
   cardDisplay: {fileID: 0}
   CardSupportDisplay: {fileID: 260462291747854899}
 --- !u!65 &2766404744177101512

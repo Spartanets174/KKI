@@ -6,6 +6,7 @@ using UnityEngine.UI;
 //Класс для создания нужных карточек на сцене
 public class cardSpawner : MonoBehaviour
 {
+    public bool isShop;
     //Список scriptable objects, которые надо спавнить
     public List<Card> cardObjects;
     public List<cardSupport> cardSupportObjects;
@@ -28,15 +29,18 @@ public class cardSpawner : MonoBehaviour
     //Просто начальный спавн всех карт на сцене
     private void Start()
     {
-        for (int i = 0; i < playerManager1.allCharCards.Count; i++)
+        if (isShop)
         {
-            cardObjects.Add(playerManager1.allCharCards[i]);
+            for (int i = 0; i < playerManager1.allCharCards.Count; i++)
+            {
+                cardObjects.Add(playerManager1.allCharCards[i]);
+            }
+            for (int i = 0; i < playerManager1.allSupportCards.Count; i++)
+            {
+                cardSupportObjects.Add(playerManager1.allSupportCards[i]);
+            }
+            Money.text = $"У вас денег: {playerManager1.money}";
         }
-        for (int i = 0; i < playerManager1.allSupportCards.Count; i++)
-        {
-            cardSupportObjects.Add(playerManager1.allSupportCards[i]);
-        }
-        Money.text =  $"У вас денег: {playerManager1.money}";
         cardFilter.cards.Clear();
         for (int i = 0; i < cardObjects.Count; i++)
         {

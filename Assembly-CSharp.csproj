@@ -58,16 +58,17 @@
   <ItemGroup>
     <Compile Include="Assets\packages\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSupportDisplay.cs" />
-    <Compile Include="Assets\scripts\card scripts\buyCard.cs" />
+    <Compile Include="Assets\scripts\card scripts\shop scripts\buyCard.cs" />
     <Compile Include="Assets\scripts\card scripts\CardDisplay.cs" />
-    <Compile Include="Assets\scripts\card scripts\disableCharCards.cs" />
+    <Compile Include="Assets\scripts\card scripts\shop scripts\disableCharCards.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSupport.cs" />
     <Compile Include="Assets\scripts\menuScripts\setActive.cs" />
     <Compile Include="Assets\scripts\menuScripts\onHover.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSpawner.cs" />
-    <Compile Include="Assets\scripts\card scripts\turnOnCards.cs" />
+    <Compile Include="Assets\scripts\card scripts\shop scripts\turnOnCards.cs" />
+    <Compile Include="Assets\scripts\PlayerManager1.cs" />
     <Compile Include="Assets\scripts\enums.cs" />
-    <Compile Include="Assets\scripts\card scripts\alWindowOpen.cs" />
+    <Compile Include="Assets\scripts\card scripts\shop scripts\alWindowOpen.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\PlayerTurn.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\StateMachine.cs" />
     <Compile Include="Assets\scripts\menuScripts\menu.cs" />
@@ -81,11 +82,11 @@
     <Compile Include="Assets\scripts\card scripts\Card.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\State.cs" />
     <Compile Include="Assets\scripts\gameScripts\battle field\Cell.cs" />
-    <Compile Include="Assets\scripts\card scripts\setCoordTo0.cs" />
+    <Compile Include="Assets\scripts\card scripts\shop scripts\setCoordTo0.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\Lost.cs" />
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
     <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
-    <Compile Include="Assets\scripts\card scripts\PlayerManager1.cs" />
+    <Compile Include="Assets\scripts\card scripts\respawnUserCards.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\packages\Room\Settings\Note.txt" />
