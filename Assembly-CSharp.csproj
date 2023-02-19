@@ -57,9 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\packages\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\scripts\card scripts\deck scripts\addToDeck.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSupportDisplay.cs" />
     <Compile Include="Assets\scripts\card scripts\shop scripts\buyCard.cs" />
     <Compile Include="Assets\scripts\card scripts\CardDisplay.cs" />
+    <Compile Include="Assets\scripts\card scripts\deck scripts\removeFromDeck.cs" />
     <Compile Include="Assets\scripts\card scripts\shop scripts\disableCharCards.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSupport.cs" />
     <Compile Include="Assets\scripts\menuScripts\setActive.cs" />
@@ -87,8 +89,8 @@
     <Compile Include="Assets\scripts\gameScripts\states\Lost.cs" />
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
     <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
-    <Compile Include="Assets\scripts\card scripts\deck scripts\addToDeck.cs" />
-    <Compile Include="Assets\scripts\card scripts\deck scripts\removeFromDeck.cs" />
+    <Compile Include="Assets\scripts\gameScripts\cameraRotation.cs" />
+    <Compile Include="Assets\healthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\packages\Room\Settings\Note.txt" />

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleSystem : StateMachine
 {
     /*—юда вставл€ть переменные дл€ своего, врага, интерфейса и т.д.*/
+    public Text captionOfAction;
 
     private void Start()
     {

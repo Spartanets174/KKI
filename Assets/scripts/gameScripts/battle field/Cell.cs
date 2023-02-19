@@ -17,7 +17,6 @@ public class Cell : MonoBehaviour
     private void OnMouseDown()
     {
         Vector2 pos = new Vector2(transform.position.x, transform.position.z);
-        Debug.Log("f");
         GameObject.Find("field").GetComponent<Field>().GetCellAtPosition(pos);
     }
     private void OnMouseOver()
