@@ -73,6 +73,8 @@
     <Compile Include="Assets\scripts\enums.cs" />
     <Compile Include="Assets\scripts\card scripts\alWindowOpen.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\PlayerTurn.cs" />
+    <Compile Include="Assets\healthBar.cs" />
+    <Compile Include="Assets\scripts\gameScripts\cameraRotation.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\StateMachine.cs" />
     <Compile Include="Assets\scripts\menuScripts\menu.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\EnemyTurn.cs" />
@@ -89,8 +91,6 @@
     <Compile Include="Assets\scripts\gameScripts\states\Lost.cs" />
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
     <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
-    <Compile Include="Assets\scripts\gameScripts\cameraRotation.cs" />
-    <Compile Include="Assets\healthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\packages\Room\Settings\Note.txt" />
@@ -354,12 +354,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.10f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.10f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.10f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
