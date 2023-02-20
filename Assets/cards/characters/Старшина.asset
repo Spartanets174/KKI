@@ -21,7 +21,7 @@ MonoBehaviour:
   speed: 2
   physAttack: 3
   magAttack: 1
-  Range: 4
+  range: 4
   physDefence: 3
   magDefence: 2
   critChance: 0.35

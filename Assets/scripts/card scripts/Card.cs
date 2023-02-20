@@ -15,7 +15,7 @@ public class Card: ScriptableObject
     public int speed;
     public double physAttack;
     public double magAttack;
-    public int Range;
+    public int range;
     public double physDefence;
     public double magDefence;
     public double critChance;

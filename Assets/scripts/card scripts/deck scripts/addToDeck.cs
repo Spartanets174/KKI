@@ -10,6 +10,7 @@ public class addToDeck : MonoBehaviour
     public PlayerManager1 playerManager1;
     public List<GameObject> charCardsWindow;
     public List<GameObject> supportCardsWindow;
+  
     public void AddToDeck()
     {        
         //Перебор всех объектов (карточек персонажа)
@@ -49,6 +50,19 @@ public class addToDeck : MonoBehaviour
                     break;
                 }
             }
+        }
+    }
+    private void Start()
+    {
+        for (int i = 0; i < playerManager1.deckUserCharCards.Count; i++)
+        {
+            charCardsWindow[i].transform.GetChild(1).GetComponent<Image>().sprite = playerManager1.deckUserCharCards[i].image;
+            charCardsWindow[i].transform.GetChild(2).GetComponent<Text>().text = playerManager1.deckUserCharCards[i].name;
+        }
+        for (int i = 0; i < playerManager1.deckUserSupportCards.Count; i++)
+        {
+            supportCardsWindow[i].transform.GetChild(1).GetComponent<Image>().sprite = playerManager1.deckUserSupportCards[i].image;
+            supportCardsWindow[i].transform.GetChild(2).GetComponent<Text>().text = playerManager1.deckUserSupportCards[i].name;
         }
     }
 }
