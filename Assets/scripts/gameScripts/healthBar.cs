@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Скрипт для изменения полоски здоровья в интерфейсе
 public class healthBar : MonoBehaviour
 {
     public Slider slider;

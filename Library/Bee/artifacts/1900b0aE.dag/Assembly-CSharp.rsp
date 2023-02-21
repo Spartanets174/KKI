@@ -381,6 +381,8 @@
 "Assets/scripts/gameScripts/battle field/Cell.cs"
 "Assets/scripts/gameScripts/battle field/Field.cs"
 "Assets/scripts/gameScripts/cameraRotation.cs"
+"Assets/scripts/gameScripts/cardCharHolde.cs"
+"Assets/scripts/gameScripts/character.cs"
 "Assets/scripts/gameScripts/healthBar.cs"
 "Assets/scripts/gameScripts/states/BattleSystem.cs"
 "Assets/scripts/gameScripts/states/Begin.cs"

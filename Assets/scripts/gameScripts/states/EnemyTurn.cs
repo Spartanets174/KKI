@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine;
 
 public class EnemyTurn : State
 {
@@ -16,7 +17,7 @@ public class EnemyTurn : State
         /*Логика при выборе перса*/
         yield break;
     }
-    public override IEnumerator Move()
+    public override IEnumerator Move(GameObject cell)
     {
         /*Логика при движении*/
         yield break;

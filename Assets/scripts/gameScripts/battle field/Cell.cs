@@ -5,10 +5,12 @@ using UnityEngine;
 public class Cell : MonoBehaviour
 {
     //Класс для подсветки клетки игрового поля и покрашивание в шахматном порядке
-    [SerializeField] private Material baseColor, offsetColor;
+    public Material baseColor, offsetColor;
     [SerializeField] private MeshRenderer renderer;
     [SerializeField] private GameObject hightLight;
+    public bool Enabled=true;
     
+    //Установление цвета клетки в зависимости от её четности или нечетности
    public void Init(bool isOffset)
     {
         renderer.material = isOffset?offsetColor:baseColor;
@@ -16,15 +18,30 @@ public class Cell : MonoBehaviour
     //При клике на клетку выводятся её координаты и позиция в мире
     private void OnMouseDown()
     {
-        Vector2 pos = new Vector2(transform.position.x, transform.position.z);
-        GameObject.Find("field").GetComponent<Field>().GetCellAtPosition(pos);
+        //Проверка на то, включена ли клетка
+        if (Enabled)
+        {
+            //Получение и вывод координат клетки
+            Vector2 pos = new Vector2(transform.position.x, transform.position.z);
+            GameObject.Find("field").GetComponent<Field>().GetCellAtPosition(pos);
+            //Передача данных о текущей клетки в battleSystem
+            GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnMoveButton(this.gameObject);
+        }
+        
     }
     private void OnMouseOver()
     {
-        hightLight.SetActive(true);
+        if (Enabled)
+        {
+            hightLight.SetActive(true);
+        }
+       
     }
     private void OnMouseExit()
     {
-        hightLight.SetActive(false);
+        if (Enabled)
+        {
+            hightLight.SetActive(false);
+        }        
     }
 }

@@ -12,7 +12,7 @@ public class PlayerManager1:MonoBehaviour
     public List<cardSupport> deckUserSupportCards;
     public int money = 100000;
     public bool isGame;
-    private void Start()
+    private void Awake()
     {
         this.allCharCards = playerData.allCharCards;
         this.allSupportCards = playerData.allSupportCards;

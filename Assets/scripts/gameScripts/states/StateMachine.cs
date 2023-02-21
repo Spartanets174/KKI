@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class StateMachine: MonoBehaviour
 {
-    protected State State;
+    public State State;
 
     public void SetState(State state)
     {

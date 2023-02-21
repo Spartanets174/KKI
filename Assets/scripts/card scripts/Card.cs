@@ -26,4 +26,4 @@ public class Card: ScriptableObject
     public string buffAbility;
     public Sprite image;
     public int Price;
-} 
+}
