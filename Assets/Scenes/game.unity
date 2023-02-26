@@ -798,7 +798,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 309141481}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnChooseCharacterButton
+        m_MethodName: onUnitStatementButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1892,7 +1892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360162172}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 15.94, y: -5.56, z: 10.07}
+  m_LocalPosition: {x: 15.94, y: -5.56, z: 9.87}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2539,7 +2539,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 309141481}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnChooseCharacterButton
+        m_MethodName: onUnitStatementButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4100,7 +4100,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 309141481}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnChooseCharacterButton
+        m_MethodName: onUnitStatementButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5844,7 +5844,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 309141481}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnChooseCharacterButton
+        m_MethodName: onUnitStatementButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7160,7 +7160,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 309141481}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnChooseCharacterButton
+        m_MethodName: onUnitStatementButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7481,14 +7481,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437239127}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.813, y: 5.43, z: 42.62}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -3.81, y: 5.43, z: 39.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 818219151}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1437239129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7501,10 +7501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcb87dac2474da4085163ff43e18b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 11
-  height: 7
+  width: 7
+  height: 11
   cellPrefab: {fileID: 2402688601813834047, guid: 14e7d9548ab7f8d448b8e71c6af3f226, type: 3}
-  CellsOfFieled: []
 --- !u!1 &1460870534
 GameObject:
   m_ObjectHideFlags: 0

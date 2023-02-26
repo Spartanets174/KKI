@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,16 +60,15 @@ public class BattleSystem : StateMachine
         if (charCards.Count == 5)
         {
             isUnitPlacement = false;
-            for (int i = 0; i < charCardsUI.Count; i++)
-            {
-                charCardsUI[i].GetComponent<Button>().interactable = true;
-                charCardsUI[i].GetComponent<Button>().enabled = true;
-            }
         }
     }
-    public void OnChooseCharacterButton()
+    public void onUnitStatementButton()
     {
-        StartCoroutine(State.chooseCharacter());
+        StartCoroutine(State.unitStatement());
+    }
+    public void OnChooseCharacterButton(GameObject character)
+    {
+        StartCoroutine(State.chooseCharacter(character));
     }
     public void OnMoveButton(GameObject cell)
     {
@@ -102,5 +102,17 @@ public class BattleSystem : StateMachine
     {
         StartCoroutine(State.useItem());
     }
-
+    public bool isCell(float cellCoord, float charCoord, int charFeature)
+    {
+       
+        if (Math.Floor(Math.Abs(charCoord - cellCoord))<= charFeature)
+        {
+            Debug.Log(Math.Floor(Math.Abs(charCoord - cellCoord) / 0.27f));
+            return true;
+        }
+        else
+        {           
+            return false;
+        }
+    }
 }

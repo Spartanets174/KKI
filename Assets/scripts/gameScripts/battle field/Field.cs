@@ -8,7 +8,7 @@ public class Field : MonoBehaviour
     [SerializeField] private int width, height;
     [SerializeField] private Cell cellPrefab;
     private Dictionary<Vector2, Cell > Cells;
-    public List<Cell> CellsOfFieled;
+    public Cell[,] CellsOfFieled = new Cell[7, 11];
     private void Start()
     {
         GenerateField();
@@ -16,7 +16,6 @@ public class Field : MonoBehaviour
 
     void GenerateField()
     {
-        CellsOfFieled.Clear();
         Cells = new Dictionary<Vector2, Cell>();
         for (int i = 0; i < width; i++)
         {
@@ -37,7 +36,7 @@ public class Field : MonoBehaviour
                 }
                 //Запись клеток в списки
                 Cells[new Vector2(spawnedTile.transform.position.x, spawnedTile.transform.position.z)] = spawnedTile;
-                CellsOfFieled.Add(spawnedTile);
+                CellsOfFieled[i,j] = spawnedTile;
             }
         }
     }

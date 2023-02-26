@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7284853495163815136}
   - component: {fileID: 4929839683084114187}
   - component: {fileID: 2818430552318321696}
+  - component: {fileID: -3263418075147034683}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15db951916b430499a7dd47e961a036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 6a35d8175b0def84294c1fd6c133e4e9, type: 2}
+  card: {fileID: 11400000, guid: 1efb931489e48d54382b4858bb72c825, type: 2}
   name: 
   race: 0
   Class: 0
@@ -126,3 +127,21 @@ MonoBehaviour:
   critChance: 0
   critNum: 0
   Model: {fileID: 0}
+--- !u!114 &-3263418075147034683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291694222842207153}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

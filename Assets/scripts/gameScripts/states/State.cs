@@ -15,7 +15,11 @@ public abstract class State
     {
         yield break;
     }
-    public virtual IEnumerator chooseCharacter()
+    public virtual IEnumerator unitStatement()
+    {
+        yield break;
+    }
+    public virtual IEnumerator chooseCharacter(GameObject character)
     {
         yield break;
     }

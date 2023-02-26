@@ -12,7 +12,7 @@ public class EnemyTurn : State
         /*Логика при старте*/
         yield break;
     }
-    public override IEnumerator chooseCharacter()
+    public override IEnumerator chooseCharacter(GameObject character)
     {
         /*Логика при выборе перса*/
         yield break;
