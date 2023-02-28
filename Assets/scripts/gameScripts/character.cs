@@ -26,7 +26,7 @@ public class character : MonoBehaviour
     public int index;
     public bool isChosen=false;
     private KeyCode[] keyCodes = new KeyCode[5] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5 };
-    void Start()
+    void Awake()
     {
         name = card.name;
         race = card.race;
@@ -55,6 +55,7 @@ public class character : MonoBehaviour
     }
     public bool Damage(int amount)
     {
+        GameObject.Find("battleSystem").GetComponent<BattleSystem>().charCardsUI[index].transform.GetChild(4).GetComponent<healthBar>().SetHealth(amount);
         health = System.Math.Max(0, health - amount);
         return health == 0;
     }

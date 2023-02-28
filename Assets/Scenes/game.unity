@@ -7504,6 +7504,7 @@ MonoBehaviour:
   width: 7
   height: 11
   cellPrefab: {fileID: 2402688601813834047, guid: 14e7d9548ab7f8d448b8e71c6af3f226, type: 3}
+  mountainPrefab: {fileID: 7546595294957032122, guid: 23357e63794fcdc498d0a6b1dca4ec76, type: 3}
 --- !u!1 &1460870534
 GameObject:
   m_ObjectHideFlags: 0

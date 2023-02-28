@@ -27,11 +27,7 @@ public class cardCharHolde : MonoBehaviour
                 battleSystem.charCardsUI[i].GetComponent<Button>().interactable = false;
                 battleSystem.charCardsUI[i].GetComponent<Button>().enabled = false;
             }
-            
-        }
-        else
-        {
-
+            this.GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
         }
     }
 }

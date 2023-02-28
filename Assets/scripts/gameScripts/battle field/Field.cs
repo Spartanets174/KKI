@@ -7,6 +7,7 @@ public class Field : MonoBehaviour
     //Скрипт для создания игрового поля
     [SerializeField] private int width, height;
     [SerializeField] private Cell cellPrefab;
+    [SerializeField] private GameObject mountainPrefab;
     private Dictionary<Vector2, Cell > Cells;
     public Cell[,] CellsOfFieled = new Cell[7, 11];
     private void Start()
@@ -24,7 +25,12 @@ public class Field : MonoBehaviour
                 Cell spawnedTile = Instantiate(cellPrefab, Vector3.zero,Quaternion.identity,transform);
                 spawnedTile.name = $"Cell {i} {j}";
                 spawnedTile.transform.localPosition = new Vector3(j * -0.27f,0, i * -0.27f);
-                spawnedTile.Enabled = true; 
+                spawnedTile.Enabled = true;
+                if ((j==4 || j==6)&&i%2!=0)
+                {
+                    GameObject Mountain = Instantiate(mountainPrefab, Vector3.zero, Quaternion.identity, spawnedTile.transform);
+                    Mountain.transform.localPosition = new Vector3(0, 0.5f, 0);
+                }
                 //Ессли чётная, то один цвет, нечетная - другой
                 if ((i + j) % 2 == 1)
                 {

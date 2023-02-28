@@ -34,25 +34,16 @@ public class cardFilter : MonoBehaviour
     * по которым и происходит фильтрация list c картами*/
     public void cardFiltration()
     {
+        cards = playerManager1.allUserCharCards;
         //Если ничего не выбрано
         if (cardRace == "" && cardClass == "")
         {
             if (cardSpawner.isShop)
             {
-                cards.Clear();
-                for (int i = 0; i < playerManager1.allCharCards.Count; i++)
-                {
-                    cards.Add(playerManager1.allCharCards[i]);
-                }
                 cardSpawner.cardSpawn(cards);
             }
             else
             {
-                cards.Clear();
-                for (int i = 0; i < playerManager1.allUserCharCards.Count; i++)
-                {
-                    cards.Add(playerManager1.allUserCharCards[i]);
-                }
                 cardSpawner.cardSpawn(cards);
             }
         }

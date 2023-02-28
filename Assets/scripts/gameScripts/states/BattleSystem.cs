@@ -57,10 +57,6 @@ public class BattleSystem : StateMachine
         }
         //Нужно для расстановки юнитов
         //Когда все 5 юнитов расставлены, то стадия расстановки (isUnitPlacement) отключается и вклоючаются все ui карточки
-        if (charCards.Count == 5)
-        {
-            isUnitPlacement = false;
-        }
     }
     public void onUnitStatementButton()
     {
@@ -102,17 +98,44 @@ public class BattleSystem : StateMachine
     {
         StartCoroutine(State.useItem());
     }
+
+    //Функция для проверки клеток на крестообразность
     public bool isCell(float cellCoord, float charCoord, int charFeature)
     {
        
         if (Math.Floor(Math.Abs(charCoord - cellCoord))<= charFeature)
         {
-            Debug.Log(Math.Floor(Math.Abs(charCoord - cellCoord) / 0.27f));
             return true;
         }
         else
         {           
             return false;
+        }
+    }
+    //Функция для включения и выключения нужных клеток
+    public void isCellEven(bool even, bool isNormal, Cell cell)
+    {
+        if (isNormal)
+        {
+            if (even)
+            {
+                cell.GetComponent<MeshRenderer>().material.color = this.field.CellsOfFieled[0, 0].baseColor.color;
+            }
+            else
+            {
+                cell.GetComponent<MeshRenderer>().material.color = this.field.CellsOfFieled[0, 0].offsetColor.color;
+            }
+        }
+        else
+        {
+            if (even)
+            {
+                cell.GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0);
+            }
+            else
+            {
+                cell.GetComponent<MeshRenderer>().material.color = new Color(0, 0.5f, 0);
+            }
         }
     }
 }
