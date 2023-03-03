@@ -21,13 +21,13 @@ public class PlayerManager1:MonoBehaviour
         this.deckUserCharCards = playerData.deckUserCharCards;
         this.deckUserSupportCards = playerData.deckUserSupportCards;
         this.money = playerData.money;
-        /* playerData.allCharCards = this.allCharCards;
-         playerData.allSupportCards = this.allSupportCards;
-         playerData.allUserCharCards = this.allUserCharCards;
-         playerData.allUserSupportCards = this.allUserSupportCards;
-         playerData.deckUserCharCards = this.deckUserCharCards;
-         playerData.deckUserSupportCards = this.deckUserSupportCards;
-         playerData.money = this.money;*/
+        /*playerData.allCharCards = this.allCharCards;
+        playerData.allSupportCards = this.allSupportCards;
+        playerData.allUserCharCards = this.allUserCharCards;
+        playerData.allUserSupportCards = this.allUserSupportCards;
+        playerData.deckUserCharCards = this.deckUserCharCards;
+        playerData.deckUserSupportCards = this.deckUserSupportCards;
+        playerData.money = this.money;*/
     }
     private void Update()
     {

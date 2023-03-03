@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class cardFilter : MonoBehaviour
 {
@@ -34,18 +35,19 @@ public class cardFilter : MonoBehaviour
     * по которым и происходит фильтрация list c картами*/
     public void cardFiltration()
     {
-        cards = playerManager1.allUserCharCards;
+        if (cardSpawner.isShop)
+        {
+            cards = playerManager1.allCharCards;
+        }
+        else
+        {
+            cards = playerManager1.allUserCharCards;
+        }
+       
         //Если ничего не выбрано
         if (cardRace == "" && cardClass == "")
         {
-            if (cardSpawner.isShop)
-            {
-                cardSpawner.cardSpawn(cards);
-            }
-            else
-            {
-                cardSpawner.cardSpawn(cards);
-            }
+            cardSpawner.cardSpawn(cards);
         }
         //Если выбран только класс
         if (cardRace == "" && cardClass != "")
@@ -69,28 +71,17 @@ public class cardFilter : MonoBehaviour
     //Та же самая функция, что и выше, но для карт помощи (свои нюансы есть)
     public void cardSupportFiltration()
     {
-        if (cardSupportType == "")
+        if (cardSpawner.isShop)
         {
-            if (cardSpawner.isShop)
-            {
-                supportCards.Clear();
-                for (int i = 0; i < playerManager1.allSupportCards.Count; i++)
-                {
-                    supportCards.Add(playerManager1.allSupportCards[i]);
-                }
-                cardSpawner.cardSupportSpawn(supportCards);
-            }
-            else
-            {
-                supportCards.Clear();
-                for (int i = 0; i < playerManager1.allUserSupportCards.Count; i++)
-                {
-                    supportCards.Add(playerManager1.allUserSupportCards[i]);
-                }
-                cardSpawner.cardSupportSpawn(supportCards);
-
-            }
-            
+            supportCards = playerManager1.allSupportCards;
+        }
+        else
+        {           
+            supportCards = playerManager1.allUserSupportCards;
+        }
+        if (cardSupportType == "")
+        {   
+            cardSpawner.cardSupportSpawn(supportCards);
         }
         if (cardSupportType != "")
         {

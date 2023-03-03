@@ -31,12 +31,28 @@ public class removeFromDeck : MonoBehaviour
             //Обнуление отображаемых элементов о карте
             addToDeck.charCardsWindow[i].transform.GetChild(1).GetComponent<Image>().sprite = null;
             addToDeck.charCardsWindow[i].transform.GetChild(2).GetComponent<Text>().text = "";
+            addToDeck.charCardsWindow[i].transform.GetChild(3).GetComponent<Image>().sprite = null;
         }
         //Переотбражение отображаемых элементов о карте относительно пред. изменений
         for (int i = 0; i < playerManager1.deckUserCharCards.Count; i++)
         {
             addToDeck.charCardsWindow[i].transform.GetChild(1).GetComponent<Image>().sprite = playerManager1.deckUserCharCards[i].image;
             addToDeck.charCardsWindow[i].transform.GetChild(2).GetComponent<Text>().text = playerManager1.deckUserCharCards[i].name;
+            switch (playerManager1.deckUserCharCards[i].Class)
+            {
+                case enums.Classes.Паладин:
+                    addToDeck.charCardsWindow[i].transform.GetChild(3).GetComponent<Image>().sprite = addToDeck.classesSprite[0];
+                    break;
+                case enums.Classes.Лучник:
+                    addToDeck.charCardsWindow[i].transform.GetChild(3).GetComponent<Image>().sprite = addToDeck.classesSprite[1];
+                    break;
+                case enums.Classes.Маг:
+                    addToDeck.charCardsWindow[i].transform.GetChild(3).GetComponent<Image>().sprite = addToDeck.classesSprite[2];
+                    break;
+                case enums.Classes.Кавалерия:
+                    addToDeck.charCardsWindow[i].transform.GetChild(3).GetComponent<Image>().sprite = addToDeck.classesSprite[3];
+                    break;
+            }
         }
     }
     //Скрипт для удаления карт поддержки
@@ -61,6 +77,7 @@ public class removeFromDeck : MonoBehaviour
         {
             addToDeck.supportCardsWindow[i].transform.GetChild(1).GetComponent<Image>().sprite = playerManager1.deckUserSupportCards[i].image;
             addToDeck.supportCardsWindow[i].transform.GetChild(2).GetComponent<Text>().text = playerManager1.deckUserSupportCards[i].name;
+            
         }
     }
 }

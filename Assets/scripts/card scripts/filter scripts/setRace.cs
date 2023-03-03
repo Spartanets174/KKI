@@ -69,7 +69,16 @@ public class setRace : MonoBehaviour
             }
             else
             {
-                CardFilter.cardRace = tempDropdown.options[tempDropdown.value].text;
+                string rase = tempDropdown.options[tempDropdown.value].text;
+                if (rase == "Тёмные эльфы")
+                {
+                    rase = "ТёмныеЭльфы";
+                }
+                if (rase == "Магические существа")
+                {
+                    rase = "МагическиеСущества";
+                }
+                CardFilter.cardRace = rase;
             }          
             for (int i = 0; i < CardFilter.supportButtons.Count; i++)
             {

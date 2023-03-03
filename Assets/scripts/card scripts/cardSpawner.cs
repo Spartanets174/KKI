@@ -41,7 +41,6 @@ public class cardSpawner : MonoBehaviour
             }
             Money.text = $"У вас денег: {playerManager1.money}";
         }
-        cardFilter.cards.Clear();
         for (int i = 0; i < cardObjects.Count; i++)
         {
             cardPrefab.GetComponent<CardDisplay>().card = cardObjects[i];

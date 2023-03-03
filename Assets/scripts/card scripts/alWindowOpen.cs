@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,8 +13,7 @@ public class alWindowOpen : MonoBehaviour
     
     void OnMouseUp()
     {
-        //Проверка на то, является ли элементо, к которому подключен скрипт магазином
-        //Нужно, т.к. у магазина и книги карт разные элементы, которые надо отображать
+       
         cardSpawner cardSpawner = GameObject.Find("cardSpawner").GetComponent<cardSpawner>();
         for (int i = 0; i < cardSpawner.listOfCardObjects.Count; i++)
         {
@@ -24,6 +23,8 @@ public class alWindowOpen : MonoBehaviour
         {
             cardSpawner.listOfCardSupportObjects[i].GetComponent<alWindowOpen>().isOpen = false;
         }
+        //Проверка на то, является ли элемент, к которому подключен скрипт магазином
+        //Нужно, т.к. у магазина и книги карт разные элементы, которые надо отображать
         if (cardSpawner.isShop)
         {
             isOpen = true;
@@ -37,7 +38,6 @@ public class alWindowOpen : MonoBehaviour
                     $"Усиливающая способность: {cardDisplay.card.buffAbility}" + "\n" + "\n" +
                     $"Пассивная способность: {cardDisplay.card.passiveAbility}";
                 GameObject.Find("price text").GetComponent<Text>().text = $"Цена: {cardDisplay.card.Price}$";
-
                 /* отключение всех карточек, чтобы по ним нельзя было клинкуть сквозь модальное окно*/
                 for (int i = 0; i < GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardObjects.Count; i++)
                 {
@@ -46,6 +46,7 @@ public class alWindowOpen : MonoBehaviour
             }
             if (this.GetComponent<cardSupportDisplay>() != null)
             {
+                
                 GameObject.Find("blur modal").GetComponent<setCoordTo0>().setCoord0();
                 GameObject.Find("buy card").GetComponent<setCoordTo0>().setCoord0();
                 GameObject.Find("buy card").transform.GetChild(1).GetComponent<Image>().sprite = CardSupportDisplay.card.image;
@@ -76,6 +77,7 @@ public class alWindowOpen : MonoBehaviour
                     $"Защитная способность: {cardDisplay.card.defenceAbility}" + "\n" + "\n" +
                     $"Усиливающая способность: {cardDisplay.card.buffAbility}" + "\n" + "\n" +
                     $"Пассивная способность: {cardDisplay.card.passiveAbility}";
+                GameObject.Find("max card text").GetComponent<Text>().text = $"";
             }
             if (this.GetComponent<cardSupportDisplay>() != null)
             {

@@ -33,7 +33,10 @@ public class Cell : MonoBehaviour
     {
         if (Enabled)
         {
-            hightLight.SetActive(true);
+            if (transform.childCount==1)
+            {
+                hightLight.SetActive(true);
+            }           
         }
        
     }
