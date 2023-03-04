@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class BattleSystem : StateMachine
 {
@@ -19,6 +22,10 @@ public class BattleSystem : StateMachine
     public GameObject charPrefab;
     public bool isStart;
     public bool isUnitPlacement = true;
+
+    //Вражиk
+    public List<GameObject> EnemyCharCards;
+    public List<GameObject> EnemySupportCards;
 
     private void Start()
     {
@@ -46,6 +53,11 @@ public class BattleSystem : StateMachine
                 supportCardsUI[i].transform.GetChild(3).GetComponent<Image>().color = new Color(126, 0, 255);
             }
         }
+
+
+
+        CreateEnemy();
+        InstantiateEnemy();
         SetState(new Begin(this));
     }
     private void Update()
@@ -56,7 +68,7 @@ public class BattleSystem : StateMachine
             charCardsUI[i].transform.GetChild(4).GetComponent<Slider>().value = (float)playerManager.deckUserCharCards[i].health;
         }
         //Нужно для расстановки юнитов
-        //Когда все 5 юнитов расставлены, то стадия расстановки (isUnitPlacement) отключается и вклоючаются все ui карточки
+        //Когда все 5 юнитов расставлены, то стадия расстановки (isUnitPlacement) отключается и включаются все ui карточки
     }
     public void onUnitStatementButton()
     {
@@ -136,6 +148,87 @@ public class BattleSystem : StateMachine
             {
                 cell.GetComponent<MeshRenderer>().material.color = new Color(0, 0.5f, 0);
             }
+        }
+    }
+
+    public void CreateEnemy()
+    {
+        //for (int i = EnemyCharCards.Count; i < 5; i++)
+        //{
+        //    bool isInDeck = false;
+        //    GameObject prefab = charPrefab;
+        //    //Запись нужных данных о карточке в префаб
+        //    prefab.GetComponent<character>().card = playerManager.allCharCards[UnityEngine.Random.Range(0, playerManager.allCharCards.Count)];
+        //    for (int j = 0; j < EnemyCharCards.Count; j++)
+        //    {
+        //        if (prefab.GetComponent<character>().card.name == EnemyCharCards[j].GetComponent<character>().card.name)
+        //        {
+        //            isInDeck = true;
+        //            break;
+        //        }
+        //    }
+        //    if (isInDeck) { CreateEnemy(); }
+        //    else { InstantiateEnemy(prefab, i); }
+        //}
+        while (EnemyCharCards.Count <= 5)
+        {
+            Card EnemyMan = GetRandomCard();
+            if (!isCardInDeck(EnemyMan))
+            {
+                GameObject prefab = charPrefab;
+                prefab.GetComponent<character>().card = EnemyMan;
+                EnemyCharCards.Add(prefab);
+                EnemyCharCards[EnemyCharCards.Count - 1].GetComponent<character>().index = EnemyCharCards.Count - 1;
+                EnemyCharCards[EnemyCharCards.Count - 1].GetComponent<character>().isEnemy = true;
+            }
+
+        }
+
+    }
+
+    private Card GetRandomCard()
+    {
+        return playerManager.allCharCards[UnityEngine.Random.Range(0, playerManager.allCharCards.Count)];
+    }
+
+    private bool isCardInDeck(Card enemy)
+    {
+        for (int j = 0; j < EnemyCharCards.Count; j++)
+        {
+            if (enemy.name == EnemyCharCards[j].GetComponent<character>().card.name)
+            {
+                return true;
+            } 
+        }
+        return false;
+    }
+
+    public void InstantiateEnemy()
+    {
+        int count = 0;
+
+        while (count < 5)
+        {
+            GameObject Cell = field.CellsOfFieled[UnityEngine.Random.Range(0, field.CellsOfFieled.GetLength(0)), UnityEngine.Random.Range(0, 2)].gameObject;
+            if (!isEnemyOnCell(Cell))
+            {
+                GameObject prefab = EnemyCharCards[count];
+                prefab = GameObject.Instantiate(EnemyCharCards[count], Vector3.zero, Quaternion.identity, Cell.transform);
+                prefab.transform.localPosition = new Vector3(0, 1, 0);
+                count++;   
+            }
+        }
+    }
+
+    private bool isEnemyOnCell(GameObject cell)
+    {
+        if (cell.transform.childCount != 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

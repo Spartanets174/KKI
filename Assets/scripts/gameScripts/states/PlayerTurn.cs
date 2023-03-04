@@ -77,11 +77,7 @@ public class PlayerTurn : State
                         for (int k = j+1; k < BattleSystem.field.CellsOfFieled.GetLength(1); k++)
                         {
                             //Если на какой-то клетке есть др. объект (юнит или препятсвие), то дальше этой клетки в эту сторону ходить нельзя
-                            if (BattleSystem.field.CellsOfFieled[i,k].transform.childCount != 1)
-                            {
-                                break;
-                            }
-                            else
+                            if (BattleSystem.field.CellsOfFieled[i,k].transform.childCount == 1)
                             {
                                 //Если координаты клетки мненьше скорости персонажа
                                 if (BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().speed))
@@ -91,59 +87,82 @@ public class PlayerTurn : State
                                     BattleSystem.charCardsUI[character.GetComponent<character>().index].GetComponent<Image>().color = new Color(1, 1, 1, 1);
                                     //Окрас клетки в зависимости от чётности/нечетности
                                     BattleSystem.isCellEven((i + k) % 2 == 0, false, BattleSystem.field.CellsOfFieled[i, k]);
-                                }                               
+                                }
+                            }
+                            else
+                            {
+                                if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                {
+                                    BattleSystem.field.CellsOfFieled[i, k].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                }
+                                break;
+                                                              
                             }
                             
                         }
                         //право
                         for (int k = i+1; k < BattleSystem.field.CellsOfFieled.GetLength(0); k++)
                         {
-                            if (BattleSystem.field.CellsOfFieled[k, j].transform.childCount != 1)
-                            {
-                                break;
-                            }
-                            else
-                            {
-                                if (BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().speed))
-                                {
-                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
-                                    BattleSystem.charCardsUI[character.GetComponent<character>().index].GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                                    BattleSystem.isCellEven((k + j) % 2 == 0,false, BattleSystem.field.CellsOfFieled[k, j]);
-                                }                               
-                            }
-                        }
-                        //верх
-                        for (int k = j-1; k >= 0; k--)
-                        {
-                            if (BattleSystem.field.CellsOfFieled[i,k].transform.childCount != 1)
-                            {
-                                break;
-                            }
-                            else
-                            {
-                                if (BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().speed))
-                                {
-                                    BattleSystem.field.CellsOfFieled[i, k].GetComponent<Cell>().Enabled = true;
-                                    BattleSystem.charCardsUI[character.GetComponent<character>().index].GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                                    BattleSystem.isCellEven((i + k) % 2 == 0, false, BattleSystem.field.CellsOfFieled[i, k]);
-                                }                                
-                            }
-                        }
-                        //лево
-                        for (int k = i-1; k >= 0; k--)
-                        {
-                            if (BattleSystem.field.CellsOfFieled[k, j].transform.childCount != 1)
-                            {
-                                break;
-                            }
-                            else
+                            if (BattleSystem.field.CellsOfFieled[k, j].transform.childCount == 1)
                             {
                                 if (BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().speed))
                                 {
                                     BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
                                     BattleSystem.charCardsUI[character.GetComponent<character>().index].GetComponent<Image>().color = new Color(1, 1, 1, 1);
                                     BattleSystem.isCellEven((k + j) % 2 == 0, false, BattleSystem.field.CellsOfFieled[k, j]);
-                                }                                
+                                }
+                            }
+                            else
+                            {
+                                if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                {
+                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                }
+                                break;
+                                                               
+                            }
+                        }
+                        //верх
+                        for (int k = j-1; k >= 0; k--)
+                        {
+                            if (BattleSystem.field.CellsOfFieled[i,k].transform.childCount == 1)
+                            {
+                                if (BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().speed))
+                                {
+                                    BattleSystem.field.CellsOfFieled[i, k].GetComponent<Cell>().Enabled = true;
+                                    BattleSystem.charCardsUI[character.GetComponent<character>().index].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                                    BattleSystem.isCellEven((i + k) % 2 == 0, false, BattleSystem.field.CellsOfFieled[i, k]);
+                                } 
+                            }
+                            else
+                            {
+                                if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                {
+                                    BattleSystem.field.CellsOfFieled[i, k].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                }
+                                break;
+                                                               
+                            }
+                        }
+                        //лево
+                        for (int k = i-1; k >= 0; k--)
+                        {
+                            if (BattleSystem.field.CellsOfFieled[k, j].transform.childCount == 1)
+                            {
+                                if (BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().speed))
+                                {
+                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
+                                    BattleSystem.charCardsUI[character.GetComponent<character>().index].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                                    BattleSystem.isCellEven((k + j) % 2 == 0, false, BattleSystem.field.CellsOfFieled[k, j]);
+                                }     
+                            }
+                            else
+                            {
+                                if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                {
+                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                }
+                                break;                           
                             }
                         }
                     }            

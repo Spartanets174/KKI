@@ -25,6 +25,7 @@ public class character : MonoBehaviour
     public GameObject Model;
     public int index;
     public bool isChosen=false;
+    public bool isEnemy = false;
     private KeyCode[] keyCodes = new KeyCode[5] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5 };
     void Awake()
     {
@@ -44,14 +45,18 @@ public class character : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(keyCodes[index]))
+        if (Input.GetKey(keyCodes[index]) && !isEnemy)
         {
             GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnChooseCharacterButton(this.gameObject);
         }
     }
     private void OnMouseDown()
     {
-        GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnChooseCharacterButton(this.gameObject);
+        if (!isEnemy)
+        {
+            GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnChooseCharacterButton(this.gameObject);
+        }
+        
     }
     public bool Damage(int amount)
     {

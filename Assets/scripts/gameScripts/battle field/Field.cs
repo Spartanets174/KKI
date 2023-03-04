@@ -10,7 +10,7 @@ public class Field : MonoBehaviour
     [SerializeField] private GameObject mountainPrefab;
     private Dictionary<Vector2, Cell > Cells;
     public Cell[,] CellsOfFieled = new Cell[7, 11];
-    private void Start()
+    private void Awake()
     {
         GenerateField();
     }
