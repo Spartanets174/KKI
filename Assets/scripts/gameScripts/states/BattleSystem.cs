@@ -53,11 +53,6 @@ public class BattleSystem : StateMachine
                 supportCardsUI[i].transform.GetChild(3).GetComponent<Image>().color = new Color(126, 0, 255);
             }
         }
-
-
-
-        CreateEnemy();
-        InstantiateEnemy();
         SetState(new Begin(this));
     }
     private void Update()
@@ -115,7 +110,7 @@ public class BattleSystem : StateMachine
     public bool isCell(float cellCoord, float charCoord, int charFeature)
     {
        
-        if (Math.Floor(Math.Abs(charCoord - cellCoord))<= charFeature)
+        if (Math.Floor(Mathf.Abs(charCoord - cellCoord))<= charFeature)
         {
             return true;
         }
@@ -153,31 +148,15 @@ public class BattleSystem : StateMachine
 
     public void CreateEnemy()
     {
-        //for (int i = EnemyCharCards.Count; i < 5; i++)
-        //{
-        //    bool isInDeck = false;
-        //    GameObject prefab = charPrefab;
-        //    //Запись нужных данных о карточке в префаб
-        //    prefab.GetComponent<character>().card = playerManager.allCharCards[UnityEngine.Random.Range(0, playerManager.allCharCards.Count)];
-        //    for (int j = 0; j < EnemyCharCards.Count; j++)
-        //    {
-        //        if (prefab.GetComponent<character>().card.name == EnemyCharCards[j].GetComponent<character>().card.name)
-        //        {
-        //            isInDeck = true;
-        //            break;
-        //        }
-        //    }
-        //    if (isInDeck) { CreateEnemy(); }
-        //    else { InstantiateEnemy(prefab, i); }
-        //}
         while (EnemyCharCards.Count <= 5)
         {
-            Card EnemyMan = GetRandomCard();
+            Card EnemyMan = playerManager.allCharCards[UnityEngine.Random.Range(0, playerManager.allCharCards.Count)];
             if (!isCardInDeck(EnemyMan))
             {
                 GameObject prefab = charPrefab;
                 prefab.GetComponent<character>().card = EnemyMan;
                 EnemyCharCards.Add(prefab);
+                
                 EnemyCharCards[EnemyCharCards.Count - 1].GetComponent<character>().index = EnemyCharCards.Count - 1;
                 EnemyCharCards[EnemyCharCards.Count - 1].GetComponent<character>().isEnemy = true;
             }
@@ -185,12 +164,6 @@ public class BattleSystem : StateMachine
         }
 
     }
-
-    private Card GetRandomCard()
-    {
-        return playerManager.allCharCards[UnityEngine.Random.Range(0, playerManager.allCharCards.Count)];
-    }
-
     private bool isCardInDeck(Card enemy)
     {
         for (int j = 0; j < EnemyCharCards.Count; j++)
@@ -212,9 +185,11 @@ public class BattleSystem : StateMachine
             GameObject Cell = field.CellsOfFieled[UnityEngine.Random.Range(0, field.CellsOfFieled.GetLength(0)), UnityEngine.Random.Range(0, 2)].gameObject;
             if (!isEnemyOnCell(Cell))
             {
+                EnemyCharCards[count].GetComponent<character>().index = count;
                 GameObject prefab = EnemyCharCards[count];
                 prefab = GameObject.Instantiate(EnemyCharCards[count], Vector3.zero, Quaternion.identity, Cell.transform);
                 prefab.transform.localPosition = new Vector3(0, 1, 0);
+                Debug.Log(EnemyCharCards[count].GetComponent<character>().index);
                 count++;   
             }
         }

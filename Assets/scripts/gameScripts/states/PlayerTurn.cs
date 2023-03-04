@@ -16,28 +16,6 @@ public class PlayerTurn : State
         BattleSystem.pointsOfActionAndСube.text = "20";
         yield break;
     }
-    //При расстановек персонажа
-    public override IEnumerator unitStatement()
-    {
-        //Цикл перебора клеток, на ктороые можно установить юнита в начале боя
-        for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
-        {
-            for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
-            {
-                if (j == BattleSystem.field.CellsOfFieled.GetLength(1) - 1 || j == BattleSystem.field.CellsOfFieled.GetLength(1) - 2)
-                {
-                    //Расцветка в зависимости от четности/нечетности
-                    BattleSystem.isCellEven((i+j)%2==0, false, BattleSystem.field.CellsOfFieled[i, j]);
-                }
-                //Отключение клеток, на которые нельзя ходить
-                else
-                {
-                    BattleSystem.field.CellsOfFieled[i, j].GetComponent<Cell>().Enabled = false;
-                }
-            }           
-        }
-        yield break;
-    }
     //При выборе персонажа
     public override IEnumerator chooseCharacter(GameObject character)
     {
@@ -94,6 +72,7 @@ public class PlayerTurn : State
                                 if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
                                 {
                                     BattleSystem.field.CellsOfFieled[i, k].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
                                 }
                                 break;
                                                               
@@ -107,6 +86,7 @@ public class PlayerTurn : State
                             {
                                 if (BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().speed))
                                 {
+                                    
                                     BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
                                     BattleSystem.charCardsUI[character.GetComponent<character>().index].GetComponent<Image>().color = new Color(1, 1, 1, 1);
                                     BattleSystem.isCellEven((k + j) % 2 == 0, false, BattleSystem.field.CellsOfFieled[k, j]);
@@ -114,9 +94,10 @@ public class PlayerTurn : State
                             }
                             else
                             {
-                                if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().range))
                                 {
                                     BattleSystem.field.CellsOfFieled[k, j].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
                                 }
                                 break;
                                                                
@@ -139,6 +120,7 @@ public class PlayerTurn : State
                                 if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
                                 {
                                     BattleSystem.field.CellsOfFieled[i, k].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
                                 }
                                 break;
                                                                
@@ -158,9 +140,10 @@ public class PlayerTurn : State
                             }
                             else
                             {
-                                if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().range))
                                 {
                                     BattleSystem.field.CellsOfFieled[k, j].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
+                                    BattleSystem.field.CellsOfFieled[k, j].GetComponent<Cell>().Enabled = true;
                                 }
                                 break;                           
                             }
@@ -176,44 +159,7 @@ public class PlayerTurn : State
         /*Логика при движении*/
         //Проверка на то, можно ли поставить юнита на клетку
         if (cell.transform.childCount == 1)
-        {
-            //Проверка идёт ли сейчас расстановка юнитов
-            if (BattleSystem.isUnitPlacement)
-            {         
-                //Цикл перебора ui карточек для спавна нужной карточки при выборе
-                for (int i = 0; i < BattleSystem.charCardsUI.Count; i++)
-                {
-                    //Проверка на то, какая карточка выбрана
-                    if (BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().isSelected)
-                    {  
-                        //Перевыбор префаба
-                        GameObject prefab = BattleSystem.charPrefab;
-                        //Запись нужных данных о карточке в префаб
-                        prefab.GetComponent<character>().card = BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().card;
-                        //Создание на сцене префаба и расстановка на нужную позицию
-                        prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, cell.transform);
-                        prefab.transform.localPosition = new Vector3(0, 1, 0);
-                        BattleSystem.charCards.Add(prefab);
-                        BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().index = i;         
-                        BattleSystem.charCardsUI[i].transform.GetChild(4).GetComponent<healthBar>().SetMaxHealth((float)BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().health);
-                        //Смена полей у ui карточек
-                        BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().isSelected = false;
-                        BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().wasChosen = true;
-                    }
-                    //Если карта не была раньше выбрана, то происходит включение оставшихся ui карт
-                    if (!BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().wasChosen)
-                    {
-                        BattleSystem.charCardsUI[i].GetComponent<Button>().interactable = true;
-                        BattleSystem.charCardsUI[i].GetComponent<Button>().enabled = true;
-                    }                   
-                }                
-                if (BattleSystem.charCards.Count == 5)
-                {
-                    BattleSystem.isUnitPlacement = false;
-                }
-            }
-            else
-            {
+        {           
                 //Перебор всех персонажей в колоде
                 for (int i = 0; i < BattleSystem.charCards.Count; i++)
                 {
@@ -229,7 +175,7 @@ public class PlayerTurn : State
                     }
                     BattleSystem.charCardsUI[i].GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
                 }
-            }          
+        }          
             for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
             {
                 for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
@@ -238,8 +184,7 @@ public class PlayerTurn : State
                     BattleSystem.field.CellsOfFieled[i, j].GetComponent<Cell>().Enabled = true;
                     BattleSystem.isCellEven((i + j) % 2 == 0, true, BattleSystem.field.CellsOfFieled[i, j]);
                 }
-            }
-        }       
+            }     
         yield break;
     }
     public override IEnumerator Attack()
