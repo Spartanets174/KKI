@@ -24,7 +24,18 @@ public class Cell : MonoBehaviour
             //Получение и вывод координат клетки
             Vector2 pos = new Vector2(transform.position.x, transform.position.z);
             GameObject.Find("field").GetComponent<Field>().GetCellAtPosition(pos);
-            //Передача данных о текущей клетки в battleSystem
+            //Передача данных о текущей клетки в battleSystem            
+            if (this.transform.childCount!=1)
+            {
+                if (this.transform.GetChild(1).GetComponent<character>().isEnemy)
+                {
+                    GameObject.Find("battleSystem").GetComponent<BattleSystem>().cahngeCardWindow(this.transform.GetChild(1).gameObject, true);
+                }
+                else
+                {
+                    GameObject.Find("battleSystem").GetComponent<BattleSystem>().cahngeCardWindow(this.transform.GetChild(1).gameObject, false);
+                }
+            }
             GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnMoveButton(this.gameObject);
         }
         

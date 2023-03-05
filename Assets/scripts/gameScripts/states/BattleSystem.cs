@@ -10,13 +10,29 @@ using UnityEngine.UI;
 public class BattleSystem : StateMachine
 {
     /*Сюда вставлять переменные для своего, врага, интерфейса и т.д.*/
-    public Text captionOfAction;
+    //Интерфейс
     public Text pointsOfActionAndСube;
     public Text gameLog;
+    //Окно персонажа
+    public GameObject healthBar;
+    public Text physAttack;
+    public Text magAttack;
+    public Text physDefence;
+    public Text magDefence;
+
+    public Image cardImage;
+    public Image Class;
+    public Text rase;
+    public List<Sprite> classesSprite;
+    public List<Text> racesSprite;
+
+    //Для игрока
     public List<GameObject> charCardsUI;
     public List<GameObject> supportCardsUI;
     public List<GameObject> charCards;
     public List<GameObject> supportCards;
+
+    //Игровые
     public PlayerManager1 playerManager;
     public Field field;
     public GameObject charPrefab;
@@ -24,8 +40,14 @@ public class BattleSystem : StateMachine
     public bool isUnitPlacement = true;
 
     //Вражиk
-    public List<GameObject> EnemyCharCards;
+    //Двигающиеся враги
+    public List<Card> EnemyCharCards;
+    public List<GameObject> EnemyCharObjects;
     public List<GameObject> EnemySupportCards;
+
+    //Статичные враги
+    public List<Card> EnemyStaticCharCards;
+    public List<GameObject> EnemyStaticCharObjects;
 
     private void Start()
     {
@@ -78,9 +100,9 @@ public class BattleSystem : StateMachine
         StartCoroutine(State.Move(cell));
     }
 
-    public void OnAttackButton()
+    public void OnAttackButton(character target)
     {
-        StartCoroutine(State.Attack());
+        StartCoroutine(State.Attack(target));
     }
 
     public void OnAttackAbilityButton()
@@ -145,30 +167,26 @@ public class BattleSystem : StateMachine
             }
         }
     }
-
+    //Создание руки врага
     public void CreateEnemy()
     {
-        while (EnemyCharCards.Count <= 5)
+        while (EnemyCharCards.Count < 5)
         {
             Card EnemyMan = playerManager.allCharCards[UnityEngine.Random.Range(0, playerManager.allCharCards.Count)];
             if (!isCardInDeck(EnemyMan))
             {
-                GameObject prefab = charPrefab;
-                prefab.GetComponent<character>().card = EnemyMan;
-                EnemyCharCards.Add(prefab);
-                
-                EnemyCharCards[EnemyCharCards.Count - 1].GetComponent<character>().index = EnemyCharCards.Count - 1;
-                EnemyCharCards[EnemyCharCards.Count - 1].GetComponent<character>().isEnemy = true;
+                EnemyCharCards.Add(EnemyMan);
             }
 
         }
 
     }
+    //Есть ли уже карта в руке
     private bool isCardInDeck(Card enemy)
     {
         for (int j = 0; j < EnemyCharCards.Count; j++)
         {
-            if (enemy.name == EnemyCharCards[j].GetComponent<character>().card.name)
+            if (enemy.name == EnemyCharCards[j].name)
             {
                 return true;
             } 
@@ -179,22 +197,70 @@ public class BattleSystem : StateMachine
     public void InstantiateEnemy()
     {
         int count = 0;
-
+        //Спавн двигающихся врагов
         while (count < 5)
         {
             GameObject Cell = field.CellsOfFieled[UnityEngine.Random.Range(0, field.CellsOfFieled.GetLength(0)), UnityEngine.Random.Range(0, 2)].gameObject;
             if (!isEnemyOnCell(Cell))
-            {
-                EnemyCharCards[count].GetComponent<character>().index = count;
-                GameObject prefab = EnemyCharCards[count];
-                prefab = GameObject.Instantiate(EnemyCharCards[count], Vector3.zero, Quaternion.identity, Cell.transform);
+            {     
+                GameObject prefab = charPrefab;
+                prefab.GetComponent<character>().card = EnemyCharCards[count];
+                prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, Cell.transform);
                 prefab.transform.localPosition = new Vector3(0, 1, 0);
-                Debug.Log(EnemyCharCards[count].GetComponent<character>().index);
+                prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().red;
+                EnemyCharObjects.Add(prefab);
+                EnemyCharObjects[EnemyCharObjects.Count - 1].GetComponent<character>().index = EnemyCharObjects.Count - 1;
+                EnemyCharObjects[EnemyCharObjects.Count - 1].GetComponent<character>().isEnemy = true;
+                EnemyCharObjects[EnemyCharObjects.Count - 1].transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<healthBar>().SetMaxHealth((float)EnemyCharObjects[EnemyCharObjects.Count - 1].GetComponent<character>().health);
+                EnemyCharObjects[count].GetComponent<character>().index = count;
                 count++;   
             }
         }
+        //Спавн статических врагов
+        for (int i = 0; i < field.CellsOfFieled.GetLength(0); i++)
+        {
+            for (int j = 0; j < field.CellsOfFieled.GetLength(1); j++)
+            {
+                //Спавн ассасинов
+                if ((j == 4 || j == 6) && (i == 0||i==6))
+                {
+                    GameObject prefab = charPrefab;
+                    prefab.GetComponent<character>().card = EnemyStaticCharCards[0];
+                    prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, field.CellsOfFieled[i,j].transform);
+                    prefab.transform.localPosition = new Vector3(0, 1, 0);
+                    prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().assasin;
+                    EnemyStaticCharObjects.Add(prefab);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
+                }
+                //Спавн голиафов
+                if ((j == 4 || j == 6) && (i == 2 || i == 4))
+                {
+                    GameObject prefab = charPrefab;
+                    prefab.GetComponent<character>().card = EnemyStaticCharCards[1];
+                    prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, field.CellsOfFieled[i, j].transform);
+                    prefab.transform.localPosition = new Vector3(0, 1, 0);
+                    prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().goliaf;
+                    EnemyStaticCharObjects.Add(prefab);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
+                }
+                //Спавн элементалей
+                if ((j == 2 || j == 8) && i % 2 != 0)
+                {
+                    GameObject prefab = charPrefab;
+                    prefab.GetComponent<character>().card = EnemyStaticCharCards[2];
+                    prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, field.CellsOfFieled[i, j].transform);
+                    prefab.transform.localPosition = new Vector3(0, 1, 0);
+                    prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().elemental;
+                    EnemyStaticCharObjects.Add(prefab);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
+                }
+            }
+        }
     }
-
+    //Есть ли уже на клетке объект
     private bool isEnemyOnCell(GameObject cell)
     {
         if (cell.transform.childCount != 1)
@@ -205,5 +271,66 @@ public class BattleSystem : StateMachine
         {
             return false;
         }
+    }
+    public void cahngeCardWindow(GameObject character, bool isEnemy)
+    {
+        cardImage.transform.parent.gameObject.SetActive(true);
+       healthBar.GetComponent<healthBar>().SetMaxHealth((float)character.GetComponent<character>().card.health);
+        healthBar.GetComponent<healthBar>().SetHealth((float)character.GetComponent<character>().health);
+        physAttack.text = $"Физическая атака {character.GetComponent<character>().physAttack * 100}";
+        magAttack.text = $"Магическая атака {character.GetComponent<character>().magAttack * 100}";
+        physDefence.text = $"Физическая защита {character.GetComponent<character>().physDefence * 100}";
+        magDefence.text = $"Магическая атака {character.GetComponent<character>().magDefence * 100}";
+        cardImage.sprite = character.GetComponent<character>().card.image;
+        switch (character.GetComponent<character>().Class)
+        {
+            case enums.Classes.Паладин:
+                Class.sprite = classesSprite[0];
+                break;
+            case enums.Classes.Лучник:
+               Class.sprite = classesSprite[1];
+                break;
+            case enums.Classes.Маг:
+                Class.sprite = classesSprite[2];
+                break;
+            case enums.Classes.Кавалерия:
+                Class.sprite = classesSprite[3];
+                break;
+        }
+        switch (character.GetComponent<character>().race)
+        {
+            case enums.Races.Люди:
+                rase.text = "Л";
+                break;
+            case enums.Races.Гномы:
+                rase.text = "Г";
+                break;
+            case enums.Races.Эльфы:
+                rase.text = "Э";
+                break;
+            case enums.Races.ТёмныеЭльфы:
+                rase.text = "Т";
+                break;
+            case enums.Races.МагическиеСущества:
+                rase.text = "М";
+                break;
+        }
+        if (isEnemy)
+        {
+            cardImage.transform.parent.transform.parent.GetComponent<Image>().color = new Color(0.9921569f, 0.8740318f, 0.8666667f, 1);
+        }
+        else
+        {
+            cardImage.transform.parent.transform.parent.GetComponent<Image>().color = new Color(0.8707209f, 0.9921569f, 0.8666667f,1);
+        }
+        for (int i = 0; i < EnemyCharObjects.Count; i++)
+        {
+            EnemyCharObjects[i].GetComponent<Outline>().enabled =false;
+        }
+        for (int i = 0; i < EnemyStaticCharObjects.Count; i++)
+        {
+            EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
+        }
+        character.GetComponent<Outline>().enabled = true;
     }
 }

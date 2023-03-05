@@ -59,15 +59,18 @@ public class Begin : State
                     {
                         //Перевыбор префаба
                         GameObject prefab = BattleSystem.charPrefab;
+                        prefab.GetComponent<Outline>().enabled = false;
                         //Запись нужных данных о карточке в префаб
                         prefab.GetComponent<character>().card = BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().card;
                         //Создание на сцене префаба и расстановка на нужную позицию
                         prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, cell.transform);
                         prefab.transform.localPosition = new Vector3(0, 1, 0);
+                        prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().green;
                         BattleSystem.charCards.Add(prefab);
                         BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().index = i;
                         BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().isEnemy = false;
                         BattleSystem.charCardsUI[i].transform.GetChild(4).GetComponent<healthBar>().SetMaxHealth((float)BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().health);
+                        BattleSystem.charCards[BattleSystem.charCards.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                         //Смена полей у ui карточек
                         BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().isSelected = false;
                         BattleSystem.charCardsUI[i].GetComponent<cardCharHolde>().wasChosen = true;

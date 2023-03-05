@@ -13,15 +13,15 @@ public class character : MonoBehaviour
     public enums.Races race;
     public enums.Classes Class;
     public enums.Rarity rarity;
-    public double health;
+    public float health;
     public int speed;
-    public double physAttack;
-    public double magAttack;
+    public float physAttack;
+    public float magAttack;
     public int range;
-    public double physDefence;
-    public double magDefence;
-    public double critChance;
-    public double critNum;
+    public float physDefence;
+    public float magDefence;
+    public float critChance;
+    public float critNum;
     public GameObject Model;
     public int index;
     public bool isChosen=false;
@@ -33,15 +33,16 @@ public class character : MonoBehaviour
         race = card.race;
         Class = card.Class; 
         rarity = card.rarity;
-        health = card.health;
+        health = (float)card.health;
         speed = card.speed;
-        physAttack = card.physAttack;
-        magAttack = card.magAttack;
+        physAttack = (float)card.physAttack;
+        magAttack = (float)card.magAttack;
         range = card.range;
-        physDefence = card.physDefence;
-        magDefence = card.magDefence;
-        critChance = card.critChance;
-        critNum = card.critNum;
+        physDefence = (float)card.physDefence;
+        magDefence = (float)card.magDefence;
+        critChance = (float)card.critChance;
+        critNum = (float)card.critNum;
+
     }
     private void Update()
     {
@@ -56,13 +57,40 @@ public class character : MonoBehaviour
         {
             GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnChooseCharacterButton(this.gameObject);
         }
-        
+        else
+        {
+            if (this.isChosen)
+            {
+                GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnAttackButton(this);
+            }           
+            GameObject.Find("battleSystem").GetComponent<BattleSystem>().cahngeCardWindow(this.gameObject, true);
+        }
     }
-    public bool Damage(int amount)
+    public bool Damage(character chosenCharacter)
     {
-        GameObject.Find("battleSystem").GetComponent<BattleSystem>().charCardsUI[index].transform.GetChild(4).GetComponent<healthBar>().SetHealth(amount);
-        health = System.Math.Max(0, health - amount);
+        float crit = isCrit(chosenCharacter);
+        float finalPhysDamage = ((11 + chosenCharacter.physAttack) * chosenCharacter.physAttack * crit * (chosenCharacter.physAttack - physDefence + (float)card.health)) / 256;
+        float finalMagDamage = ((11 + chosenCharacter.magAttack) * chosenCharacter.magAttack * crit * (chosenCharacter.magAttack - magDefence + (float)card.health)) / 256;
+        float finalDamage = System.Math.Max(finalMagDamage, finalPhysDamage);
+        Debug.Log("finalMagDamage: " + finalMagDamage + " finalPhysDamage: " + finalPhysDamage);
+        health = System.Math.Max(0, health - finalDamage);
+        Debug.Log("health: " + health);
         return health == 0;
+    }
+
+    public float isCrit(character character)
+    {
+        float chance =  UnityEngine.Random.Range(0f,1f);
+        Debug.Log("chance: " + chance);
+        if (chance< character.critChance)
+        {
+            Debug.Log("critNum: " + character.critNum);
+            return character.critNum;
+        }
+        else
+        {
+            return 1;
+        }
     }
 
     public void Heal(int amount)

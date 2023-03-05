@@ -38,6 +38,7 @@ public class alWindowOpen : MonoBehaviour
                     $"Усиливающая способность: {cardDisplay.card.buffAbility}" + "\n" + "\n" +
                     $"Пассивная способность: {cardDisplay.card.passiveAbility}";
                 GameObject.Find("price text").GetComponent<Text>().text = $"Цена: {cardDisplay.card.Price}$";
+                GameObject.Find("money of player").GetComponent<Text>().text = $"У вас денег: {GameObject.Find("playerManager").GetComponent<PlayerManager1>().money}$";
                 /* отключение всех карточек, чтобы по ним нельзя было клинкуть сквозь модальное окно*/
                 for (int i = 0; i < GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardObjects.Count; i++)
                 {
@@ -52,7 +53,7 @@ public class alWindowOpen : MonoBehaviour
                 GameObject.Find("buy card").transform.GetChild(1).GetComponent<Image>().sprite = CardSupportDisplay.card.image;
                 GameObject.Find("abilitySupport").GetComponent<Text>().text = $"Способность: {CardSupportDisplay.card.ability}";
                 GameObject.Find("price text").GetComponent<Text>().text = $"Цена: {CardSupportDisplay.card.Price}$";
-
+                GameObject.Find("money of player").GetComponent<Text>().text = $"У вас денег: {GameObject.Find("playerManager").GetComponent<PlayerManager1>().money}$";
                 /* отключение всех карточек, чтобы по ним нельзя было клинкуть сквозь модальное окно*/
                 for (int i = 0; i < GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardSupportObjects.Count; i++)
                 {

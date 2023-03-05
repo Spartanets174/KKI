@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\packages\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\scripts\gameScripts\BillBoard.cs" />
     <Compile Include="Assets\scripts\card scripts\deck scripts\addToDeck.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSupportDisplay.cs" />
     <Compile Include="Assets\scripts\card scripts\shop scripts\buyCard.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\scripts\card scripts\shop scripts\setCoordTo0.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\Lost.cs" />
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
+    <Compile Include="Assets\scripts\gameScripts\materialPicker.cs" />
     <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
   </ItemGroup>
   <ItemGroup>

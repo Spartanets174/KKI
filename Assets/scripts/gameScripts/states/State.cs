@@ -27,7 +27,7 @@ public abstract class State
     {
         yield break;
     }
-    public virtual IEnumerator Attack()
+    public virtual IEnumerator Attack(character target)
     {
         yield break;
     }

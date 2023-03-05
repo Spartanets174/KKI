@@ -23,7 +23,7 @@ public class EnemyTurn : State
         /*Логика при движении*/
         yield break;
     }
-    public override IEnumerator Attack()
+    public override IEnumerator Attack(character target)
     {
         /*Логика при атаке*/
         yield break;
