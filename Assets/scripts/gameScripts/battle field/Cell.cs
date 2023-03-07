@@ -5,11 +5,11 @@ using UnityEngine;
 public class Cell : MonoBehaviour
 {
     //Класс для подсветки клетки игрового поля и покрашивание в шахматном порядке
-    public Material baseColor, offsetColor;
+    public Material baseColor, offsetColor, swampColor;
     [SerializeField] private MeshRenderer renderer;
     [SerializeField] private GameObject hightLight;
     public bool Enabled=true;
-    
+    public bool isSwamp;
     //Установление цвета клетки в зависимости от её четности или нечетности
    public void Init(bool isOffset)
     {

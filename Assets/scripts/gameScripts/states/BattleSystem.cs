@@ -13,6 +13,8 @@ public class BattleSystem : StateMachine
     //Интерфейс
     public Text pointsOfActionAndСube;
     public Text gameLog;
+    public Scrollbar gameLogScrollBar;
+    public Button EndMove;   
     //Окно персонажа
     public GameObject healthBar;
     public Text physAttack;
@@ -31,13 +33,15 @@ public class BattleSystem : StateMachine
     public List<GameObject> supportCardsUI;
     public List<GameObject> charCards;
     public List<GameObject> supportCards;
+    public int pointsOfAction;
 
     //Игровые
     public PlayerManager1 playerManager;
     public Field field;
     public GameObject charPrefab;
-    public bool isStart;
+
     public bool isUnitPlacement = true;
+    public int cubeValue;
 
     //Вражиk
     //Двигающиеся враги
@@ -51,6 +55,7 @@ public class BattleSystem : StateMachine
 
     private void Start()
     {
+        cubeValue = UnityEngine.Random.Range(1, 6);
         //Установление полей ui карточек в нужные значение из playerManager
         for (int i = 0; i < charCardsUI.Count; i++)
         {
@@ -131,8 +136,8 @@ public class BattleSystem : StateMachine
     //Функция для проверки клеток на крестообразность
     public bool isCell(float cellCoord, float charCoord, int charFeature)
     {
-       
-        if (Math.Floor(Mathf.Abs(charCoord - cellCoord))<= charFeature)
+        double numberOfCells = Math.Floor(Mathf.Abs(charCoord - cellCoord));
+        if (numberOfCells <= charFeature)
         {
             return true;
         }
@@ -140,6 +145,65 @@ public class BattleSystem : StateMachine
         {           
             return false;
         }
+    }
+    //Считает кол-во пройденных клеток от местоположения юнита игрока
+    public float howManyCells(float cellCoord, float charCoord, string direction, Cell cell)
+    {
+        float numberOfCells = charCoord - cellCoord;
+        if (direction == "z" && numberOfCells > 0)
+        {
+            //лево
+            for (int j = Convert.ToInt32(Mathf.Abs(charCoord) - 1); j >= Mathf.Abs(cellCoord); j--)
+            {
+                if (field.CellsOfFieled[Convert.ToInt32(Mathf.Abs(cell.transform.localPosition.x / 0.27f)), j].isSwamp)
+                {
+                    numberOfCells--;
+                    return Mathf.Abs((float)Math.Floor(numberOfCells));
+                }                
+            }
+            return Mathf.Abs((float)Math.Floor(numberOfCells));
+        }
+        if (direction == "z" && numberOfCells < 0)
+        {
+            //право            
+            for (int j = Convert.ToInt32(Mathf.Abs(charCoord) + 1); j < Mathf.Abs(cellCoord); j++)
+            {
+                if (field.CellsOfFieled[Convert.ToInt32(Mathf.Abs(cell.transform.localPosition.x / 0.27f)), j].isSwamp)
+                {
+                    numberOfCells--;
+                    return Mathf.Abs((float)Math.Floor(numberOfCells));
+                }
+                
+            }
+            return Mathf.Abs((float)Math.Floor(numberOfCells));
+        }        
+        if (direction == "x" && numberOfCells > 0)
+        {
+            //низ
+            for (int k = Convert.ToInt32(Mathf.Abs(charCoord) + 1); k < Mathf.Abs(cellCoord); k++)
+            {
+                if (field.CellsOfFieled[Convert.ToInt32(Mathf.Abs(cell.transform.localPosition.z/0.27f)), k].isSwamp)
+                {
+                    numberOfCells--;
+                    return Mathf.Abs((float)Math.Floor(numberOfCells));
+                }
+            }
+            return Mathf.Abs((float)Math.Floor(numberOfCells));
+        }
+        if (direction == "x" && numberOfCells < 0)
+        {
+            //верх
+            for (int k = Convert.ToInt32(Mathf.Abs(charCoord) - 1); k >= Mathf.Abs(cellCoord); k--)
+            {
+                if (field.CellsOfFieled[Convert.ToInt32(Mathf.Abs(cell.transform.localPosition.z / 0.27f)), k].isSwamp)
+                {
+                    numberOfCells--;
+                    return Mathf.Abs((float)Math.Floor(numberOfCells));
+                }
+            }
+            return Mathf.Abs((float)Math.Floor(numberOfCells));
+        }
+        return 0;
     }
     //Функция для включения и выключения нужных клеток
     public void isCellEven(bool even, bool isNormal, Cell cell)
@@ -272,6 +336,7 @@ public class BattleSystem : StateMachine
             return false;
         }
     }
+    //Изменение информации о герое при клике на него
     public void cahngeCardWindow(GameObject character, bool isEnemy)
     {
         cardImage.transform.parent.gameObject.SetActive(true);
@@ -332,5 +397,10 @@ public class BattleSystem : StateMachine
             EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
         }
         character.GetComponent<Outline>().enabled = true;
+    }
+    //Завершение хода игрока
+    public void endMove()
+    {
+       SetState(new EnemyTurn(this));        
     }
 }

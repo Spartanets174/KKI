@@ -26,7 +26,9 @@ public class character : MonoBehaviour
     public int index;
     public bool isChosen=false;
     public bool isEnemy = false;
+    public bool wasAttack = false;
     private KeyCode[] keyCodes = new KeyCode[5] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5 };
+    private BattleSystem battleSystem;
     void Awake()
     {
         name = card.name;
@@ -44,26 +46,30 @@ public class character : MonoBehaviour
         critNum = (float)card.critNum;
 
     }
+    private void Start()
+    {
+        battleSystem = GameObject.Find("battleSystem").GetComponent<BattleSystem>();
+    }
     private void Update()
     {
         if (Input.GetKey(keyCodes[index]) && !isEnemy)
         {
-            GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnChooseCharacterButton(this.gameObject);
+            battleSystem.OnChooseCharacterButton(this.gameObject);
         }
     }
     private void OnMouseDown()
     {
         if (!isEnemy)
         {
-            GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnChooseCharacterButton(this.gameObject);
+            battleSystem.OnChooseCharacterButton(this.gameObject);
         }
         else
         {
             if (this.isChosen)
             {
-                GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnAttackButton(this);
-            }           
-            GameObject.Find("battleSystem").GetComponent<BattleSystem>().cahngeCardWindow(this.gameObject, true);
+                battleSystem.GetComponent<BattleSystem>().OnAttackButton(this);
+            }
+            battleSystem.GetComponent<BattleSystem>().cahngeCardWindow(this.gameObject, true);
         }
     }
     public bool Damage(character chosenCharacter)
@@ -75,6 +81,8 @@ public class character : MonoBehaviour
         Debug.Log("finalMagDamage: " + finalMagDamage + " finalPhysDamage: " + finalPhysDamage);
         health = System.Math.Max(0, health - finalDamage);
         Debug.Log("health: " + health);
+        battleSystem.gameLog.text += $"{chosenCharacter.name} наносит  юниту {name} {Mathf.RoundToInt(finalDamage*100)} урона"+"\n";
+        battleSystem.gameLogScrollBar.value = 0f;
         return health == 0;
     }
 

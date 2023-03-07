@@ -113,8 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseColor: {fileID: 2100000, guid: 74b68f96eccf689409081240fefc1ee4, type: 2}
   offsetColor: {fileID: 2100000, guid: a2cfe010123e8824baa48ce9139f0d81, type: 2}
+  swampColor: {fileID: 2100000, guid: bace994669d1ec84ba8195c0e868079f, type: 2}
   renderer: {fileID: 8001905886131694187}
   hightLight: {fileID: 4706716322714312113}
+  Enabled: 1
+  isSwamp: 0
 --- !u!1 &4706716322714312113
 GameObject:
   m_ObjectHideFlags: 0

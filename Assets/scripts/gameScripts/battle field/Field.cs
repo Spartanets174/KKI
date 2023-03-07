@@ -40,6 +40,11 @@ public class Field : MonoBehaviour
                 {
                     spawnedTile.Init(false);
                 }
+                if ((i == 2 && j == 2)|| (i == 4 && j == 3)|| (i == 2 && j == 7)|| (i == 4 && j == 8))
+                {
+                    spawnedTile.isSwamp = true;
+                    spawnedTile.gameObject.GetComponent<MeshRenderer>().material = spawnedTile.swampColor;
+                }
                 //Запись клеток в списки
                 Cells[new Vector2(spawnedTile.transform.position.x, spawnedTile.transform.position.z)] = spawnedTile;
                 CellsOfFieled[i,j] = spawnedTile;

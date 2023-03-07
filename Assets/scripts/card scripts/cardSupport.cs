@@ -12,4 +12,5 @@ public class cardSupport : ScriptableObject
     public string ability;
     public enums.Rarity rarity;
     public int Price;
+
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Begin : State
 {
     //Бросок кубика
-    private int cubeValue = Random.Range(1, 6);
+    
     public Begin(BattleSystem battleSystem) : base(battleSystem)
     {
     }
@@ -15,7 +15,8 @@ public class Begin : State
     {
         /*Логика при старте*/
         BattleSystem.gameLog.text += $"Начните расстановку юнитов." + "\n";
-        BattleSystem.pointsOfActionAndСube.text = cubeValue.ToString();
+        BattleSystem.gameLogScrollBar.value = 0;
+        BattleSystem.pointsOfActionAndСube.text = BattleSystem.cubeValue.ToString();
         BattleSystem.CreateEnemy();
         BattleSystem.InstantiateEnemy();        
         yield break;
@@ -93,6 +94,10 @@ public class Begin : State
                         //Включение и переракрас всех клеток
                         BattleSystem.field.CellsOfFieled[i, j].GetComponent<Cell>().Enabled = true;
                         BattleSystem.isCellEven((i + j) % 2 == 0, true, BattleSystem.field.CellsOfFieled[i, j]);
+                        if ((i == 2 && j == 2) || (i == 4 && j == 3) || (i == 2 && j == 7) || (i == 4 && j == 8))
+                        {
+                            BattleSystem.field.CellsOfFieled[i, j].gameObject.GetComponent<MeshRenderer>().material = BattleSystem.field.CellsOfFieled[i, j].swampColor;
+                        }
                     }
                 }
             }
@@ -101,16 +106,18 @@ public class Begin : State
         //Определение хода       
         if (BattleSystem.charCards.Count == 5)
         {
-            /*  if (cubeValue%2==0)
-          {*/
-            BattleSystem.gameLog.text += $"На кубице выпало {cubeValue}, ваш ход." + "\n";
-            BattleSystem.SetState(new PlayerTurn(BattleSystem));
-            /*       }
-                   else
-                   {
-                       BattleSystem.gameLog.text += $"На кубице выпало {cubeValue}, ход противника" + "\n";
-                       BattleSystem.SetState(new EnemyTurn(BattleSystem));
-                   }*/
+            if (BattleSystem.cubeValue % 2 == 0)
+            {
+                BattleSystem.gameLog.text += $"На кубице выпало {BattleSystem.cubeValue}" + "\n";
+                BattleSystem.gameLogScrollBar.value = 0;
+                BattleSystem.SetState(new PlayerTurn(BattleSystem));
+            }
+            else
+            {
+                BattleSystem.gameLog.text += $"На кубице выпало {BattleSystem.cubeValue}" + "\n";
+                BattleSystem.gameLogScrollBar.value = 0;
+                BattleSystem.SetState(new EnemyTurn(BattleSystem));
+            }
         }
         yield break;
     }

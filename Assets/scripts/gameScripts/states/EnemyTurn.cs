@@ -3,14 +3,31 @@ using UnityEngine;
 
 public class EnemyTurn : State
 {
+    private static System.Timers.Timer aTimer;
     public EnemyTurn(BattleSystem battleSystem) : base(battleSystem)
     {
 
     }
     public override IEnumerator Start()
     {
-        /*Логика при старте*/
+        BattleSystem.gameLog.text += $"Ход противника." + "\n";
+        BattleSystem.EndMove.interactable = false;
+        BattleSystem.StartCoroutine(ExampleCoroutine());       
+        BattleSystem.StopCoroutine(ExampleCoroutine());
         yield break;
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        BattleSystem.SetState(new PlayerTurn(BattleSystem));
     }
 
     public override IEnumerator chooseCharacter(GameObject character)

@@ -31,4 +31,9 @@ public static class enums
         защитная,
         мобильность
     }
+    public enum Purpose
+    {
+        урон,
+
+    }
 }
