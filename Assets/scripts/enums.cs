@@ -34,6 +34,7 @@ public static class enums
     public enum Purpose
     {
         урон,
+        здоровье,
 
     }
 }

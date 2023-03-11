@@ -26,6 +26,7 @@ public class character : MonoBehaviour
     public int index;
     public bool isChosen=false;
     public bool isEnemy = false;
+    public bool isStaticEnemy = false;
     public bool wasAttack = false;
     private KeyCode[] keyCodes = new KeyCode[5] { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5 };
     private BattleSystem battleSystem;
@@ -59,7 +60,7 @@ public class character : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (!isEnemy)
+        if (!isEnemy&&!isStaticEnemy)
         {
             battleSystem.OnChooseCharacterButton(this.gameObject);
         }

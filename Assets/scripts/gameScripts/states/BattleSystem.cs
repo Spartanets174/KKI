@@ -37,8 +37,11 @@ public class BattleSystem : StateMachine
 
     //Игровые
     public PlayerManager1 playerManager;
+    public EnemyBT enemyManager;
     public Field field;
     public GameObject charPrefab;
+    public GameObject enemyPrefab;
+    public GameObject staticEnemyPrefab;
 
     public bool isUnitPlacement = true;
     public int cubeValue;
@@ -48,6 +51,7 @@ public class BattleSystem : StateMachine
     public List<Card> EnemyCharCards;
     public List<GameObject> EnemyCharObjects;
     public List<GameObject> EnemySupportCards;
+
 
     //Статичные враги
     public List<Card> EnemyStaticCharCards;
@@ -267,7 +271,7 @@ public class BattleSystem : StateMachine
             GameObject Cell = field.CellsOfFieled[UnityEngine.Random.Range(0, field.CellsOfFieled.GetLength(0)), UnityEngine.Random.Range(0, 2)].gameObject;
             if (!isEnemyOnCell(Cell))
             {     
-                GameObject prefab = charPrefab;
+                GameObject prefab = enemyPrefab;
                 prefab.GetComponent<character>().card = EnemyCharCards[count];
                 prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, Cell.transform);
                 prefab.transform.localPosition = new Vector3(0, 1, 0);
@@ -288,37 +292,40 @@ public class BattleSystem : StateMachine
                 //Спавн ассасинов
                 if ((j == 4 || j == 6) && (i == 0||i==6))
                 {
-                    GameObject prefab = charPrefab;
+                    GameObject prefab = staticEnemyPrefab;
                     prefab.GetComponent<character>().card = EnemyStaticCharCards[0];
                     prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, field.CellsOfFieled[i,j].transform);
                     prefab.transform.localPosition = new Vector3(0, 1, 0);
                     prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().assasin;
                     EnemyStaticCharObjects.Add(prefab);
-                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isStaticEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = false;
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                 }
                 //Спавн голиафов
                 if ((j == 4 || j == 6) && (i == 2 || i == 4))
                 {
-                    GameObject prefab = charPrefab;
+                    GameObject prefab = staticEnemyPrefab;
                     prefab.GetComponent<character>().card = EnemyStaticCharCards[1];
                     prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, field.CellsOfFieled[i, j].transform);
                     prefab.transform.localPosition = new Vector3(0, 1, 0);
                     prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().goliaf;
                     EnemyStaticCharObjects.Add(prefab);
-                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isStaticEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = false;
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                 }
                 //Спавн элементалей
                 if ((j == 2 || j == 8) && i % 2 != 0)
                 {
-                    GameObject prefab = charPrefab;
+                    GameObject prefab = staticEnemyPrefab;
                     prefab.GetComponent<character>().card = EnemyStaticCharCards[2];
                     prefab = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity, field.CellsOfFieled[i, j].transform);
                     prefab.transform.localPosition = new Vector3(0, 1, 0);
                     prefab.GetComponent<MeshRenderer>().sharedMaterial = prefab.GetComponent<materialPicker>().elemental;
                     EnemyStaticCharObjects.Add(prefab);
-                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isStaticEnemy = true;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = false;
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
@@ -400,7 +407,17 @@ public class BattleSystem : StateMachine
     }
     //Завершение хода игрока
     public void endMove()
+    {        
+        SetState(new EnemyTurn(this));
+        enemyManager.enabled = true;
+        enemyManager.gameObject.SetActive(true);
+        enemyManager.RestartTree();
+    }
+    public void endEnemyMove()
     {
-       SetState(new EnemyTurn(this));        
+        enemyManager.enabled = false;
+        enemyManager.gameObject.SetActive(false);
+        enemyManager.StopTree();
+        SetState(new PlayerTurn(this));
     }
 }

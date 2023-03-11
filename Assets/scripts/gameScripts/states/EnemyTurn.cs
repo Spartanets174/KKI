@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
+using BehaviourTree;
+using UnityEngine.UI;
+using System;
 
 public class EnemyTurn : State
 {
-    private static System.Timers.Timer aTimer;
     public EnemyTurn(BattleSystem battleSystem) : base(battleSystem)
     {
 
@@ -12,37 +14,148 @@ public class EnemyTurn : State
     {
         BattleSystem.gameLog.text += $"Ход противника." + "\n";
         BattleSystem.EndMove.interactable = false;
-        BattleSystem.StartCoroutine(ExampleCoroutine());       
-        BattleSystem.StopCoroutine(ExampleCoroutine());
+        BattleSystem.pointsOfAction = 20;
+        BattleSystem.pointsOfActionAndСube.text = BattleSystem.pointsOfAction.ToString();
+        BattleSystem.gameLogScrollBar.value = 0;
+        BattleSystem.gameLog.text += $"Враг планирует свой ход..." + "\n";
+        //Переустановка переменных для ограничения по скорости и атаке в начальное
+        for (int i = 0; i < BattleSystem.EnemyCharObjects.Count; i++)
+        {           
+            BattleSystem.EnemyCharObjects[i].GetComponent<character>().speed = BattleSystem.charCards[i].GetComponent<character>().card.speed;
+            BattleSystem.EnemyCharObjects[i].GetComponent<character>().wasAttack = false;
+        }
+        for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0) ; i++)
+        {
+            for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
+            {
+                BattleSystem.field.CellsOfFieled[i, j].Enabled = false;
+            }
+        }
+       
         yield break;
     }
-
-    IEnumerator ExampleCoroutine()
-    {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(5);
-
-        //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-        BattleSystem.SetState(new PlayerTurn(BattleSystem));
-    }
-
     public override IEnumerator chooseCharacter(GameObject character)
     {
         /*Логика при выборе перса*/
-        yield break;
+        //Отключение обводки у всех юнитов и переменной, отвечающей за то, какой персонаж выбран у врага
+        if (character.GetComponent<character>().isEnemy)
+        {
+            for (int i = 0; i < BattleSystem.EnemyCharObjects.Count; i++)
+            {
+                BattleSystem.EnemyCharObjects[i].GetComponent<Outline>().enabled = false;
+                BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen = false;
+            }
+            //Отключение обводки у врагов
+            for (int i = 0; i < BattleSystem.EnemyCharObjects.Count; i++)
+            {
+                BattleSystem.EnemyCharObjects[i].GetComponent<Outline>().enabled = false;
+                BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen = false;
+            }
+            for (int i = 0; i < BattleSystem.EnemyStaticCharObjects.Count; i++)
+            {
+                BattleSystem.EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
+                BattleSystem.EnemyStaticCharObjects[i].GetComponent<character>().isChosen = false;
+            }
+            BattleSystem.cahngeCardWindow(character, false);
+            //Включение обводки и переменной отвечающей за то, какой персонаж выбран у выбранного персонажа
+            character.GetComponent<Outline>().enabled = true;
+            character.GetComponent<character>().isChosen = true;
+        }
+        yield return character;
     }
     public override IEnumerator Move(GameObject cell)
     {
         /*Логика при движении*/
+        if (cell.transform.childCount == 1)
+        {
+            //Перебор всех персонажей врага в колоде
+            for (int i = 0; i < BattleSystem.EnemyCharObjects.Count; i++)
+            {
+                //ПРоверка на то, какой персонаж выбран
+                if (BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen)
+                {
+                    int numOfCells = Convert.ToInt32(BattleSystem.howManyCells(cell.transform.localPosition.z / 0.27f, BattleSystem.EnemyCharObjects[i].transform.parent.localPosition.z / 0.27f, "z", cell.GetComponent<Cell>()));
+                    if (numOfCells == 0)
+                    {
+                        numOfCells = Convert.ToInt32(BattleSystem.howManyCells(cell.transform.localPosition.x / 0.27f, BattleSystem.EnemyCharObjects[i].transform.parent.localPosition.x / 0.27f, "x", cell.GetComponent<Cell>()));
+                    }
+                    if (numOfCells <= BattleSystem.pointsOfAction)
+                    {
+                        BattleSystem.pointsOfAction -= numOfCells;
+                        BattleSystem.pointsOfActionAndСube.text = BattleSystem.pointsOfAction.ToString();
+                        BattleSystem.EnemyCharObjects[i].GetComponent<character>().speed -= numOfCells;
+                        //Установление координат в новой клетке
+                        BattleSystem.EnemyCharObjects[i].transform.SetParent(cell.transform);
+                        BattleSystem.EnemyCharObjects[i].transform.localPosition = new Vector3(0, 1, 0);
+                        //Отключение обводки и выбранности перса
+                        if (BattleSystem.pointsOfAction == 0)
+                        {
+                            BattleSystem.endEnemyMove();
+                        }
+                    }
+                    BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen = false;
+                    BattleSystem.EnemyCharObjects[i].GetComponent<Outline>().enabled = false;
+                }
+            }
+        }
         yield break;
     }
     public override IEnumerator Attack(character target)
     {
         /*Логика при атаке*/
+
+        if (2 <= BattleSystem.pointsOfAction)
+        {
+            for (int i = 0; i < BattleSystem.charCards.Count; i++)
+            {
+                BattleSystem.charCards[i].GetComponent<Outline>().enabled = false;
+            }
+            for (int i = 0; i < BattleSystem.EnemyStaticCharObjects.Count; i++)
+            {
+                BattleSystem.EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
+            }
+            Debug.Log(target);
+            BattleSystem.cahngeCardWindow(target.gameObject, true);
+            for (int i = 0; i < BattleSystem.EnemyCharObjects.Count; i++)
+            {
+                if (BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen)
+                {
+                    character charac = BattleSystem.EnemyCharObjects[i].GetComponent<character>();
+                    BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen = false;
+                    BattleSystem.EnemyCharObjects[i].GetComponent<Outline>().enabled = false;
+                    BattleSystem.EnemyCharObjects[i].GetComponent<character>().wasAttack = true;
+                    bool isDeath = target.Damage(charac);
+                    /*target.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<healthBar>().SetHealth((float)target.health);*/
+                    if (isDeath)
+                    {
+                        if (target.name == "Ассасин" || target.name == "Голиаф" || target.name == "Элементаль")
+                        {
+                            BattleSystem.EnemyStaticCharObjects.Remove(target.gameObject);
+
+                        }
+                        else
+                        {
+                            BattleSystem.charCards.Remove(target.gameObject);
+                        }
+
+                        GameObject.Destroy(target.gameObject);
+                        BattleSystem.gameLog.text += $"Вражеский юнит {target.name} убит" + "\n";
+                        BattleSystem.gameLogScrollBar.value = 0;
+                    }
+                    if (BattleSystem.charCards.Count == 0)
+                    {
+                        BattleSystem.SetState(new Lost(BattleSystem));
+                    }
+                }
+
+            }
+            BattleSystem.pointsOfAction -= 2;
+            BattleSystem.pointsOfActionAndСube.text = BattleSystem.pointsOfAction.ToString();
+            if (BattleSystem.pointsOfAction == 0)
+            {
+                BattleSystem.endEnemyMove();
+            }
+        }
         yield break;
     }
     public override IEnumerator attackAbility()

@@ -70,6 +70,7 @@ public class Begin : State
                         BattleSystem.charCards.Add(prefab);
                         BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().index = i;
                         BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().isEnemy = false;
+                        BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().isStaticEnemy = false;
                         BattleSystem.charCardsUI[i].transform.GetChild(4).GetComponent<healthBar>().SetMaxHealth((float)BattleSystem.charCards[BattleSystem.charCards.Count - 1].GetComponent<character>().health);
                         BattleSystem.charCards[BattleSystem.charCards.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                         //Смена полей у ui карточек
@@ -110,12 +111,16 @@ public class Begin : State
             {
                 BattleSystem.gameLog.text += $"На кубице выпало {BattleSystem.cubeValue}" + "\n";
                 BattleSystem.gameLogScrollBar.value = 0;
+                BattleSystem.enemyManager.enabled = false;
+                BattleSystem.enemyManager.gameObject.SetActive(false);                
                 BattleSystem.SetState(new PlayerTurn(BattleSystem));
             }
             else
             {
                 BattleSystem.gameLog.text += $"На кубице выпало {BattleSystem.cubeValue}" + "\n";
                 BattleSystem.gameLogScrollBar.value = 0;
+                BattleSystem.enemyManager.enabled = true;
+                BattleSystem.enemyManager.gameObject.SetActive(true);
                 BattleSystem.SetState(new EnemyTurn(BattleSystem));
             }
         }

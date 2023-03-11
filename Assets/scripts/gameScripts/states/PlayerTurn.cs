@@ -12,17 +12,27 @@ public class PlayerTurn : State
     public override IEnumerator Start()
     {
         /*Логика при выборе старте*/
+
         //Кол-во очков действий
         BattleSystem.pointsOfAction = 20;
         BattleSystem.pointsOfActionAndСube.text = BattleSystem.pointsOfAction.ToString();
+
         BattleSystem.gameLog.text += $"Ваш ход." + "\n";
         BattleSystem.gameLogScrollBar.value = 0;
+
         BattleSystem.EndMove.interactable = true;
         //Переустановка переменных для ограничения по скорости и атаке в начальное
         for (int i = 0; i < BattleSystem.charCards.Count; i++)
         {
             BattleSystem.charCards[i].GetComponent<character>().speed = BattleSystem.charCards[i].GetComponent<character>().card.speed;
             BattleSystem.charCards[i].GetComponent<character>().wasAttack = false;
+        }
+        for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
+        {
+            for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
+            {
+                BattleSystem.field.CellsOfFieled[i, j].Enabled = true;
+            }
         }
         yield break;
     }
@@ -93,7 +103,7 @@ public class PlayerTurn : State
                             {
                                 if (!character.GetComponent<character>().wasAttack)
                                 {
-                                    if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                    if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true || BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
                                     {
                                         BattleSystem.field.CellsOfFieled[i, k].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
                                         BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<Outline>().enabled = true;
@@ -122,7 +132,7 @@ public class PlayerTurn : State
                             {
                                 if (!character.GetComponent<character>().wasAttack)
                                 {
-                                    if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().range))
+                                    if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true || BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().range))
                                     {
                                         BattleSystem.field.CellsOfFieled[k, j].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
                                         BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<Outline>().enabled = true;
@@ -149,7 +159,7 @@ public class PlayerTurn : State
                             {
                                 if (!character.GetComponent<character>().wasAttack)
                                 {
-                                    if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                    if (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && (BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == true || BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
                                     {
                                         BattleSystem.field.CellsOfFieled[i, k].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
                                         BattleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<Outline>().enabled = true;
@@ -176,7 +186,7 @@ public class PlayerTurn : State
                             {
                                 if (!character.GetComponent<character>().wasAttack)
                                 {                                
-                                    if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().range))
+                                    if (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && (BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == true || BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && BattleSystem.isCell(BattleSystem.field.CellsOfFieled[k, j].transform.localPosition.z / 0.27f, character.transform.parent.localPosition.z / 0.27f, character.GetComponent<character>().range))
                                     {
                                         BattleSystem.field.CellsOfFieled[k, j].GetComponent<MeshRenderer>().material.color = new Color(0.7830189f, 0.152664f, 0.152664f, 1);
                                         BattleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<Outline>().enabled = true;
@@ -247,7 +257,7 @@ public class PlayerTurn : State
         else
         {
             //Если чел кликнул на клетку с врагом, то меняется инфа в окне интерфейса (инфа о враге)
-            if (cell.transform.GetChild(1).GetComponent<character>().isEnemy == true)
+            if (cell.transform.GetChild(1).GetComponent<character>().isEnemy == true|| cell.transform.GetChild(1).GetComponent<character>().isStaticEnemy == true)
             {
                 for (int i = 0; i < BattleSystem.charCards.Count; i++)
                 {
