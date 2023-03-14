@@ -53,7 +53,7 @@ public class character : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(keyCodes[index]) && !isEnemy)
+        if (Input.GetKey(keyCodes[index]) && !isEnemy&&!isStaticEnemy)
         {
             battleSystem.OnChooseCharacterButton(this.gameObject);
         }
@@ -79,21 +79,36 @@ public class character : MonoBehaviour
         float finalPhysDamage = ((11 + chosenCharacter.physAttack) * chosenCharacter.physAttack * crit * (chosenCharacter.physAttack - physDefence + (float)card.health)) / 256;
         float finalMagDamage = ((11 + chosenCharacter.magAttack) * chosenCharacter.magAttack * crit * (chosenCharacter.magAttack - magDefence + (float)card.health)) / 256;
         float finalDamage = System.Math.Max(finalMagDamage, finalPhysDamage);
-        Debug.Log("finalMagDamage: " + finalMagDamage + " finalPhysDamage: " + finalPhysDamage);
         health = System.Math.Max(0, health - finalDamage);
-        Debug.Log("health: " + health);
         battleSystem.gameLog.text += $"{chosenCharacter.name} наносит  юниту {name} {Mathf.RoundToInt(finalDamage*100)} урона"+"\n";
         battleSystem.gameLogScrollBar.value = 0f;
+        if (!this.isStaticEnemy)
+        {
+            if (!this.isEnemy)
+            {
+                for (int i = 0; i < battleSystem.charCardsUI.Count; i++)
+                {
+                    if (this.name == battleSystem.charCardsUI[i].GetComponent<cardCharHolde>().card.name)
+                    {
+                        battleSystem.charCardsUI[i].GetComponent<cardCharHolde>().healthBar.SetHealth(health);
+                    }
+                }
+            }
+            else
+            {
+               this.transform.GetChild(0).transform.GetChild(0).GetComponent<healthBar>().SetHealth(health);
+            }
+        }
+        battleSystem.cahngeCardWindow(this.gameObject, isEnemy);
+        this.gameObject.GetComponent<Outline>().enabled = false;
         return health == 0;
     }
 
     public float isCrit(character character)
     {
         float chance =  UnityEngine.Random.Range(0f,1f);
-        Debug.Log("chance: " + chance);
         if (chance< character.critChance)
         {
-            Debug.Log("critNum: " + character.critNum);
             return character.critNum;
         }
         else

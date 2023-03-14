@@ -27,21 +27,28 @@ public class PlayerTurn : State
             BattleSystem.charCards[i].GetComponent<character>().speed = BattleSystem.charCards[i].GetComponent<character>().card.speed;
             BattleSystem.charCards[i].GetComponent<character>().wasAttack = false;
         }
-        for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
+        for (int i = 0; i < BattleSystem.EnemyCharObjects.Count; i++)
+        {
+            BattleSystem.EnemyCharObjects[i].GetComponent<Outline>().enabled = false;
+        }
+        for (int i = 0; i < BattleSystem.EnemyStaticCharObjects.Count; i++)
+        {
+            BattleSystem.EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
+            BattleSystem.EnemyStaticCharObjects[i].GetComponent<staticEnemyAttack>().attackInRadius(false);
+        }
+      /*  for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
         {
             for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
             {
                 BattleSystem.field.CellsOfFieled[i, j].Enabled = true;
             }
-        }
+        }*/
         yield break;
     }
     //При выборе персонажа
     public override IEnumerator chooseCharacter(GameObject character)
     {
-        //Если сейчас не расстановка юнитов
-        if (!BattleSystem.isUnitPlacement)
-        {        
+        //Если сейчас не расстановка юнитов       
             //Отключение обводки у всех юнитов и переменной, отвечающей за то, какой персонаж выбран
             for (int i = 0; i < BattleSystem.charCards.Count; i++)
             {
@@ -203,8 +210,7 @@ public class PlayerTurn : State
                     {
                         BattleSystem.field.CellsOfFieled[i, j].gameObject.GetComponent<MeshRenderer>().material = BattleSystem.field.CellsOfFieled[i, j].swampColor;
                     }
-                }
-            }
+                }            
             
         }
         yield break;
@@ -236,8 +242,13 @@ public class PlayerTurn : State
                         //Установление координат в новой клетке
                         BattleSystem.charCards[i].transform.SetParent(cell.transform);
                         BattleSystem.charCards[i].transform.localPosition = new Vector3(0, 1, 0);
-                        //Отключение обводки и выбранности перса
-                        
+
+                        for (int j = 0; j < BattleSystem.EnemyStaticCharObjects.Count; j++)
+                        {
+                            BattleSystem.EnemyStaticCharObjects[j].GetComponent<Outline>().enabled = false;
+                            BattleSystem.EnemyStaticCharObjects[j].GetComponent<staticEnemyAttack>().attackInRadius(false);
+                            
+                        }
                         if (BattleSystem.pointsOfAction==0)
                         {
                             BattleSystem.endMove();
@@ -248,15 +259,16 @@ public class PlayerTurn : State
                         BattleSystem.gameLog.text += "Недостаточно очков действий" + "\n";
                         BattleSystem.gameLogScrollBar.value = 0;
                     }
+                    Debug.Log(BattleSystem.charCards.Count);
                     BattleSystem.charCards[i].GetComponent<character>().isChosen = false;
                     BattleSystem.charCards[i].GetComponent<Outline>().enabled = false;
                 }
                 BattleSystem.charCardsUI[i].GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);                
-            }
+            }            
         }
         else
         {
-            //Если чел кликнул на клетку с врагом, то меняется инфа в окне интерфейса (инфа о враге)
+            //Если чел кликнул на клетку с врагом, то меняется инфа в окне интерфейса (инфа о враге) и производится атака
             if (cell.transform.GetChild(1).GetComponent<character>().isEnemy == true|| cell.transform.GetChild(1).GetComponent<character>().isStaticEnemy == true)
             {
                 for (int i = 0; i < BattleSystem.charCards.Count; i++)
@@ -306,8 +318,9 @@ public class PlayerTurn : State
             for (int i = 0; i < BattleSystem.EnemyStaticCharObjects.Count; i++)
             {
                 BattleSystem.EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
+                //Для нанесения урона статичиескими противниками
+                BattleSystem.EnemyStaticCharObjects[i].GetComponent<staticEnemyAttack>().attackInRadius(false);
             }
-            BattleSystem.cahngeCardWindow(target.gameObject, true);
             for (int i = 0; i < BattleSystem.charCards.Count; i++)
             {
                 if (BattleSystem.charCards[i].GetComponent<character>().isChosen)

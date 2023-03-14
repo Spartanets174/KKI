@@ -18,15 +18,35 @@ public class ChooseChar : Node
 
     public override NodeState Evaluate()
     {
-            _character = _battleSystem.EnemyCharObjects[getRandomChar()];
+            chooseChar();
             _battleSystem.OnChooseCharacterButton(_character);
             state = NodeState.SUCCESS;
             _start = false;
             return state;
     }
-    public int getRandomChar()
+    public void chooseChar()
     {
-        int randomEnemyIndex = UnityEngine.Random.Range(0, 5);
-        return randomEnemyIndex;
+        int count = 0;
+        while (count < 1)
+        {
+            _character = _battleSystem.EnemyCharObjects[UnityEngine.Random.Range(0, _battleSystem.EnemyCharObjects.Count)];
+            if (isCharValid(_character))
+            {
+                count++;
+            }            
+        }
+
+    }
+    private bool isCharValid(GameObject enemy)
+    {
+        if (!enemy.GetComponent<character>().wasAttack || enemy.GetComponent<character>().speed > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+       
     }
 }

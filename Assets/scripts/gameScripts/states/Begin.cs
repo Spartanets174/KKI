@@ -50,8 +50,6 @@ public class Begin : State
         if (cell.transform.childCount == 1)
         {
             //Проверка идёт ли сейчас расстановка юнитов
-            if (BattleSystem.isUnitPlacement)
-            {
                 //Цикл перебора ui карточек для спавна нужной карточки при выборе
                 for (int i = 0; i < BattleSystem.charCardsUI.Count; i++)
                 {
@@ -84,10 +82,6 @@ public class Begin : State
                         BattleSystem.charCardsUI[i].GetComponent<Button>().enabled = true;
                     }
                 }
-                if (BattleSystem.charCards.Count == 5)
-                {
-                    BattleSystem.isUnitPlacement = false;
-                }
                 for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
                 {
                     for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
@@ -100,8 +94,7 @@ public class Begin : State
                             BattleSystem.field.CellsOfFieled[i, j].gameObject.GetComponent<MeshRenderer>().material = BattleSystem.field.CellsOfFieled[i, j].swampColor;
                         }
                     }
-                }
-            }
+                }            
         }
         //При расстановек персонажа
         //Определение хода       
@@ -119,6 +112,7 @@ public class Begin : State
             {
                 BattleSystem.gameLog.text += $"На кубице выпало {BattleSystem.cubeValue}" + "\n";
                 BattleSystem.gameLogScrollBar.value = 0;
+                BattleSystem.isEnemyTurn = true;
                 BattleSystem.enemyManager.enabled = true;
                 BattleSystem.enemyManager.gameObject.SetActive(true);
                 BattleSystem.SetState(new EnemyTurn(BattleSystem));

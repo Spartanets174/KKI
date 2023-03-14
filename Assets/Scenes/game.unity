@@ -836,6 +836,7 @@ MonoBehaviour:
   isSelected: 0
   wasChosen: 0
   battleSystem: {fileID: 309141481}
+  healthBar: {fileID: 1293566863}
 --- !u!1 &61550332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1461,7 @@ GameObject:
   - component: {fileID: 228139604}
   - component: {fileID: 228139603}
   m_Layer: 0
-  m_Name: health bar
+  m_Name: health bar 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1982,7 +1983,7 @@ MonoBehaviour:
   charPrefab: {fileID: 291694222842207153, guid: e6531ec5831594a4d816af9d973d28e0, type: 3}
   enemyPrefab: {fileID: 291694222842207153, guid: 77a06ca3fa47da34984812b459453fd1, type: 3}
   staticEnemyPrefab: {fileID: 291694222842207153, guid: 4ac1142dc9b5c824b8ef331036d2a33f, type: 3}
-  isUnitPlacement: 1
+  isEnemyTurn: 0
   cubeValue: 0
   EnemyCharCards: []
   EnemyCharObjects: []
@@ -2320,8 +2321,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1757399216}
+  m_Children: []
   m_Father: {fileID: 1719790111}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3126,6 +3126,7 @@ MonoBehaviour:
   isSelected: 0
   wasChosen: 0
   battleSystem: {fileID: 309141481}
+  healthBar: {fileID: 1460870536}
 --- !u!1 &485377293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4834,7 +4835,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 485377295}
   m_HandleRect: {fileID: 485377294}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4914,7 +4915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00269282, y: -0.000091552734}
+  m_AnchoredPosition: {x: 0.00269282, y: -0.00015068054}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &753900672
@@ -4969,7 +4970,7 @@ GameObject:
   - component: {fileID: 757771214}
   - component: {fileID: 757771213}
   m_Layer: 0
-  m_Name: health bar
+  m_Name: health bar 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5305,6 +5306,7 @@ MonoBehaviour:
   isSelected: 0
   wasChosen: 0
   battleSystem: {fileID: 309141481}
+  healthBar: {fileID: 827951738}
 --- !u!1 &786973494
 GameObject:
   m_ObjectHideFlags: 0
@@ -5522,7 +5524,7 @@ GameObject:
   - component: {fileID: 827951739}
   - component: {fileID: 827951738}
   m_Layer: 0
-  m_Name: health bar
+  m_Name: health bar 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5602,7 +5604,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 837604438}
   m_HandleRect: {fileID: 0}
@@ -5610,7 +5612,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 2.445
+  m_Value: 2.08
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7217,6 +7219,7 @@ MonoBehaviour:
   isSelected: 0
   wasChosen: 0
   battleSystem: {fileID: 309141481}
+  healthBar: {fileID: 757771213}
 --- !u!1 &1115486536
 GameObject:
   m_ObjectHideFlags: 0
@@ -8400,7 +8403,7 @@ GameObject:
   - component: {fileID: 1293566864}
   - component: {fileID: 1293566863}
   m_Layer: 0
-  m_Name: health bar
+  m_Name: health bar 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8962,6 +8965,7 @@ MonoBehaviour:
   isSelected: 0
   wasChosen: 0
   battleSystem: {fileID: 309141481}
+  healthBar: {fileID: 228139603}
 --- !u!4 &1379082159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4368101801063984, guid: e701c442dd73c844b9f5a0c6ed6e59e1, type: 3}
@@ -9407,7 +9411,7 @@ GameObject:
   - component: {fileID: 1460870537}
   - component: {fileID: 1460870536}
   m_Layer: 0
-  m_Name: health bar
+  m_Name: health bar 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11593,8 +11597,8 @@ RectTransform:
   - {fileID: 722950057}
   - {fileID: 1289574065}
   - {fileID: 621786401}
-  m_Father: {fileID: 335062185}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

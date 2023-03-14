@@ -57,7 +57,7 @@ public class Field : MonoBehaviour
     {
         if (Cells.TryGetValue(pos, out var tile))
         {
-            Debug.Log(tile + " " + pos);
+/*            Debug.Log(tile + " " + pos);*/
             return tile;
         }
         return null;

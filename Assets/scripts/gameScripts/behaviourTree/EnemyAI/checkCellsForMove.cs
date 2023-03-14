@@ -13,11 +13,6 @@ public class checkCellsForMove : Node
         _battleSystem = battleSystem;
         _EnemyBT = EnemyBT;
     }
-    public int getRandomChar()
-    {
-        int randomEnemyIndex = UnityEngine.Random.Range(0, 5);
-        return randomEnemyIndex;
-    }
     public override NodeState Evaluate()
     {
         object t = GetData("target");
@@ -108,7 +103,6 @@ public class checkCellsForMove : Node
                     }
                 }
             }
-            Debug.Log("Клетки"+possibleCells.Count);
             if (possibleCells.Count>0)
             {
                 parent.SetData("target", possibleCells[UnityEngine.Random.Range(0, possibleCells.Count)]);

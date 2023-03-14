@@ -67,6 +67,7 @@
     <Compile Include="Assets\scripts\card scripts\deck scripts\removeFromDeck.cs" />
     <Compile Include="Assets\scripts\gameScripts\behaviourTree\Node.cs" />
     <Compile Include="Assets\scripts\card scripts\shop scripts\disableCharCards.cs" />
+    <Compile Include="Assets\scripts\gameScripts\staticEnemyAttack.cs" />
     <Compile Include="Assets\scripts\gameScripts\behaviourTree\EnemyAI\Movement.cs" />
     <Compile Include="Assets\scripts\gameScripts\cardCharHolde.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSupport.cs" />

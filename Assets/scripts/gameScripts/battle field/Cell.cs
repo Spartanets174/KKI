@@ -10,8 +10,13 @@ public class Cell : MonoBehaviour
     [SerializeField] private GameObject hightLight;
     public bool Enabled=true;
     public bool isSwamp;
+    private BattleSystem battleSystem;
     //Установление цвета клетки в зависимости от её четности или нечетности
-   public void Init(bool isOffset)
+    private void Start()
+    {
+        battleSystem = GameObject.Find("battleSystem").GetComponent<BattleSystem>();
+    }
+    public void Init(bool isOffset)
     {
         renderer.material = isOffset?offsetColor:baseColor;
     }
@@ -22,23 +27,26 @@ public class Cell : MonoBehaviour
         if (Enabled)
         {
             //Получение и вывод координат клетки
-            Vector2 pos = new Vector2(transform.position.x, transform.position.z);
-            GameObject.Find("field").GetComponent<Field>().GetCellAtPosition(pos);
+/*            Vector2 pos = new Vector2(transform.position.x, transform.position.z);
+            GameObject.Find("field").GetComponent<Field>().GetCellAtPosition(pos);*/
             //Передача данных о текущей клетки в battleSystem            
             if (this.transform.childCount!=1)
             {
                 if (this.transform.GetChild(1).GetComponent<character>().isEnemy)
                 {
-                    GameObject.Find("battleSystem").GetComponent<BattleSystem>().cahngeCardWindow(this.transform.GetChild(1).gameObject, true);
+                    battleSystem.cahngeCardWindow(this.transform.GetChild(1).gameObject, true);                  
                 }
                 else
                 {
-                    GameObject.Find("battleSystem").GetComponent<BattleSystem>().cahngeCardWindow(this.transform.GetChild(1).gameObject, false);
+                    battleSystem.cahngeCardWindow(this.transform.GetChild(1).gameObject, false);                   
                 }
+                
             }
-            GameObject.Find("battleSystem").GetComponent<BattleSystem>().OnMoveButton(this.gameObject);
-        }
-        
+            if (!battleSystem.isEnemyTurn)
+            {
+                battleSystem.OnMoveButton(this.gameObject);
+            }        
+        }        
     }
     private void OnMouseOver()
     {

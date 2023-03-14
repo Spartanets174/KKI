@@ -25,7 +25,6 @@ public class Attack : Node
         return state;
         IEnumerator StartAction()
         {
-            Debug.Log("Враг"+ _character);
             _battleSystem.OnAttackButton(_character.GetComponent<character>());
             yield return new WaitForSeconds(2);  
             _EnemyBT.RestartTree();

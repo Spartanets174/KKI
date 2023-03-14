@@ -405,6 +405,7 @@
 "Assets/scripts/gameScripts/states/State.cs"
 "Assets/scripts/gameScripts/states/StateMachine.cs"
 "Assets/scripts/gameScripts/states/Won.cs"
+"Assets/scripts/gameScripts/staticEnemyAttack.cs"
 "Assets/scripts/gameScripts/SupportCardHolder.cs"
 "Assets/scripts/menuScripts/menu.cs"
 "Assets/scripts/menuScripts/onHover.cs"

@@ -43,7 +43,7 @@ public class BattleSystem : StateMachine
     public GameObject enemyPrefab;
     public GameObject staticEnemyPrefab;
 
-    public bool isUnitPlacement = true;
+    public bool isEnemyTurn;
     public int cubeValue;
 
     //Вражиk
@@ -74,7 +74,6 @@ public class BattleSystem : StateMachine
             supportCardsUI[i].transform.GetChild(0).GetComponent<Image>().sprite = playerManager.deckUserSupportCards[i].image;
             supportCardsUI[i].transform.GetChild(1).transform.GetChild(0).GetComponent<Text>().text = playerManager.deckUserSupportCards[i].ability;
             supportCardsUI[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = playerManager.deckUserSupportCards[i].name;
-            Debug.Log(playerManager.deckUserSupportCards[i].rarity);
             if (playerManager.deckUserSupportCards[i].rarity.ToString() == "Обычная")
             {
                 supportCardsUI[i].transform.GetChild(3).GetComponent<Image>().color = new Color(126, 126, 126);
@@ -85,16 +84,6 @@ public class BattleSystem : StateMachine
             }
         }
         SetState(new Begin(this));
-    }
-    private void Update()
-    {
-        //Перерисовка зоровья юнита, если оно изменяентся
-        for (int i = 0; i < charCardsUI.Count; i++)
-        {
-            charCardsUI[i].transform.GetChild(4).GetComponent<Slider>().value = (float)playerManager.deckUserCharCards[i].health;
-        }
-        //Нужно для расстановки юнитов
-        //Когда все 5 юнитов расставлены, то стадия расстановки (isUnitPlacement) отключается и включаются все ui карточки
     }
     public void onUnitStatementButton()
     {
@@ -300,6 +289,9 @@ public class BattleSystem : StateMachine
                     EnemyStaticCharObjects.Add(prefab);
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isStaticEnemy = true;
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = false;
+                    //Заполнение листа с клетками для атаки
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i, j + 1].gameObject);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i, j - 1].gameObject);
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                 }
                 //Спавн голиафов
@@ -313,6 +305,8 @@ public class BattleSystem : StateMachine
                     EnemyStaticCharObjects.Add(prefab);
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isStaticEnemy = true;
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = false;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i, j + 1].gameObject);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i, j - 1].gameObject);
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                 }
                 //Спавн элементалей
@@ -326,6 +320,10 @@ public class BattleSystem : StateMachine
                     EnemyStaticCharObjects.Add(prefab);
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isStaticEnemy = true;
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<character>().isEnemy = false;
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i + 1, j].gameObject);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i - 1, j].gameObject);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i, j + 1].gameObject);
+                    EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].GetComponent<staticEnemyAttack>().listOfCellToAttack.Add(field.CellsOfFieled[i, j - 1].gameObject);
                     EnemyStaticCharObjects[EnemyStaticCharObjects.Count - 1].transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
@@ -387,7 +385,7 @@ public class BattleSystem : StateMachine
                 rase.text = "М";
                 break;
         }
-        if (isEnemy)
+        if (isEnemy||character.GetComponent<character>().isStaticEnemy)
         {
             cardImage.transform.parent.transform.parent.GetComponent<Image>().color = new Color(0.9921569f, 0.8740318f, 0.8666667f, 1);
         }
@@ -410,12 +408,14 @@ public class BattleSystem : StateMachine
     {        
         SetState(new EnemyTurn(this));
         enemyManager.enabled = true;
+        isEnemyTurn = true;
         enemyManager.gameObject.SetActive(true);
         enemyManager.RestartTree();
     }
     public void endEnemyMove()
     {
         enemyManager.enabled = false;
+        isEnemyTurn = false;
         enemyManager.gameObject.SetActive(false);
         enemyManager.StopTree();
         SetState(new PlayerTurn(this));

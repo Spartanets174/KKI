@@ -28,88 +28,95 @@ public class checkCellsForAttack : Node
                     character = _battleSystem.EnemyCharObjects[i];
                 }
             }
-            //ѕеребор всех клеток на поле
-            for (int i = 0; i < _battleSystem.field.CellsOfFieled.GetLength(0); i++)
+            if (character.GetComponent<character>().wasAttack)
             {
-                for (int j = 0; j < _battleSystem.field.CellsOfFieled.GetLength(1); j++)
+                state = NodeState.FAILURE;
+                return state;
+            }
+            else
+            {
+                //ѕеребор всех клеток на поле
+                for (int i = 0; i < _battleSystem.field.CellsOfFieled.GetLength(0); i++)
                 {
-                    //≈сли это клетка, на которой стоит персонаж
-                    if (_battleSystem.field.CellsOfFieled[i, j].transform.localPosition == character.transform.parent.localPosition)
+                    for (int j = 0; j < _battleSystem.field.CellsOfFieled.GetLength(1); j++)
                     {
-                        //ƒальше все 4 цикла отвечают за активацию нужных клеток от выбранного персноажа по каждой из 4 сторон
-                        //¬ерх, них, право и лево
-                        //низ
-                        for (int k = j + 1; k < _battleSystem.field.CellsOfFieled.GetLength(1); k++)
+                        //≈сли это клетка, на которой стоит персонаж
+                        if (_battleSystem.field.CellsOfFieled[i, j].transform.localPosition == character.transform.parent.localPosition)
                         {
-                            if (_battleSystem.field.CellsOfFieled[i, k].transform.childCount != 1)
+                            //ƒальше все 4 цикла отвечают за активацию нужных клеток от выбранного персноажа по каждой из 4 сторон
+                            //¬ерх, них, право и лево
+                            //низ
+                            for (int k = j + 1; k < _battleSystem.field.CellsOfFieled.GetLength(1); k++)
                             {
-                                if (!character.GetComponent<character>().wasAttack)
+                                if (_battleSystem.field.CellsOfFieled[i, k].transform.childCount != 1)
                                 {
-                                    if (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                    if (!character.GetComponent<character>().wasAttack)
                                     {
-                                        possibleEnemies.Add(_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).gameObject);
+                                        if (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                        {
+                                            possibleEnemies.Add(_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).gameObject);
+                                        }
                                     }
                                 }
                             }
-                        }
-                        //право
-                        for (int k = i + 1; k < _battleSystem.field.CellsOfFieled.GetLength(0); k++)
-                        {
-                            if (_battleSystem.field.CellsOfFieled[k, j].transform.childCount != 1)
+                            //право
+                            for (int k = i + 1; k < _battleSystem.field.CellsOfFieled.GetLength(0); k++)
                             {
-                                if (!character.GetComponent<character>().wasAttack)
+                                if (_battleSystem.field.CellsOfFieled[k, j].transform.childCount != 1)
                                 {
-                                    if (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                    if (!character.GetComponent<character>().wasAttack)
                                     {
-                                        possibleEnemies.Add(_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).gameObject);
+                                        if (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                        {
+                                            possibleEnemies.Add(_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).gameObject);
+                                        }
                                     }
                                 }
                             }
-                        }
-                        //верх
-                        for (int k = j - 1; k >= 0; k--)
-                        {
-                            if (_battleSystem.field.CellsOfFieled[i, k].transform.childCount != 1)
+                            //верх
+                            for (int k = j - 1; k >= 0; k--)
                             {
-                                if (!character.GetComponent<character>().wasAttack)
+                                if (_battleSystem.field.CellsOfFieled[i, k].transform.childCount != 1)
                                 {
-                                    if (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                    if (!character.GetComponent<character>().wasAttack)
                                     {
-                                        possibleEnemies.Add(_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).gameObject);
+                                        if (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[i, k].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                        {
+                                            possibleEnemies.Add(_battleSystem.field.CellsOfFieled[i, k].transform.GetChild(1).gameObject);
+                                        }
                                     }
                                 }
                             }
-                        }
-                        //лево
-                        for (int k = i - 1; k >= 0; k--)
-                        {
-                            if (_battleSystem.field.CellsOfFieled[k, j].transform.childCount != 1)
+                            //лево
+                            for (int k = i - 1; k >= 0; k--)
                             {
-                                if (!character.GetComponent<character>().wasAttack)
+                                if (_battleSystem.field.CellsOfFieled[k, j].transform.childCount != 1)
                                 {
-                                    if (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                    if (!character.GetComponent<character>().wasAttack)
                                     {
-                                        possibleEnemies.Add(_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).gameObject);
+                                        if (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>() != null && (_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isEnemy == false || _battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).GetComponent<character>().isStaticEnemy == true) && _battleSystem.isCell(_battleSystem.field.CellsOfFieled[k, j].transform.localPosition.x / 0.27f, character.transform.parent.localPosition.x / 0.27f, character.GetComponent<character>().range))
+                                        {
+                                            possibleEnemies.Add(_battleSystem.field.CellsOfFieled[k, j].transform.GetChild(1).gameObject);
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
+                if (possibleEnemies.Count > 0)
+                {
+                    parent.parent.SetData("target", possibleEnemies[UnityEngine.Random.Range(0, possibleEnemies.Count)]);
+                    state = NodeState.RUNNING;
+                    return state;
+                }
+                else
+                {
+                    state = NodeState.FAILURE;
+                    return state;
+                }
             }
-            Debug.Log("¬раги"+possibleEnemies.Count);
-            if (possibleEnemies.Count > 0)
-            {
-                parent.parent.SetData("target", possibleEnemies[UnityEngine.Random.Range(0, possibleEnemies.Count)]);
-                state = NodeState.RUNNING;
-                return state;
-            }
-            else
-            {
-                state = NodeState.FAILURE;
-                return state;
-            }
-        }
+        }         
         state = NodeState.SUCCESS;
         return state;
     }

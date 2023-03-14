@@ -19,7 +19,6 @@ public class Movement : Node
         _battleSystem.StopCoroutine(StartAction());
         state = NodeState.SUCCESS;
         ClearData("target");
-        /*_EnemyBT.RestartTree();*/
         return state;
         IEnumerator StartAction()
         {

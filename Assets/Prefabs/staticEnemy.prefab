@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2818430552318321696}
   - component: {fileID: -3263418075147034683}
   - component: {fileID: 2785693332056852416}
+  - component: {fileID: -3308406264812188979}
   m_Layer: 7
   m_Name: staticEnemy
   m_TagString: Untagged
@@ -169,6 +170,18 @@ MonoBehaviour:
   goliaf: {fileID: 2100000, guid: c63db73bcc2ba9344bb550841c93879f, type: 2}
   assasin: {fileID: 2100000, guid: b58f93c8ca78d7e4698f3e254569d497, type: 2}
   elemental: {fileID: 2100000, guid: e7869a18b3ec3ea4c8434d3612bd9d53, type: 2}
+--- !u!114 &-3308406264812188979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291694222842207153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadb02585470f194681fc31f4bb26030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1198622760713301259
 GameObject:
   m_ObjectHideFlags: 0
