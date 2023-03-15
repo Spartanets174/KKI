@@ -123,6 +123,10 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Libraries/BouncyCastle.Crypto.dll"
+-r:"Assets/Libraries/Google.Protobuf.dll"
+-r:"Assets/Libraries/MySql.Data.DLL"
+-r:"Assets/Libraries/renci.sshnet.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -359,6 +363,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/abilities/ability.cs"
+"Assets/db/DbManager.cs"
 "Assets/packages/QuickOutline/Scripts/Outline.cs"
 "Assets/scripts/card scripts/alWindowOpen.cs"
 "Assets/scripts/card scripts/Card.cs"
@@ -377,6 +382,7 @@
 "Assets/scripts/card scripts/shop scripts/disableCharCards.cs"
 "Assets/scripts/card scripts/shop scripts/setCoordTo0.cs"
 "Assets/scripts/card scripts/shop scripts/turnOnCards.cs"
+"Assets/scripts/checkNickname.cs"
 "Assets/scripts/dataManager.cs"
 "Assets/scripts/enums.cs"
 "Assets/scripts/gameScripts/battle field/Cell.cs"

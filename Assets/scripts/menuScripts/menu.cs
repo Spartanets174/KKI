@@ -8,6 +8,15 @@ public class menu : MonoBehaviour
 {
     public GameObject warningText;
     public PlayerManager1 playerManager;
+    [SerializeField] Text playerNick;
+    [SerializeField] PlayerData playerData;
+    private void Start()
+    {
+        if (gameObject.name=="play")
+        {
+            playerNick.text = $"Приветсвуем тебя, {playerData.Name}!";
+        }        
+    }
     public void Exit()
     {
         Debug.Log("out");

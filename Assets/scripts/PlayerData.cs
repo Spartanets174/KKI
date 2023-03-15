@@ -12,4 +12,5 @@ public class PlayerData : ScriptableObject
     public List<Card> deckUserCharCards;
     public List<cardSupport> deckUserSupportCards;
     public int money;
+    public string Name;
 }
