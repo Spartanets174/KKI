@@ -16,8 +16,8 @@ public class dataManager : MonoBehaviour
     }
     public void SaveData()
     {
-        playerData.allCharCards = playerManager.allCharCards;
-        playerData.allSupportCards = playerManager.allSupportCards;
+        playerData.allShopCharCards = playerManager.allCharCards;
+        playerData.allShopSupportCards = playerManager.allSupportCards;
         playerData.allUserCharCards = playerManager.allUserCharCards;
         playerData.allUserSupportCards = playerManager.allUserSupportCards;
         playerData.deckUserCharCards = playerManager.deckUserCharCards;
@@ -26,8 +26,8 @@ public class dataManager : MonoBehaviour
     }
     public void LoadData()
     {
-        playerManager.allCharCards = playerData.allCharCards ;
-        playerManager.allSupportCards = playerData.allSupportCards ;
+        playerManager.allCharCards = playerData.allShopCharCards;
+        playerManager.allSupportCards = playerData.allShopSupportCards;
         playerManager.allUserCharCards = playerData.allUserCharCards;
         playerManager.allUserSupportCards = playerData.allUserSupportCards;
         playerManager.deckUserCharCards = playerData.deckUserCharCards;

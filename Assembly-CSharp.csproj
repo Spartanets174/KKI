@@ -58,11 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\packages\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\scripts\gameScripts\BillBoard.cs" />
+    <Compile Include="Assets\db\DbManager.cs" />
     <Compile Include="Assets\scripts\card scripts\deck scripts\addToDeck.cs" />
     <Compile Include="Assets\scripts\card scripts\cardSupportDisplay.cs" />
     <Compile Include="Assets\scripts\gameScripts\behaviourTree\EnemyAI\EnemyBT.cs" />
     <Compile Include="Assets\scripts\gameScripts\behaviourTree\Tree.cs" />
     <Compile Include="Assets\scripts\card scripts\shop scripts\buyCard.cs" />
+    <Compile Include="Assets\scripts\checkNickname.cs" />
     <Compile Include="Assets\scripts\card scripts\CardDisplay.cs" />
     <Compile Include="Assets\scripts\card scripts\deck scripts\removeFromDeck.cs" />
     <Compile Include="Assets\scripts\gameScripts\behaviourTree\Node.cs" />
@@ -110,8 +112,6 @@
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
     <Compile Include="Assets\scripts\gameScripts\materialPicker.cs" />
     <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
-    <Compile Include="Assets\scripts\checkNickname.cs" />
-    <Compile Include="Assets\db\DbManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -392,23 +392,23 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.1.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="renci.sshnet">
       <HintPath>Assets\Libraries\renci.sshnet.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
       <HintPath>Assets\Libraries\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>Assets\Libraries\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.1.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>Assets\Libraries\BouncyCastle.Crypto.dll</HintPath>
