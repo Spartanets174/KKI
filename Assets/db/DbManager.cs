@@ -16,7 +16,7 @@ public class DbManager : MonoBehaviour
 {
     static string connectionString = $"server = {ConnectionInfo.ip}; uid = {ConnectionInfo.uid}; pwd = {ConnectionInfo.pwd}; Database = {ConnectionInfo.database}; SSLMode = none";
 
-    static MySqlConnection con;
+    public static MySqlConnection con;
     private void Awake()
     {
         con = new MySqlConnection(connectionString);
@@ -28,14 +28,12 @@ public class DbManager : MonoBehaviour
         {
             Debug.LogError(ex.Message);
         }
-    }
-    private void OnApplicationQuit()
+    }    
+
+    public void closeCon()
     {
         con.Close();
-        Debug.Log("closed");
     }
-
-
 
     #region Player
     public int InsertToPlayers(string Name, int balance)
@@ -84,6 +82,50 @@ public class DbManager : MonoBehaviour
             Debug.LogError(ex.Message);
         }
         return nickList;
+    }
+
+    public int UpdatePlayerBalance(PlayerData playerData)
+    {
+        string query = $"UPDATE gamedb.players SET balance = {playerData.money} where p_name='{playerData.Name}'";
+
+        var command = new MySqlCommand(query, con);
+        try
+        {
+            command.ExecuteNonQuery();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex.Message);
+        }
+        command.Dispose();
+        return Convert.ToInt32(command.LastInsertedId);
+    }
+
+    public int SelectBalancePlayer(PlayerData playerData)
+    {
+        int balance = -1;
+        string query = $"select balance from gamedb.players where p_name='{playerData.Name}'";
+        MySqlCommand command = new MySqlCommand(query, con);
+        try
+        {
+            var reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                balance = reader.GetInt32("balance");
+                command.Dispose();
+            }
+            else
+            {
+                command.Dispose();
+            }
+        }
+        catch (System.Exception ex)
+        {
+            command.Dispose();
+            Debug.LogError(ex.Message);
+        }
+        return balance;
     }
 
     /*    public int SelectIdPlayer(string playerName)
@@ -345,7 +387,9 @@ public class DbManager : MonoBehaviour
                             break;
                     }
                     item.image =Resources.Load<Sprite>($"Card images/cards of support/{reader.GetString("path")}");
-                    item.id = reader.GetInt32("idCards");
+                   /* Debug.Log($"image {item.image}");*/
+
+                   item.id = reader.GetInt32("idCards");
                     item.Price = reader.GetInt32("price");
                     /*                    Debug.Log($"имя {item.name} ({reader.GetString("name")}), раса {item.race} ({reader.GetString("race")}), способность {item.ability} ({reader.GetString("effect")}), тип {item.type} ({reader.GetString("type")}), редкость {item.rarity} ({reader.GetString("rarity")})");*/
                     cardSupportList.Add(item);
@@ -367,36 +411,6 @@ public class DbManager : MonoBehaviour
     }
 
 
-    /*    public List<int> SelectIdsCardSupport()
-        {
-            string query = $"select idCards from gamedb.cards";
-            List<int> cardSupporIdtList = new List<int>();
-            MySqlCommand command = new MySqlCommand(query, con);
-            try
-            {
-                var reader = command.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        cardSupporIdtList.Add(reader.GetInt32("idCards"));
-                        Debug.Log(reader.GetInt32("idCards"));
-                    }
-                    command.Dispose();
-                }
-                else
-                {
-                    command.Dispose();
-                }
-            }
-            catch (System.Exception ex)
-            {
-                command.Dispose();
-                Debug.LogError(ex.Message);
-            }
-            return cardSupporIdtList;
-        }*/
-
 
     #endregion
 
@@ -404,13 +418,37 @@ public class DbManager : MonoBehaviour
     #region supportShop
 
 
-    public void InsertToCardsSupportShop(PlayerData player)
+    public void InsertToCardsSupportShop(PlayerData playerData)
     {
-
+        for (int i = 0; i < playerData.allShopSupportCards.Count; i++)
+        {
+            string query = $"insert into gamedb.cards_shop(idCards_Shop,cost,id_player) values({playerData.allShopSupportCards[i].id},{playerData.allShopSupportCards[i].Price},{playerData.PlayerId})";
+            var command = new MySqlCommand(query, con);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError(ex.Message);
+            }
+            command.Dispose();
+        }
     }
-    public void RemoveCardsSupportShop(PlayerData player)
+    public void RemoveCardsSupportShop(PlayerData playerData)
     {
-
+        string query = $"DELETE FROM gamedb.cards_shop WHERE id_player = {playerData.PlayerId}";
+        var command = new MySqlCommand(query, con);
+        try
+        {
+            command.ExecuteNonQuery();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex.Message);
+        }
+        command.Dispose();
+       
     }
 
 
@@ -419,7 +457,6 @@ public class DbManager : MonoBehaviour
         for (int i = 0; i < playerData.allSupportCards.Count - 7; i++)
         {
             string query = $"insert into gamedb.cards_shop(idCards_Shop,cost,id_player) values({playerData.allSupportCards[i].id},{playerData.allSupportCards[i].Price},{playerData.PlayerId})";
-            Debug.Log($"{playerData.allSupportCards[i].id}");
             var command = new MySqlCommand(query, con);
             try
             {
@@ -489,8 +526,8 @@ public class DbManager : MonoBehaviour
                     }
                     item.Price = reader.GetInt32("price");
                     item.id = reader.GetInt32("idCards");
-                    Debug.Log($"имя {item.name} ({reader.GetString("name")}), раса {item.race} ({reader.GetString("race")}), способность {item.ability} ({reader.GetString("effect")}), тип {item.type} ({reader.GetString("type")}), редкость {item.rarity} ({reader.GetString("rarity")})");
-                    cardSupportList.Add(item);
+/*                    Debug.Log($"имя {item.name} ({reader.GetString("name")}), раса {item.race} ({reader.GetString("race")}), способность {item.ability} ({reader.GetString("effect")}), тип {item.type} ({reader.GetString("type")}), редкость {item.rarity} ({reader.GetString("rarity")})");
+*/                    cardSupportList.Add(item);
                 }
 
                 command.Dispose();
@@ -512,6 +549,45 @@ public class DbManager : MonoBehaviour
 
 
     #region charShop
+
+    public void InsertToCardsShop(PlayerData playerData)
+    {
+        for (int i = 0; i < playerData.allShopCharCards.Count; i++)
+        {
+            string query = $"insert into gamedb.characters_shop(idCharacters_Shop,cost,id_payer) values({playerData.allShopCharCards[i].id},{playerData.allShopCharCards[i].Price},{playerData.PlayerId})";
+            var command = new MySqlCommand(query, con);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError(ex.Message);
+            }
+            command.Dispose();
+        }
+    }
+    public void RemoveCardsShop(PlayerData playerData)
+    {
+        string query = $"DELETE FROM gamedb.characters_shop WHERE id_payer = {playerData.PlayerId}";
+        var command = new MySqlCommand(query, con);
+        try
+        {
+            command.ExecuteNonQuery();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex.Message);
+        }
+        command.Dispose();
+
+    }
+
+
+
+
+
+
     public void InsertToCardsShopStart(PlayerData playerData)
     {
         for (int i = 0; i < playerData.allCharCards.Count - 5; i++)
@@ -635,11 +711,294 @@ public class DbManager : MonoBehaviour
     #region supportOwn
 
 
+    public void InsertToCardsSupportOwn(PlayerData playerData)
+    {
+        for (int i = 0; i < playerData.allUserSupportCards.Count; i++)
+        {
+            string query = $"insert into gamedb.owned_cards(card_id,player_id) values({playerData.allUserSupportCards[i].id},{playerData.PlayerId})";
+            var command = new MySqlCommand(query, con);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError(ex.Message);
+            }
+            command.Dispose();
+        }
+    }
+    public void RemoveCardsSupportOwn(PlayerData playerData)
+    {
+        string query = $"DELETE FROM gamedb.owned_cards WHERE player_id = {playerData.PlayerId}";
+        var command = new MySqlCommand(query, con);
+        try
+        {
+            command.ExecuteNonQuery();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex.Message);
+        }
+        command.Dispose();
+
+    }
+
+
+
+    public void InsertToOwnCardsSupportStart(PlayerData playerData)
+    {
+        for (int i = playerData.allSupportCards.Count - 7; i < playerData.allSupportCards.Count ; i++)
+        {
+            string query = $"insert into gamedb.owned_cards(card_id,player_id) values({playerData.allSupportCards[i].id},{playerData.PlayerId})";
+            var command = new MySqlCommand(query, con);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError(ex.Message);
+            }
+            command.Dispose();
+        }
+    }
+
+    public List<cardSupport> SelectFromOwnCardsSupport(PlayerData playerData)
+    {
+        string query = $"SELECT * FROM gamedb.cards as c inner join gamedb.owned_cards as cs on(c.idCards = cs.card_id) where cs.player_id = {playerData.PlayerId}";
+        List<cardSupport> cardSupportList = new List<cardSupport>();
+        MySqlCommand command = new MySqlCommand(query, con);
+        try
+        {
+            var reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    cardSupport item = new cardSupport();
+                    item.name = reader.GetString("name");
+                    switch (reader.GetString("race"))
+                    {
+                        case "Люди":
+                            item.race = enums.Races.Люди;
+                            break;
+                        case "Гномы":
+                            item.race = enums.Races.Гномы;
+                            break;
+                        case "Эльфы":
+                            item.race = enums.Races.Эльфы;
+                            break;
+                        case "ТёмныеЭльфы":
+                            item.race = enums.Races.ТёмныеЭльфы;
+                            break;
+                        case "МагическиеСущества":
+                            item.race = enums.Races.МагическиеСущества;
+                            break;
+                    }
+                    switch (reader.GetString("type"))
+                    {
+                        case "атакующая":
+                            item.type = enums.typeOfSupport.атакующая;
+                            break;
+                        case "защитная":
+                            item.type = enums.typeOfSupport.защитная;
+                            break;
+                        case "мобильность":
+                            item.type = enums.typeOfSupport.мобильность;
+                            break;
+                    }
+                    item.ability = reader.GetString("effect");
+                    switch (reader.GetString("rarity"))
+                    {
+                        case "Обычная":
+                            item.rarity = enums.Rarity.Обычная;
+                            break;
+                        case "Мифическая":
+                            item.rarity = enums.Rarity.Мифическая;
+                            break;
+                    }
+                    item.Price = reader.GetInt32("price");
+                    item.id = reader.GetInt32("idCards");
+/*                    Debug.Log($"имя {item.name} ({reader.GetString("name")}), раса {item.race} ({reader.GetString("race")}), способность {item.ability} ({reader.GetString("effect")}), тип {item.type} ({reader.GetString("type")}), редкость {item.rarity} ({reader.GetString("rarity")})");
+*/                    cardSupportList.Add(item);
+                }
+
+                command.Dispose();
+            }
+            else
+            {
+                command.Dispose();
+            }
+        }
+        catch (System.Exception ex)
+        {
+            command.Dispose();
+            Debug.LogError(ex.Message);
+        }
+        return cardSupportList;
+
+    }
 
     #endregion
 
 
     #region charOwn
+
+
+    public void InsertToCardsOwn(PlayerData playerData)
+    {
+        for (int i = 0; i < playerData.allUserCharCards.Count; i++)
+        {
+            string query = $"insert into gamedb.owned_characters(character_id,playerId) values({playerData.allUserCharCards[i].id},{playerData.PlayerId})";
+            var command = new MySqlCommand(query, con);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError(ex.Message);
+            }
+            command.Dispose();
+        }
+    }
+    public void RemoveCardsOwn(PlayerData playerData)
+    {
+        string query = $"DELETE FROM gamedb.owned_characters WHERE playerId = {playerData.PlayerId}";
+        var command = new MySqlCommand(query, con);
+        try
+        {
+            command.ExecuteNonQuery();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex.Message);
+        }
+        command.Dispose();
+
+    }
+
+
+
+
+    public void InsertToOwnCardStart(PlayerData playerData)
+    {
+        for (int i = playerData.allCharCards.Count - 5; i < playerData.allCharCards.Count; i++)
+        {
+            string query = $"insert into gamedb.owned_characters(character_id,playerId) values({playerData.allCharCards[i].id},{playerData.PlayerId})";
+            var command = new MySqlCommand(query, con);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError(ex.Message);
+            }
+            command.Dispose();
+        }
+    }
+
+    public List<Card> SelectFromOwnCards(PlayerData playerData)
+    {
+        string query = $"SELECT * FROM gamedb.characters as c inner join gamedb.owned_characters as cs on(c.idCharacters = cs.character_id) where cs.playerId = {playerData.PlayerId}";
+        List<Card> cardList = new List<Card>();
+        MySqlCommand command = new MySqlCommand(query, con);
+        try
+        {
+            var reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Card item = new Card();
+                    item.name = reader.GetString("char_name");
+
+                    switch (reader.GetString("race"))
+                    {
+                        case "Люди":
+                            item.race = enums.Races.Люди;
+                            break;
+                        case "Гномы":
+                            item.race = enums.Races.Гномы;
+                            break;
+                        case "Эльфы":
+                            item.race = enums.Races.Эльфы;
+                            break;
+                        case "ТёмныеЭльфы":
+                            item.race = enums.Races.ТёмныеЭльфы;
+                            break;
+                        case "МагическиеСущества":
+                            item.race = enums.Races.МагическиеСущества;
+                            break;
+                    }
+
+                    switch (reader.GetString("class"))
+                    {
+                        case "Паладин":
+                            item.Class = enums.Classes.Паладин;
+                            break;
+                        case "Лучник":
+                            item.Class = enums.Classes.Лучник;
+                            break;
+                        case "Кавалерия":
+                            item.Class = enums.Classes.Кавалерия;
+                            break;
+                        case "Маг":
+                            item.Class = enums.Classes.Маг;
+                            break;
+                    }
+
+                    switch (reader.GetString("rarity"))
+                    {
+                        case "Обычная":
+                            item.rarity = enums.Rarity.Обычная;
+                            break;
+                        case "Мифическая":
+                            item.rarity = enums.Rarity.Мифическая;
+                            break;
+                    }
+
+                    item.description = reader.GetString("desctiption");
+
+                    item.health = Convert.ToInt32(reader.GetFloat("health"));
+                    item.speed = Convert.ToInt32(reader.GetFloat("speed"));
+                    item.physAttack = Convert.ToDouble(reader.GetFloat("p_attack"));
+                    item.magAttack = Convert.ToDouble(reader.GetFloat("m_attack"));
+                    item.range = Convert.ToInt32(reader.GetFloat("char_range"));
+                    item.physDefence = Convert.ToDouble(reader.GetFloat("p_defence"));
+                    item.magDefence = Convert.ToDouble(reader.GetFloat("m_defence"));
+                    item.critChance = Convert.ToDouble(reader.GetDouble("crit_possibility"));
+                    item.critNum = Convert.ToDouble(reader.GetDouble("crit"));
+
+                    item.passiveAbility = reader.GetString("passive");
+                    item.attackAbility = reader.GetString("special_1");
+                    item.defenceAbility = reader.GetString("special_2");
+                    item.buffAbility = reader.GetString("special_3");
+
+                    item.Price = reader.GetInt32("price");
+
+                    item.image = Resources.Load<Sprite>($"Card images/card of char/{reader.GetString("path")}");
+                    item.id = reader.GetInt32("idCharacters");
+                    cardList.Add(item);
+                }
+
+                command.Dispose();
+            }
+            else
+            {
+                command.Dispose();
+            }
+        }
+        catch (System.Exception ex)
+        {
+            command.Dispose();
+            Debug.LogError(ex.Message);
+        }
+        return cardList;
+
+    }
 
     #endregion
 }

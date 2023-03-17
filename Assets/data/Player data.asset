@@ -92,7 +92,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ab1066cb4f39254899be95026fb9297, type: 2}
   - {fileID: 11400000, guid: 9001641650c79574ba65f9f400447391, type: 2}
   - {fileID: 11400000, guid: 09edf4e3186d59647a6eec77ded2fd83, type: 2}
-  - {fileID: 11400000, guid: d5212e957263f9147a641d89f0fcf4db, type: 2}
   allShopSupportCards:
   - {fileID: 11400000, guid: cc8709a890533164f9d6c898052f5b80, type: 2}
   - {fileID: 11400000, guid: 0e5e9ea4c4a6c3144a74255bdd6db086, type: 2}
@@ -122,16 +121,29 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 247e8b9ff08bba24080a9a0ca99b0d38, type: 2}
   - {fileID: 11400000, guid: 3c6bccbf0c981974680a8dcf8ab2f531, type: 2}
   - {fileID: 11400000, guid: 84bb7f7ff0b430349930dd26f46f8419, type: 2}
-  - {fileID: 11400000, guid: b40dccc0e8052b749a505921aca02c2a, type: 2}
   - {fileID: 11400000, guid: 3bcf693f0fa8a4b4ea27f58944bc4c9e, type: 2}
   - {fileID: 11400000, guid: 7c51c4de9e922d746a9886dabd133727, type: 2}
   - {fileID: 11400000, guid: bc7c9e8a72f529a4dab187054b238ec8, type: 2}
   - {fileID: 11400000, guid: 119a4b4fc355b564cab1cb2438170384, type: 2}
   - {fileID: 11400000, guid: 01051d735d44b6d4d882ae4ff2cd2912, type: 2}
-  allUserCharCards: []
-  allUserSupportCards: []
+  allUserCharCards:
+  - {fileID: 11400000, guid: 8ddad6f2dd7fae749ab585f3bc109f72, type: 2}
+  - {fileID: 11400000, guid: d5212e957263f9147a641d89f0fcf4db, type: 2}
+  - {fileID: 11400000, guid: 7c1bf058d4094a148b9ec544c8523b87, type: 2}
+  - {fileID: 11400000, guid: 34cb52581f51c0d49a3f556361ebfbf6, type: 2}
+  - {fileID: 11400000, guid: 2e458810105ab4648828c9e25778d193, type: 2}
+  - {fileID: 11400000, guid: 14cbde657a3173347af9823bb863e1d9, type: 2}
+  allUserSupportCards:
+  - {fileID: 11400000, guid: b40dccc0e8052b749a505921aca02c2a, type: 2}
+  - {fileID: 11400000, guid: df0aedd72128a1544ae2cc75ab6768fb, type: 2}
+  - {fileID: 11400000, guid: 4356bed165dbfaa448f3e1fb04adada3, type: 2}
+  - {fileID: 11400000, guid: 1ee5f89ca1b8b0c44a78b4c0d1dad92f, type: 2}
+  - {fileID: 11400000, guid: 8b4677ba62c957e44a32c1eaf62909f1, type: 2}
+  - {fileID: 11400000, guid: db21915f334f3154280ff419b29fd575, type: 2}
+  - {fileID: 11400000, guid: 8f5cbf164e1efd545bbc328802f0b632, type: 2}
+  - {fileID: 11400000, guid: 53179920743f8c441b620df47da4bbb4, type: 2}
   deckUserCharCards: []
   deckUserSupportCards: []
-  money: 1000
-  Name: "\u0411\u0435\u0431\u0440\u0443\u043D XVIII"
-  PlayerId: 29
+  money: 725
+  Name: "\u0411\u0435\u0431\u0440\u0443\u043D XXIX"
+  PlayerId: 54

@@ -48,6 +48,7 @@ public class buyCard : MonoBehaviour
                         }
                     }
                     playerManager1.money -= alWindowOpen.cardDisplay.card.Price;
+                    Money.text = $"Ваши деньги: {playerManager1.money}$";
                     CardFilter.cardFiltration();
                 }
                 else
@@ -68,10 +69,13 @@ public class buyCard : MonoBehaviour
                         }
                     }
                     playerManager1.money -= alWindowOpen.CardSupportDisplay.card.Price;
+                    Money.text = $"Ваши деньги: {playerManager1.money}$";
                     CardFilter.cardSupportFiltration();
+
                 }
                 else
                 {
+                Debug.Log("sdf");
                     Money.text = "У вас недостаточно денег";
                 }
             }
@@ -84,7 +88,7 @@ public class buyCard : MonoBehaviour
             {
                 GameObject.Find("cardSpawner").GetComponent<cardSpawner>().listOfCardSupportObjects[i].gameObject.SetActive(false);
             }
-            Money.text = $"Ваши деньги: {playerManager1.money}$";
+            
               
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerManager1:MonoBehaviour
 {
     public PlayerData playerData;
+    public DbManager DB;
     public List<Card> allCharCards;
     public List<cardSupport> allSupportCards;
     public List<Card> allUserCharCards;
@@ -14,8 +15,8 @@ public class PlayerManager1:MonoBehaviour
     public bool isGame;
     private void Awake()
     {
-        this.allCharCards = playerData.allCharCards;
-        this.allSupportCards = playerData.allSupportCards;
+        this.allCharCards = playerData.allShopCharCards;
+        this.allSupportCards = playerData.allShopSupportCards;
         this.allUserCharCards = playerData.allUserCharCards;
         this.allUserSupportCards = playerData.allUserSupportCards;
         this.deckUserCharCards = playerData.deckUserCharCards;
@@ -29,14 +30,34 @@ public class PlayerManager1:MonoBehaviour
         //playerData.deckUserSupportCards = this.deckUserSupportCards;
         //playerData.money = this.money;
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        playerData.allCharCards = this.allCharCards;
-        playerData.allSupportCards = this.allSupportCards;
+        playerData.allShopCharCards = this.allCharCards;
+        playerData.allShopSupportCards = this.allSupportCards;
         playerData.allUserCharCards = this.allUserCharCards;
         playerData.allUserSupportCards = this.allUserSupportCards;
         playerData.deckUserCharCards = this.deckUserCharCards;
         playerData.deckUserSupportCards = this.deckUserSupportCards;
         playerData.money = this.money;
+    }
+    private void OnApplicationQuit()
+    {
+        DB.UpdatePlayerBalance(playerData);
+
+        DB.RemoveCardsSupportShop(playerData);
+        DB.InsertToCardsSupportShop(playerData);
+
+        DB.RemoveCardsShop(playerData);
+        DB.InsertToCardsShop(playerData);
+
+        DB.RemoveCardsSupportOwn(playerData);
+        DB.InsertToCardsSupportOwn(playerData);
+
+        DB.RemoveCardsOwn(playerData);
+        DB.InsertToCardsOwn(playerData);
+
+
+        DB.closeCon();
+        Debug.Log("closed");
     }
 }
