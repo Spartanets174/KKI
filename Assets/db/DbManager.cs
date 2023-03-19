@@ -128,33 +128,34 @@ public class DbManager : MonoBehaviour
         return balance;
     }
 
-    /*    public int SelectIdPlayer(string playerName)
+    public int SelectIdPlayer(string playerName)
+    {
+        string query = $"select idPlayers from gamedb.players where gamedb.players.p_name = '{playerName}'";
+        MySqlCommand command = new MySqlCommand(query, con);
+        int id = -1;
+        try
         {
-            string query = $"select idPlayers from gamedb.players where gamedb.players.p_name={playerName}";
-            MySqlCommand command = new MySqlCommand(query, con);
-            int id = -1;
-            try
+            var reader = command.ExecuteReader();
+            if (reader.HasRows)
             {
-                var reader = command.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    id =  reader.GetInt32("idPlayers");
-                    *//* reader.Read();*//*
-                    Debug.Log(reader.GetInt32("idPlayers"));
-                    command.Dispose();
-                }
-                else
-                {
-                    command.Dispose();
-                }
+                reader.Read();
+                id = reader.GetInt32("idPlayers");
+                reader.Read();
+                Debug.Log(reader.GetInt32("idPlayers"));
+                command.Dispose();
             }
-            catch (System.Exception ex)
+            else
             {
                 command.Dispose();
-                Debug.LogError(ex.Message);
             }
-            return id;
-        }*/
+        }
+        catch (System.Exception ex)
+        {
+            command.Dispose();
+            Debug.LogError(ex.Message);
+        }
+        return id;
+    }
     #endregion
 
 

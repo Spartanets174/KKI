@@ -112,6 +112,7 @@
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
     <Compile Include="Assets\scripts\gameScripts\materialPicker.cs" />
     <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
+    <Compile Include="Assets\scripts\saveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

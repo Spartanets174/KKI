@@ -13,6 +13,7 @@ public class PlayerManager1:MonoBehaviour
     public List<cardSupport> deckUserSupportCards;
     public int money = 100000;
     public bool isGame;
+    public string Name;
     private void Awake()
     {
         this.allCharCards = playerData.allShopCharCards;
@@ -22,6 +23,7 @@ public class PlayerManager1:MonoBehaviour
         this.deckUserCharCards = playerData.deckUserCharCards;
         this.deckUserSupportCards = playerData.deckUserSupportCards;
         this.money = playerData.money;
+        this.Name = playerData.Name;
         //playerData.allCharCards = this.allCharCards;
         //playerData.allSupportCards = this.allSupportCards;
         //playerData.allUserCharCards = this.allUserCharCards;
@@ -42,6 +44,14 @@ public class PlayerManager1:MonoBehaviour
     }
     private void OnApplicationQuit()
     {
+        for (int i = 0; i < playerData.deckUserCharCards.Count; i++)
+        {
+            playerData.allUserCharCards.Add(playerData.deckUserCharCards[i]);
+        }
+        for (int i = 0; i < playerData.deckUserSupportCards.Count; i++)
+        {
+            playerData.allUserSupportCards.Add(playerData.deckUserSupportCards[i]);
+        }
         DB.UpdatePlayerBalance(playerData);
 
         DB.RemoveCardsSupportShop(playerData);
@@ -56,6 +66,7 @@ public class PlayerManager1:MonoBehaviour
         DB.RemoveCardsOwn(playerData);
         DB.InsertToCardsOwn(playerData);
 
+        
 
         DB.closeCon();
         Debug.Log("closed");

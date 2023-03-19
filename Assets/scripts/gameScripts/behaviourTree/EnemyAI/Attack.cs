@@ -17,18 +17,12 @@ public class Attack : Node
     public override NodeState Evaluate()
     {
         GameObject _character = (GameObject)GetData("target");
-        
-        _battleSystem.StartCoroutine(StartAction());
-        _battleSystem.StopCoroutine(StartAction());
+
+        _battleSystem.OnAttackButton(_character.GetComponent<character>());        
         state = NodeState.RUNNING;
         ClearData("target");
+        _EnemyBT.RestartTree();
         return state;
-        IEnumerator StartAction()
-        {
-            _battleSystem.OnAttackButton(_character.GetComponent<character>());
-            yield return new WaitForSeconds(2);  
-            _EnemyBT.RestartTree();
-        }
     }
     
 }

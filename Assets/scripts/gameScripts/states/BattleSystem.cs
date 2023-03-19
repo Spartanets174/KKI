@@ -10,11 +10,16 @@ using UnityEngine.UI;
 public class BattleSystem : StateMachine
 {
     /*Сюда вставлять переменные для своего, врага, интерфейса и т.д.*/
+    //Камера
+    public cameraRotation Camera;
     //Интерфейс
     public Text pointsOfActionAndСube;
     public Text gameLog;
     public Scrollbar gameLogScrollBar;
-    public Button EndMove;   
+    public Button EndMove;
+    public Text endGameText;
+    public GameObject gameInterface;
+    public GameObject endGameInterface;
     //Окно персонажа
     public GameObject healthBar;
     public Text physAttack;

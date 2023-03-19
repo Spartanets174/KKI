@@ -33,13 +33,19 @@ public class EnemyTurn : State
             BattleSystem.EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
             BattleSystem.EnemyStaticCharObjects[i].GetComponent<staticEnemyAttack>().attackInRadius(true);
         }
-        /*for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0) ; i++)
+        for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
         {
             for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
             {
-                BattleSystem.field.CellsOfFieled[i, j].Enabled = false;
+                //Включение и переракрас всех клеток
+                BattleSystem.field.CellsOfFieled[i, j].GetComponent<Cell>().Enabled = true;
+                BattleSystem.isCellEven((i + j) % 2 == 0, true, BattleSystem.field.CellsOfFieled[i, j]);
+                if ((i == 2 && j == 2) || (i == 4 && j == 3) || (i == 2 && j == 7) || (i == 4 && j == 8))
+                {
+                    BattleSystem.field.CellsOfFieled[i, j].gameObject.GetComponent<MeshRenderer>().material = BattleSystem.field.CellsOfFieled[i, j].swampColor;
+                }
             }
-        }*/
+        }
 
         yield break;
     }
@@ -47,6 +53,7 @@ public class EnemyTurn : State
     {
         /*Логика при выборе перса*/
         //Отключение обводки у всех юнитов и переменной, отвечающей за то, какой персонаж выбран у врага
+        new WaitForSeconds(1);
         if (character.GetComponent<character>().isEnemy)
         {
             for (int i = 0; i < BattleSystem.EnemyCharObjects.Count; i++)
@@ -75,6 +82,7 @@ public class EnemyTurn : State
     public override IEnumerator Move(GameObject cell)
     {
         /*Логика при движении*/
+        new WaitForSeconds(1);
         if (cell.transform.childCount == 1)
         {
             //Перебор всех персонажей врага в колоде
@@ -88,6 +96,8 @@ public class EnemyTurn : State
                     {
                         numOfCells = Convert.ToInt32(BattleSystem.howManyCells(cell.transform.localPosition.x / 0.27f, BattleSystem.EnemyCharObjects[i].transform.parent.localPosition.x / 0.27f, "x", cell.GetComponent<Cell>()));
                     }
+                    BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen = false;
+                    BattleSystem.EnemyCharObjects[i].GetComponent<Outline>().enabled = false;
                     if (numOfCells <= BattleSystem.pointsOfAction)
                     {
                         BattleSystem.pointsOfAction -= numOfCells;
@@ -105,10 +115,7 @@ public class EnemyTurn : State
                         {
                             BattleSystem.endEnemyMove();
                         }
-                    }
-                    Debug.Log(BattleSystem.EnemyCharObjects.Count);
-                    BattleSystem.EnemyCharObjects[i].GetComponent<character>().isChosen = false;
-                    BattleSystem.EnemyCharObjects[i].GetComponent<Outline>().enabled = false;
+                    }                 
                 }
             }
             //Для нанесения урона статичиескими противниками
@@ -119,7 +126,7 @@ public class EnemyTurn : State
     public override IEnumerator Attack(character target)
     {
         /*Логика при атаке*/
-
+        new WaitForSeconds(1);
         if (2 <= BattleSystem.pointsOfAction)
         {
             for (int i = 0; i < BattleSystem.charCards.Count; i++)
@@ -158,6 +165,8 @@ public class EnemyTurn : State
                     }
                     if (BattleSystem.charCards.Count == 0)
                     {
+                        BattleSystem.enemyManager.gameObject.SetActive(false);
+                        BattleSystem.enemyManager.StopTree();
                         BattleSystem.SetState(new Lost(BattleSystem));
                     }
                 }

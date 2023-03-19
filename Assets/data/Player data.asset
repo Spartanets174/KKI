@@ -76,74 +76,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db21915f334f3154280ff419b29fd575, type: 2}
   - {fileID: 11400000, guid: 8f5cbf164e1efd545bbc328802f0b632, type: 2}
   - {fileID: 11400000, guid: 53179920743f8c441b620df47da4bbb4, type: 2}
-  allShopCharCards:
-  - {fileID: 11400000, guid: 1efb931489e48d54382b4858bb72c825, type: 2}
-  - {fileID: 11400000, guid: 3c0d8d76eb182f4448c9ab5176ac15a4, type: 2}
-  - {fileID: 11400000, guid: 3a1f88c195808ea4eabf1b3bccc95de9, type: 2}
-  - {fileID: 11400000, guid: 3ca1373b7a605eb40bceec110a4e19d6, type: 2}
-  - {fileID: 11400000, guid: d745ccd1720745248852e6cccc78a53a, type: 2}
-  - {fileID: 11400000, guid: 84e4d71253b2d4d4a9f7783c74d63f99, type: 2}
-  - {fileID: 11400000, guid: 99246efd4f7400145a3e0ac10a5f0b7c, type: 2}
-  - {fileID: 11400000, guid: 6a35d8175b0def84294c1fd6c133e4e9, type: 2}
-  - {fileID: 11400000, guid: 0053ede186301f24084169f26ab07dcc, type: 2}
-  - {fileID: 11400000, guid: 5dc9179130fd1504c8ce4aefc55c8249, type: 2}
-  - {fileID: 11400000, guid: 07a973fb0c82eed4dae92921ad89407e, type: 2}
-  - {fileID: 11400000, guid: 93fa790d82335fb429e52d537e81876b, type: 2}
-  - {fileID: 11400000, guid: 8ab1066cb4f39254899be95026fb9297, type: 2}
-  - {fileID: 11400000, guid: 9001641650c79574ba65f9f400447391, type: 2}
-  - {fileID: 11400000, guid: 09edf4e3186d59647a6eec77ded2fd83, type: 2}
-  allShopSupportCards:
-  - {fileID: 11400000, guid: cc8709a890533164f9d6c898052f5b80, type: 2}
-  - {fileID: 11400000, guid: 0e5e9ea4c4a6c3144a74255bdd6db086, type: 2}
-  - {fileID: 11400000, guid: 1238b4e8f64fede49ae3412fe4f083a0, type: 2}
-  - {fileID: 11400000, guid: cdaa202543bcb85439d194eec5831070, type: 2}
-  - {fileID: 11400000, guid: f4eaa8c2265d25b4f94c4a4031ae8584, type: 2}
-  - {fileID: 11400000, guid: 8241e45ddbded17418bcb23976749792, type: 2}
-  - {fileID: 11400000, guid: c7459b8714411a647b37bc4c6210a14b, type: 2}
-  - {fileID: 11400000, guid: 2bda1a7935a22ef4fad4e90c8bfc8301, type: 2}
-  - {fileID: 11400000, guid: 501922f67ef97b34dafe533a1d15acc0, type: 2}
-  - {fileID: 11400000, guid: 036b9c1b2057bca458b7ec91bb4aae3f, type: 2}
-  - {fileID: 11400000, guid: d165bff948f523343ac62215754a5482, type: 2}
-  - {fileID: 11400000, guid: c4e106e440c384d4097d61c473aa0911, type: 2}
-  - {fileID: 11400000, guid: 7419e220ac32d19428ace434045daefe, type: 2}
-  - {fileID: 11400000, guid: 44c35506b3119fa4ca67d026c2656ddd, type: 2}
-  - {fileID: 11400000, guid: 85b14afbb58319748b746b388869d25f, type: 2}
-  - {fileID: 11400000, guid: a4cbfee1947cbfc4eb907f920d6c5d0c, type: 2}
-  - {fileID: 11400000, guid: 1c9b636c1594dbc4a8ab06e6d63e1256, type: 2}
-  - {fileID: 11400000, guid: b0ddec4b1c7aa7a4194f50c36424ecc4, type: 2}
-  - {fileID: 11400000, guid: 857761d4aa3fff942aaf7aae366ffe5d, type: 2}
-  - {fileID: 11400000, guid: 4eaf4d56f7012af43adae8f5e3c1c5ff, type: 2}
-  - {fileID: 11400000, guid: 4412169ea3143f542ba0052336ce07e4, type: 2}
-  - {fileID: 11400000, guid: 25dedc9f1352cd44cafd47e2f35e9220, type: 2}
-  - {fileID: 11400000, guid: d5698c88c75621d4190823ae45ce793c, type: 2}
-  - {fileID: 11400000, guid: c1e48479bd4e5d842843648764a4eecf, type: 2}
-  - {fileID: 11400000, guid: d95a558b5c7f1a84596f1cd36ec55fb9, type: 2}
-  - {fileID: 11400000, guid: 247e8b9ff08bba24080a9a0ca99b0d38, type: 2}
-  - {fileID: 11400000, guid: 3c6bccbf0c981974680a8dcf8ab2f531, type: 2}
-  - {fileID: 11400000, guid: 84bb7f7ff0b430349930dd26f46f8419, type: 2}
-  - {fileID: 11400000, guid: 3bcf693f0fa8a4b4ea27f58944bc4c9e, type: 2}
-  - {fileID: 11400000, guid: 7c51c4de9e922d746a9886dabd133727, type: 2}
-  - {fileID: 11400000, guid: bc7c9e8a72f529a4dab187054b238ec8, type: 2}
-  - {fileID: 11400000, guid: 119a4b4fc355b564cab1cb2438170384, type: 2}
-  - {fileID: 11400000, guid: 01051d735d44b6d4d882ae4ff2cd2912, type: 2}
-  allUserCharCards:
-  - {fileID: 11400000, guid: 8ddad6f2dd7fae749ab585f3bc109f72, type: 2}
-  - {fileID: 11400000, guid: d5212e957263f9147a641d89f0fcf4db, type: 2}
-  - {fileID: 11400000, guid: 7c1bf058d4094a148b9ec544c8523b87, type: 2}
-  - {fileID: 11400000, guid: 34cb52581f51c0d49a3f556361ebfbf6, type: 2}
-  - {fileID: 11400000, guid: 2e458810105ab4648828c9e25778d193, type: 2}
-  - {fileID: 11400000, guid: 14cbde657a3173347af9823bb863e1d9, type: 2}
-  allUserSupportCards:
-  - {fileID: 11400000, guid: b40dccc0e8052b749a505921aca02c2a, type: 2}
-  - {fileID: 11400000, guid: df0aedd72128a1544ae2cc75ab6768fb, type: 2}
-  - {fileID: 11400000, guid: 4356bed165dbfaa448f3e1fb04adada3, type: 2}
-  - {fileID: 11400000, guid: 1ee5f89ca1b8b0c44a78b4c0d1dad92f, type: 2}
-  - {fileID: 11400000, guid: 8b4677ba62c957e44a32c1eaf62909f1, type: 2}
-  - {fileID: 11400000, guid: db21915f334f3154280ff419b29fd575, type: 2}
-  - {fileID: 11400000, guid: 8f5cbf164e1efd545bbc328802f0b632, type: 2}
-  - {fileID: 11400000, guid: 53179920743f8c441b620df47da4bbb4, type: 2}
+  allShopCharCards: []
+  allShopSupportCards: []
+  allUserCharCards: []
+  allUserSupportCards: []
   deckUserCharCards: []
   deckUserSupportCards: []
-  money: 725
-  Name: "\u0411\u0435\u0431\u0440\u0443\u043D XXIX"
-  PlayerId: 54
+  money: 1000
+  Name: 0
+  PlayerId: 74

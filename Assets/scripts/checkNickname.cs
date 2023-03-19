@@ -12,9 +12,52 @@ public class checkNickname : MonoBehaviour
     [SerializeField] DbManager DB;
     private void Awake()
     {
+        playerData.Name = saveSystem.LoadPlayer();
         if (playerData.Name!="")
         {
             playerData.money = DB.SelectBalancePlayer(playerData);
+            Debug.Log(playerData.Name);
+            playerData.PlayerId = DB.SelectIdPlayer(playerData.Name);
+            playerData.deckUserCharCards.Clear();
+            playerData.deckUserSupportCards.Clear();
+            playerData.money = DB.SelectBalancePlayer(playerData);
+            List<Card> CardOfPlayer = DB.SelectFromChars();
+            List<cardSupport> CardSupportOfPlayer = DB.SelectFromCardsSupport();
+
+            for (int i = 0; i < playerData.allCharCards.Count; i++)
+            {
+                playerData.allCharCards[i].name = CardOfPlayer[i].name;
+                playerData.allCharCards[i].race = CardOfPlayer[i].race;
+                playerData.allCharCards[i].Class = CardOfPlayer[i].Class;
+                playerData.allCharCards[i].rarity = CardOfPlayer[i].rarity;
+                playerData.allCharCards[i].description = CardOfPlayer[i].description;
+                playerData.allCharCards[i].health = CardOfPlayer[i].health;
+                playerData.allCharCards[i].speed = CardOfPlayer[i].speed;
+                playerData.allCharCards[i].physAttack = CardOfPlayer[i].physAttack;
+                playerData.allCharCards[i].magAttack = CardOfPlayer[i].magAttack;
+                playerData.allCharCards[i].range = CardOfPlayer[i].range;
+                playerData.allCharCards[i].physDefence = CardOfPlayer[i].physDefence;
+                playerData.allCharCards[i].magDefence = CardOfPlayer[i].magDefence;
+                playerData.allCharCards[i].critNum = CardOfPlayer[i].critNum;
+                playerData.allCharCards[i].passiveAbility = CardOfPlayer[i].passiveAbility;
+                playerData.allCharCards[i].attackAbility = CardOfPlayer[i].attackAbility;
+                playerData.allCharCards[i].defenceAbility = CardOfPlayer[i].defenceAbility;
+                playerData.allCharCards[i].buffAbility = CardOfPlayer[i].buffAbility;
+                playerData.allCharCards[i].image = CardOfPlayer[i].image;
+                playerData.allCharCards[i].Price = CardOfPlayer[i].Price;
+                playerData.allCharCards[i].id = CardOfPlayer[i].id;
+            }
+            for (int i = 0; i < playerData.allSupportCards.Count; i++)
+            {
+                playerData.allSupportCards[i].name = CardSupportOfPlayer[i].name;
+                playerData.allSupportCards[i].race = CardSupportOfPlayer[i].race;
+                playerData.allSupportCards[i].type = CardSupportOfPlayer[i].type;
+                playerData.allSupportCards[i].image = CardSupportOfPlayer[i].image;
+                playerData.allSupportCards[i].ability = CardSupportOfPlayer[i].ability;
+                playerData.allSupportCards[i].rarity = CardSupportOfPlayer[i].rarity;
+                playerData.allSupportCards[i].Price = CardSupportOfPlayer[i].Price;
+                playerData.allSupportCards[i].id = CardSupportOfPlayer[i].id;
+            }
             List<Card> CardOfShopPlayer = DB.SelectFromCardsShop(playerData);
             List<cardSupport> CardSupportOfShopPlayer = DB.SelectFromCardsSupportShop(playerData);
             List<Card> OwnedCardOfPlayer = DB.SelectFromOwnCards(playerData);
@@ -96,9 +139,11 @@ public class checkNickname : MonoBehaviour
                     {
                         int id = DB.InsertToPlayers(Nick.text, 1000);                       
                         playerData.Name = Nick.text;
+                        saveSystem.savePlayer(playerData.Name);
                         playerData.money = 1000;
-                        playerData.PlayerId = id;                      
-
+                        playerData.PlayerId = id;
+                        playerData.deckUserCharCards.Clear();
+                        playerData.deckUserSupportCards.Clear();
                         List<Card> CardOfPlayer = DB.SelectFromChars();
                         List<cardSupport> CardSupportOfPlayer = DB.SelectFromCardsSupport();
 

@@ -32,7 +32,7 @@ public class Cell : MonoBehaviour
             //Передача данных о текущей клетки в battleSystem            
             if (this.transform.childCount!=1)
             {
-                if (this.transform.GetChild(1).GetComponent<character>().isEnemy)
+                if (this.transform.GetChild(1).GetComponent<character>().isEnemy|| this.transform.GetChild(1).GetComponent<character>().isStaticEnemy)
                 {
                     battleSystem.cahngeCardWindow(this.transform.GetChild(1).gameObject, true);                  
                 }

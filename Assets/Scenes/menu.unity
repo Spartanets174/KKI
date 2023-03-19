@@ -19871,6 +19871,7 @@ MonoBehaviour:
   deckUserSupportCards: []
   money: 100000
   isGame: 0
+  Name: 
 --- !u!4 &1342351913
 Transform:
   m_ObjectHideFlags: 0
@@ -19940,7 +19941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 842275590}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1

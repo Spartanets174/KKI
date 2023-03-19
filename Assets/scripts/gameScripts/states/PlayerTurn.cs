@@ -36,13 +36,19 @@ public class PlayerTurn : State
             BattleSystem.EnemyStaticCharObjects[i].GetComponent<Outline>().enabled = false;
             BattleSystem.EnemyStaticCharObjects[i].GetComponent<staticEnemyAttack>().attackInRadius(false);
         }
-      /*  for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
+        for (int i = 0; i < BattleSystem.field.CellsOfFieled.GetLength(0); i++)
         {
             for (int j = 0; j < BattleSystem.field.CellsOfFieled.GetLength(1); j++)
             {
-                BattleSystem.field.CellsOfFieled[i, j].Enabled = true;
+                //Включение и переракрас всех клеток
+                BattleSystem.field.CellsOfFieled[i, j].GetComponent<Cell>().Enabled = true;
+                BattleSystem.isCellEven((i + j) % 2 == 0, true, BattleSystem.field.CellsOfFieled[i, j]);
+                if ((i == 2 && j == 2) || (i == 4 && j == 3) || (i == 2 && j == 7) || (i == 4 && j == 8))
+                {
+                    BattleSystem.field.CellsOfFieled[i, j].gameObject.GetComponent<MeshRenderer>().material = BattleSystem.field.CellsOfFieled[i, j].swampColor;
+                }
             }
-        }*/
+        }
         yield break;
     }
     //При выборе персонажа
@@ -349,6 +355,8 @@ public class PlayerTurn : State
                     }
                     if (BattleSystem.EnemyCharObjects.Count == 0)
                     {
+                        BattleSystem.enemyManager.gameObject.SetActive(false);
+                        BattleSystem.enemyManager.StopTree();
                         BattleSystem.SetState(new Won(BattleSystem));
                     }
                 }
