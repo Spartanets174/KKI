@@ -87,6 +87,7 @@
     <Compile Include="Assets\scripts\card scripts\alWindowOpen.cs" />
     <Compile Include="Assets\scripts\PlayerData.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\PlayerTurn.cs" />
+    <Compile Include="Assets\scripts\saveSystem.cs" />
     <Compile Include="Assets\scripts\gameScripts\healthBar.cs" />
     <Compile Include="Assets\scripts\gameScripts\cameraRotation.cs" />
     <Compile Include="Assets\scripts\gameScripts\states\StateMachine.cs" />
@@ -112,7 +113,6 @@
     <Compile Include="Assets\scripts\gameScripts\battle field\Field.cs" />
     <Compile Include="Assets\scripts\gameScripts\materialPicker.cs" />
     <Compile Include="Assets\scripts\card scripts\filter scripts\setRace.cs" />
-    <Compile Include="Assets\scripts\saveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
