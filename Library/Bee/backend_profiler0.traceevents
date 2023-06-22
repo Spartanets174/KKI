@@ -1,466 +1,435 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1679331341006466, "dur":21136, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1679331341027620, "dur":366, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1679331341028068, "dur":265, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1679331341028368, "dur":729, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1679331341029098, "dur":607556, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1679331341636680, "dur":134, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1679331341636921, "dur":1548, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1679331341028989, "dur":132, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341029124, "dur":5602, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341034738, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341036062, "dur":12125, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1679331341048191, "dur":105, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341048189, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341048297, "dur":313, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341048621, "dur":10806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341060073, "dur":1162, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341059483, "dur":1753, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341061283, "dur":72407, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341133739, "dur":93, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341133736, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341133926, "dur":7463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341141444, "dur":172, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341141441, "dur":176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341141618, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341141682, "dur":8617, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341150350, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341150506, "dur":7235, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":1, "ts":1679331341157795, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":1, "ts":1679331341157952, "dur":4237, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":1, "ts":1679331341162243, "dur":113, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341162240, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341162358, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341162643, "dur":5072, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341167805, "dur":119, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341167802, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341168043, "dur":38199, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341206300, "dur":113, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityPlayer.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341206297, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341206469, "dur":165098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341371721, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341371720, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341371873, "dur":2789, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341374724, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341374722, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341374847, "dur":2948, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341377868, "dur":73, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Transactions.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341377866, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341378024, "dur":1096, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341379177, "dur":60, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Security.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341379175, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341379292, "dur":1284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341380631, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Numerics.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341380628, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341380689, "dur":216, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341380917, "dur":1978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341382950, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Management.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341382948, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Management.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341383015, "dur":720, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341383748, "dur":1778, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Management.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341385583, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341385582, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341385698, "dur":943, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341386740, "dur":164, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341386916, "dur":2206, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341389178, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341389176, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341389298, "dur":1539, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341390898, "dur":65, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Configuration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341390897, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341391020, "dur":4136, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341395232, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Configuration.Install.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341395229, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Configuration.Install.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341395348, "dur":1009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Configuration.Install.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341396409, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\netstandard.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341396407, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341396465, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341396542, "dur":1488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341398109, "dur":187, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341398308, "dur":1251, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341399659, "dur":1526, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Google.Protobuf.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341401204, "dur":91, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341401202, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341401374, "dur":3537, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341404930, "dur":81, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341404928, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341405012, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341405125, "dur":1236, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341406378, "dur":583, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341406377, "dur":585, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341406962, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341407067, "dur":1616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341408701, "dur":286, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341408700, "dur":288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341409067, "dur":1356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341410444, "dur":87, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341410443, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341410533, "dur":124, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341410669, "dur":973, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341411685, "dur":206, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341411684, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341411892, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341411952, "dur":1797, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341413768, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341413766, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341413878, "dur":1497, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341415432, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341415430, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341415504, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341415574, "dur":1243, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341416891, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341416993, "dur":1390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341418438, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341418490, "dur":270, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341418775, "dur":2765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341421637, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341421635, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341421709, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341421877, "dur":1430, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341423386, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341423494, "dur":961, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341424511, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341424509, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341424601, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341424664, "dur":1789, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341426605, "dur":1019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341427675, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341427672, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341427782, "dur":2890, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341430731, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341430729, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341430848, "dur":1394, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341432341, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341432316, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341432400, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341432500, "dur":2798, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341435360, "dur":62, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341435358, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341435479, "dur":1497, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341437035, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341437032, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341437148, "dur":1915, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341439116, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341439167, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341439296, "dur":2624, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341441988, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341442039, "dur":1299, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341443350, "dur":2153, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341445561, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341445669, "dur":1697, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341447424, "dur":132, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341447422, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341447557, "dur":139, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341447718, "dur":3521, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341451291, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341451395, "dur":956, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341452406, "dur":69, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341452403, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341452489, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341452581, "dur":4664, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341457370, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341457368, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341457435, "dur":485, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341457933, "dur":1462, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341459508, "dur":320, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1679331341459841, "dur":4168, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1679331341465083, "dur":2493, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":1, "ts":1679331341467634, "dur":1356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":1, "ts":1679331341469049, "dur":158227, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":1, "ts":1679331341627303, "dur":9278, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341029028, "dur":97, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341029125, "dur":5740, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341034882, "dur":121, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
-,{ "pid":12345, "tid":2, "ts":1679331341034866, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":2, "ts":1679331341036301, "dur":11878, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":2, "ts":1679331341048229, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1679331341048377, "dur":238748, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1679331341287191, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":2, "ts":1679331341287188, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":2, "ts":1679331341287250, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341287313, "dur":43459, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":2, "ts":1679331341330834, "dur":522, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
-,{ "pid":12345, "tid":2, "ts":1679331341330833, "dur":525, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI.exe" }}
-,{ "pid":12345, "tid":2, "ts":1679331341331359, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341331422, "dur":1380, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI.exe" }}
-,{ "pid":12345, "tid":2, "ts":1679331341332822, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":2, "ts":1679331341332994, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341333321, "dur":62620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":2, "ts":1679331341396004, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Mono.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341396002, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341396116, "dur":1468, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341397653, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341397766, "dur":2131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/MySql.Data.DLL" }}
-,{ "pid":12345, "tid":2, "ts":1679331341399987, "dur":1609, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/renci.sshnet.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341401616, "dur":106, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341401614, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341401784, "dur":1124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341402931, "dur":96, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341402929, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341403085, "dur":1102, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341404205, "dur":79, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341404204, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341404285, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341404399, "dur":1261, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341405678, "dur":81, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341405677, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341405760, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341405836, "dur":2272, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341408127, "dur":97, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341408126, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341408284, "dur":1013, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341409315, "dur":461, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341409313, "dur":464, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341409835, "dur":1916, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341411769, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341411767, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341411925, "dur":1723, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341413668, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341413666, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341413782, "dur":1431, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341415279, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341415277, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341415390, "dur":1271, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341416719, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341416717, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341416774, "dur":197, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341416982, "dur":1200, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341418623, "dur":86, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341418621, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341418711, "dur":106, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341418827, "dur":3106, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341421993, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341422045, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341422129, "dur":1514, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341423713, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341423711, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341423769, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341423930, "dur":968, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341424952, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341425083, "dur":1839, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341427069, "dur":1162, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341428286, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341428284, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341428396, "dur":961, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341429409, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341429514, "dur":1604, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341431171, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341431169, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341431277, "dur":2156, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341433541, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341433595, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341433667, "dur":1587, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341435316, "dur":87, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341435313, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341435462, "dur":1238, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341436758, "dur":71, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341436756, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341436916, "dur":2547, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341439516, "dur":106, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341439514, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341439623, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341439749, "dur":3263, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341443065, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341443174, "dur":2231, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341445460, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341445512, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341445592, "dur":1696, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341447342, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341447395, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341447483, "dur":3089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341450639, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341450637, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341450710, "dur":290, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341451013, "dur":1358, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341452460, "dur":113, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341452458, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341452629, "dur":2941, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341455625, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341455676, "dur":524, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341456215, "dur":4825, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341461099, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341461152, "dur":285, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1679331341461449, "dur":34013, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1679331341495550, "dur":140925, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":3, "ts":1679331341029066, "dur":66, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341029132, "dur":5633, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341034766, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":3, "ts":1679331341036971, "dur":10109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":3, "ts":1679331341047135, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1679331341047389, "dur":9761, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1679331341057205, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":3, "ts":1679331341057728, "dur":2454, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":3, "ts":1679331341060257, "dur":625, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1679331341060884, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341061018, "dur":3022, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1679331341064096, "dur":108, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
-,{ "pid":12345, "tid":3, "ts":1679331341064093, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":3, "ts":1679331341064278, "dur":68583, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":3, "ts":1679331341132910, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":3, "ts":1679331341133765, "dur":2715, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":3, "ts":1679331341136529, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1679331341136709, "dur":10449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1679331341147212, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":3, "ts":1679331341147402, "dur":291243, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":3, "ts":1679331341438708, "dur":66, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341438706, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341438776, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341438839, "dur":2443, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341441368, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341441365, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341441424, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341441517, "dur":1719, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341443295, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341443293, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341443348, "dur":200, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341443559, "dur":2554, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341446167, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341446218, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341446307, "dur":3115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341449488, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341449485, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341449540, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341449621, "dur":7303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341456999, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341457051, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341457141, "dur":3089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341460293, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341460346, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341460445, "dur":3326, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1679331341463834, "dur":98, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Assets\\StreamingAssets\\UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":3, "ts":1679331341463832, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":3, "ts":1679331341463933, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1679331341464444, "dur":1005, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":3, "ts":1679331341465496, "dur":101540, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/sharedassets2.assets.resS" }}
-,{ "pid":12345, "tid":3, "ts":1679331341567160, "dur":3602, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/level1.resS" }}
-,{ "pid":12345, "tid":3, "ts":1679331341570867, "dur":5417, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/level1" }}
-,{ "pid":12345, "tid":3, "ts":1679331341576352, "dur":30074, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/level0.resS" }}
-,{ "pid":12345, "tid":3, "ts":1679331341606451, "dur":30235, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341029138, "dur":5595, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341034752, "dur":117, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
-,{ "pid":12345, "tid":4, "ts":1679331341034736, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":4, "ts":1679331341037192, "dur":95499, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":4, "ts":1679331341132742, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":4, "ts":1679331341132919, "dur":238414, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":4, "ts":1679331341371399, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\mscorlib.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341371396, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341371453, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341371760, "dur":5145, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341376972, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341376969, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341377088, "dur":1083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341378226, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341378224, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341378283, "dur":266, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341378561, "dur":1268, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341380117, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341379882, "dur":288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341380226, "dur":1884, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341382260, "dur":2855, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341385171, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341385275, "dur":1072, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341386502, "dur":1137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341387786, "dur":2901, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341390743, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341390741, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341390858, "dur":4754, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341395680, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341395678, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341395819, "dur":1533, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341397461, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341397587, "dur":3066, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/BouncyCastle.Crypto.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341400694, "dur":188, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.0.2\\Runtime\\AOT\\Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341400673, "dur":210, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341400938, "dur":2344, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341403302, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341403301, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341403386, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341403477, "dur":1854, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341405349, "dur":84, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341405348, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341405440, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341405535, "dur":1591, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341407145, "dur":92, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341407144, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341407238, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341407309, "dur":1523, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341408851, "dur":124, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341408850, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341409034, "dur":1794, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341410845, "dur":374, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341410844, "dur":376, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341411276, "dur":2279, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341413576, "dur":157, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341413574, "dur":160, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341413735, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341413797, "dur":1350, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341415168, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341415166, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341415279, "dur":1039, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341416366, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341416469, "dur":827, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341417346, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341417398, "dur":226, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341417636, "dur":2304, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341420005, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341420057, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341420174, "dur":6208, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341426482, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341426480, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341426533, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341426625, "dur":1690, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341428365, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341428669, "dur":1105, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341429885, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341429883, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341429943, "dur":428, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341430384, "dur":999, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341431536, "dur":2783, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341434370, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341434422, "dur":1023, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341435459, "dur":1318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341436846, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341436844, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341436953, "dur":2030, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341439038, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341439090, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341439232, "dur":4283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341443645, "dur":221, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341443878, "dur":1841, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341445808, "dur":60, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341445806, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341445870, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341445948, "dur":1955, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341447952, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341447951, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341448007, "dur":400, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341448442, "dur":5693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341454188, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341454240, "dur":181, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341454463, "dur":4188, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341458717, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341458715, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341458774, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341458884, "dur":4130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341463080, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341463132, "dur":1052, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1679331341464195, "dur":30996, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1679331341495288, "dur":2346, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":4, "ts":1679331341497687, "dur":1407, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":4, "ts":1679331341499120, "dur":100, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":4, "ts":1679331341499118, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":4, "ts":1679331341499282, "dur":1019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":4, "ts":1679331341500422, "dur":4679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":4, "ts":1679331341505156, "dur":8958, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":4, "ts":1679331341514173, "dur":1454, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/resources.assets" }}
-,{ "pid":12345, "tid":4, "ts":1679331341515675, "dur":1521, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/level2.resS" }}
-,{ "pid":12345, "tid":4, "ts":1679331341517245, "dur":60336, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/level2" }}
-,{ "pid":12345, "tid":4, "ts":1679331341577631, "dur":2565, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/level0" }}
-,{ "pid":12345, "tid":4, "ts":1679331341580253, "dur":1731, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":4, "ts":1679331341582040, "dur":1193, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":4, "ts":1679331341583259, "dur":92, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1679331341583256, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI/KKI_Data/boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1679331341583410, "dur":1056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI/KKI_Data/boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1679331341584488, "dur":52170, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1679331341639552, "dur":2038, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1687431739237612, "dur":62062, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1687431739299689, "dur":16182, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1687431739315950, "dur":251, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1687431739316226, "dur":850, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1687431739317078, "dur":468750, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1687431739785829, "dur":126, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1687431739786057, "dur":1453, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1687431739316950, "dur":141, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739317102, "dur":15665, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739332780, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739333793, "dur":6616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1687431739340413, "dur":9274, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1687431739340410, "dur":9278, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1687431739349749, "dur":7044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1687431739356847, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1687431739357021, "dur":4318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1687431739361447, "dur":9473, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
+,{ "pid":12345, "tid":1, "ts":1687431739361445, "dur":9477, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1687431739370922, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739370991, "dur":1203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1687431739372286, "dur":147642, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739372284, "dur":147646, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739519932, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739520073, "dur":10917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739531127, "dur":103, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739531079, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739531232, "dur":160, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739531443, "dur":1611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739533159, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739533220, "dur":955, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739534314, "dur":1011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739535372, "dur":126, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739535370, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739535516, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739535576, "dur":4709, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739540336, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739540335, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739540439, "dur":2230, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739542720, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739542771, "dur":133, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739542913, "dur":1649, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739544702, "dur":963, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739545803, "dur":1989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739547931, "dur":1264, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739549394, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739549392, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739549449, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1687431739549543, "dur":2369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739552058, "dur":1663, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1687431739553839, "dur":27183, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":1, "ts":1687431739581124, "dur":11750, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":1, "ts":1687431739592950, "dur":90728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1687431739683701, "dur":102132, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739317153, "dur":15648, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739332802, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1687431739332939, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739334798, "dur":5525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1687431739340379, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1687431739340765, "dur":3536, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1687431739344351, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1687431739344840, "dur":3116, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1687431739348087, "dur":10519, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739348084, "dur":10524, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739358609, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739358710, "dur":1079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739359839, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1687431739360326, "dur":1288, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1687431739361694, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1687431739361984, "dur":2103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1687431739364139, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1687431739364303, "dur":3297, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1687431739367655, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739367824, "dur":3086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739370971, "dur":18387, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739370969, "dur":18391, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739389360, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739389746, "dur":1380, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739391175, "dur":532, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
+,{ "pid":12345, "tid":2, "ts":1687431739391173, "dur":535, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI.exe" }}
+,{ "pid":12345, "tid":2, "ts":1687431739391769, "dur":1233, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI.exe" }}
+,{ "pid":12345, "tid":2, "ts":1687431739393025, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":2, "ts":1687431739393442, "dur":33297, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":2, "ts":1687431739426791, "dur":4182, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\mscorlib.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739426789, "dur":4186, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739430976, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739431289, "dur":3464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739434805, "dur":2698, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739434803, "dur":2702, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739437506, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739437681, "dur":4321, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739442055, "dur":375, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739442053, "dur":378, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739442486, "dur":1333, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739443870, "dur":169, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Transactions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739443867, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739444102, "dur":3863, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739448019, "dur":631, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739448016, "dur":635, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739448708, "dur":2555, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739451326, "dur":262, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739451324, "dur":265, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739451598, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739451672, "dur":1059, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739452779, "dur":543, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739452777, "dur":546, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739453323, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739453427, "dur":2258, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739455781, "dur":667, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Drawing.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739455779, "dur":671, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739456509, "dur":1293, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739457855, "dur":168, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739457852, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739458075, "dur":1656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739459787, "dur":1191, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739459785, "dur":1194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739460979, "dur":1564, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739462559, "dur":1397, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739464002, "dur":372, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739464000, "dur":375, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739464452, "dur":4267, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739468773, "dur":787, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Assets\\Libraries\\MySql.Data.DLL" }}
+,{ "pid":12345, "tid":2, "ts":1687431739468772, "dur":789, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/MySql.Data.DLL" }}
+,{ "pid":12345, "tid":2, "ts":1687431739469562, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739469634, "dur":1286, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/MySql.Data.DLL" }}
+,{ "pid":12345, "tid":2, "ts":1687431739470961, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739471022, "dur":2782, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739473829, "dur":436, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Assets\\Libraries\\renci.sshnet.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739473828, "dur":438, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/renci.sshnet.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739474267, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739474339, "dur":2249, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/renci.sshnet.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739476681, "dur":1450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739478149, "dur":101, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739478148, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739478303, "dur":1577, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739479908, "dur":270, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739479906, "dur":273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739480180, "dur":282, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739480475, "dur":935, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739481427, "dur":79, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739481426, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739481558, "dur":989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739482565, "dur":85, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739482564, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739482651, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739482743, "dur":1225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739483987, "dur":78, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739483985, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739484121, "dur":901, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739485043, "dur":86, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739485042, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739485180, "dur":1054, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739486253, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739486251, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739486409, "dur":937, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739487370, "dur":118, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739487368, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739487489, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739487561, "dur":2353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739489931, "dur":366, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739489930, "dur":368, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739490356, "dur":992, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739491366, "dur":95, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739491364, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739491515, "dur":4182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739495718, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739495716, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739495830, "dur":1648, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739497635, "dur":926, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739498612, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739498610, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739498735, "dur":1034, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739499818, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739499816, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739499921, "dur":1195, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739501165, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739501216, "dur":150, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739501375, "dur":943, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739502411, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739502473, "dur":4494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739507116, "dur":970, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739508153, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739508150, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739508257, "dur":1212, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739509642, "dur":1015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739510710, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739510708, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739510763, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739510830, "dur":3055, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739513942, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739513992, "dur":1698, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739515747, "dur":10638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739526447, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739526445, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739526510, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739526573, "dur":4105, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739530749, "dur":68, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739530747, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739530895, "dur":935, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739531920, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739531991, "dur":1763, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739533913, "dur":879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739534841, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739534839, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739534941, "dur":898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739535887, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739536007, "dur":863, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739536963, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739537033, "dur":945, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739538026, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739538024, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739538116, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739538222, "dur":940, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739539211, "dur":122, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739539209, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739539335, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739539467, "dur":1921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739541532, "dur":1948, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739543572, "dur":568, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739544149, "dur":1464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739545680, "dur":62, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739545678, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739545800, "dur":1802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739547778, "dur":1465, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739549346, "dur":64, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739549344, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739549412, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739549474, "dur":2140, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739551829, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739551827, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739551934, "dur":1765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1687431739553768, "dur":96, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Assets\\StreamingAssets\\UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":2, "ts":1687431739553766, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":2, "ts":1687431739553865, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1687431739554649, "dur":837, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":2, "ts":1687431739555529, "dur":2838, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":2, "ts":1687431739558454, "dur":99786, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1687431739658300, "dur":4391, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1687431739662870, "dur":1531, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/resources.assets" }}
+,{ "pid":12345, "tid":2, "ts":1687431739664472, "dur":1389, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/level2.resS" }}
+,{ "pid":12345, "tid":2, "ts":1687431739665929, "dur":1060, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/level2" }}
+,{ "pid":12345, "tid":2, "ts":1687431739667036, "dur":1199, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/level1.resS" }}
+,{ "pid":12345, "tid":2, "ts":1687431739668285, "dur":4899, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/level1" }}
+,{ "pid":12345, "tid":2, "ts":1687431739673233, "dur":2535, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/level0.resS" }}
+,{ "pid":12345, "tid":2, "ts":1687431739675831, "dur":4430, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1687431739680319, "dur":1178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":2, "ts":1687431739681523, "dur":94, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739681521, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739681672, "dur":3874, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1687431739685573, "dur":100259, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1687431739317055, "dur":50, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1687431739317106, "dur":15780, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1687431739332900, "dur":9529, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
+,{ "pid":12345, "tid":3, "ts":1687431739332887, "dur":9544, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1687431739342432, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1687431739342520, "dur":958, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1687431739343531, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1687431739343720, "dur":5262, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1687431739349035, "dur":1131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1687431739350309, "dur":1673, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1687431739352042, "dur":10777, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1687431739352039, "dur":10781, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1687431739362820, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1687431739362972, "dur":5909, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1687431739368948, "dur":287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":3, "ts":1687431739369291, "dur":5839, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":3, "ts":1687431739375188, "dur":396212, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1687431739375186, "dur":396216, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1687431739771403, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1687431739771495, "dur":14254, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739317237, "dur":15537, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739332795, "dur":28225, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
+,{ "pid":12345, "tid":4, "ts":1687431739332778, "dur":28244, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":4, "ts":1687431739361023, "dur":122, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739361794, "dur":926, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":4, "ts":1687431739362772, "dur":9140, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1687431739362769, "dur":9145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1687431739371972, "dur":3547, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1687431739375570, "dur":61959, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1687431739375568, "dur":61962, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1687431739437593, "dur":1954, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1687431739439836, "dur":3182, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739439833, "dur":3186, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739443079, "dur":3969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739447127, "dur":334, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739447124, "dur":338, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739447519, "dur":1029, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739448596, "dur":899, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739448594, "dur":903, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739449497, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739449644, "dur":1220, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739450920, "dur":231, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739450917, "dur":235, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739451204, "dur":917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739452167, "dur":165, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Management.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739452165, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Management.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739452381, "dur":982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Management.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739453416, "dur":148, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739453414, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739453615, "dur":1071, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739454738, "dur":167, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739454736, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739454957, "dur":946, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739455952, "dur":2030, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Data.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739455950, "dur":2033, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739458039, "dur":1765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739459919, "dur":279, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739459918, "dur":281, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739460257, "dur":2892, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739463214, "dur":286, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Configuration.Install.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739463211, "dur":290, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Configuration.Install.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739463558, "dur":912, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/System.Configuration.Install.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739464520, "dur":331, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739464518, "dur":333, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739464852, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739464977, "dur":1125, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739466156, "dur":202, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739466153, "dur":206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739466413, "dur":1900, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739468364, "dur":2197, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Assets\\Libraries\\BouncyCastle.Crypto.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739468362, "dur":2201, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/BouncyCastle.Crypto.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739470564, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739470637, "dur":2014, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/BouncyCastle.Crypto.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739472674, "dur":319, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Assets\\Libraries\\Google.Protobuf.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739472672, "dur":322, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Google.Protobuf.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739473053, "dur":4971, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Google.Protobuf.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739478046, "dur":91, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739478044, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739478191, "dur":1107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739479321, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739479319, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739479455, "dur":1781, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739481260, "dur":78, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739481256, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739481389, "dur":3138, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739484546, "dur":559, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739484544, "dur":562, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739485160, "dur":1238, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739486482, "dur":257, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739486481, "dur":258, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739486740, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739486831, "dur":984, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739487831, "dur":373, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739487830, "dur":374, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739488260, "dur":1130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739489410, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739489408, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739489545, "dur":1385, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739490952, "dur":261, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739490951, "dur":262, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739491214, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739491297, "dur":2611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739493932, "dur":156, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\KKI\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739493931, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739494108, "dur":936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739495063, "dur":121, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739495061, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739495240, "dur":1180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739496474, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739496472, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739496528, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739496616, "dur":1729, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739498409, "dur":95, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739498407, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739498559, "dur":1026, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739499654, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739499753, "dur":1041, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739500845, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739500843, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739500950, "dur":850, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739501943, "dur":4887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739506892, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739506890, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739507011, "dur":1116, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739508192, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739508191, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739508245, "dur":176, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739508431, "dur":1538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739510029, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739510130, "dur":859, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739511084, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739511150, "dur":1261, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739512464, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739512462, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739512517, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739512584, "dur":2740, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739515378, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739515375, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739515510, "dur":872, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739516524, "dur":910, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739517527, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739517589, "dur":12405, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739530050, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739530153, "dur":886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739531183, "dur":1121, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739532437, "dur":1602, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739534150, "dur":152, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739534312, "dur":1081, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739535539, "dur":950, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739536552, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739536652, "dur":895, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739537598, "dur":191, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739537596, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739537842, "dur":929, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739538920, "dur":1331, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739540303, "dur":87, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739540301, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739540391, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739540479, "dur":1837, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739542376, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.1.10f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739542374, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739542480, "dur":898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739543473, "dur":443, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739543928, "dur":1005, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739545073, "dur":1058, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739546178, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739546307, "dur":3267, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739549723, "dur":1906, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739551807, "dur":1003, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739552902, "dur":355, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739553267, "dur":1901, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1687431739555289, "dur":57117, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1687431739612494, "dur":13175, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":4, "ts":1687431739625710, "dur":626, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":4, "ts":1687431739625707, "dur":631, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":4, "ts":1687431739626339, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739626440, "dur":23362, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":4, "ts":1687431739649850, "dur":19390, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1687431739649847, "dur":19395, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vlad/Desktop/KKI_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1687431739669243, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1687431739669348, "dur":3863, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1687431739673253, "dur":8683, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vlad/Desktop/KKI_Data/level0" }}
+,{ "pid":12345, "tid":4, "ts":1687431739681960, "dur":103855, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1687431739788539, "dur":1675, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

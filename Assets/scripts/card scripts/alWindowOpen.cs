@@ -32,7 +32,7 @@ public class alWindowOpen : MonoBehaviour
             {
                 GameObject.Find("blur modal").GetComponent<setCoordTo0>().setCoord0();
                 GameObject.Find("buy card").GetComponent<setCoordTo0>().setCoord0();
-                GameObject.Find("buy card").transform.GetChild(1).GetComponent<Image>().sprite = cardDisplay.card.image;
+                GameObject.Find("buy card").transform.GetChild(1).transform.GetChild(0).GetComponent<Image>().sprite = cardDisplay.card.image;
                 GameObject.Find("abilitySupport").GetComponent<Text>().text = $"Атакующая способность: {cardDisplay.card.attackAbility}" + "\n" + "\n" +
                     $"Защитная способность: {cardDisplay.card.defenceAbility}" + "\n" + "\n" +
                     $"Усиливающая способность: {cardDisplay.card.buffAbility}" + "\n" + "\n" +
@@ -50,7 +50,7 @@ public class alWindowOpen : MonoBehaviour
                 
                 GameObject.Find("blur modal").GetComponent<setCoordTo0>().setCoord0();
                 GameObject.Find("buy card").GetComponent<setCoordTo0>().setCoord0();
-                GameObject.Find("buy card").transform.GetChild(1).GetComponent<Image>().sprite = CardSupportDisplay.card.image;
+                GameObject.Find("buy card").transform.GetChild(1).transform.GetChild(0).GetComponent<Image>().sprite = CardSupportDisplay.card.image;
                 GameObject.Find("abilitySupport").GetComponent<Text>().text = $"Способность: {CardSupportDisplay.card.ability}";
                 GameObject.Find("price text").GetComponent<Text>().text = $"Цена: {CardSupportDisplay.card.Price}$";
                 GameObject.Find("money of player").GetComponent<Text>().text = $"У вас денег: {GameObject.Find("playerManager").GetComponent<PlayerManager1>().money}$";
